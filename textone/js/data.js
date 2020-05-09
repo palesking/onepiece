@@ -1,0 +1,37 @@
+//数据
+var flyData = [
+    {
+        title:"CSS",
+        author:"天堂瀑布",
+        time:"2020-3-14",
+        desc:"第一次测试",
+        src:"3d旋转相册"
+    },
+    {
+        title:"JS",
+        author:"天堂瀑布",
+        time:"2020-3-14",
+        desc:"第二次测试",
+        src:"3d旋转相册"
+    },
+    {
+        title:"Vue",
+        author:"天堂瀑布",
+        time:"2020-3-14",
+        desc:"第三次测试",
+        src:"3d旋转相册"
+    },
+    {
+        title:"React",
+        author:"天堂瀑布",
+        time:"2020-3-14",
+        desc:"第四次测试",
+        src:"3d旋转相册"
+    },{
+        title:"Node.js",
+        author:"天堂瀑布",
+        time:"2020-3-14",
+        desc:"第五次测试",
+        src:"3d旋转相册"
+    }
+]
