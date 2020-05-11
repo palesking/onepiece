@@ -1,0 +1,93 @@
+li{
+    list-style: none;
+}
+.wrap{
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    color: #fff;
+}
+#logo{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0;
+}
+#HeadDivider{
+    float: left;
+    height:45px;
+    margin: 0;
+    margin-top: 10px;
+}
+#HeadMenu{
+    float: right;
+    background: transparent;
+    color: #fff;
+    border: none;
+    line-height: 62px;
+}
+#HeadMenu li a{
+    color: #fff;
+}
+#HeadMenu li a:hover{
+    color:#1890ff;
+}
+#Footer{
+    text-align: center;
+}
+.styleone{
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    border:1px solid #ccc;
+    border-top:none;
+    border-bottom: none;
+}
+.styleone .menuleft{
+    text-align: center;
+}
+#indexlist{
+    border:1px solid #ccc;
+    border-bottom: none;
+}
+canvas{
+    background: whitesmoke ;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.styletwo{
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    border:1px solid #ccc;
+    border-top:none;
+    border-bottom: none;
+}
+.stylethree{
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+    border:1px solid #ccc;
+    border-top:none;
+    border-bottom: none;
+}
+.stylefour{
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+}
+#stylefive{
+    display: block;
+}
+.stylesix{
+    border:1px solid #ccc;
+    border-top:none;
+}
+.styleserve{
+    position: absolute;
+    
+}
+.styleeight{
+    padding-left: 20px;
+    padding-top: 35px;
+}
