@@ -1,5 +1,4 @@
-# pddproject
-
+# pddproject 拼多多案例
 ## Project setup
 ```
 npm install
