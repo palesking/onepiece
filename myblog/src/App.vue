@@ -1,19 +1,20 @@
 <template>
   <div id="app">
+    <canvas id="canvas"></canvas>
     <Header></Header>
     <router-view/>
-    <Footer></Footer>
+    <!-- <Footer></Footer> -->
   </div>
 </template>
 <script>
 import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
+// import Footer from './components/Footer.vue'
 // import Canvas from './canvas-nest.min.js'
 export default {
   name:'App',
   components:{
     Header,
-    Footer,
+    // Footer,
     // Canvas
   }
 }
@@ -109,19 +110,36 @@ ul,ol,li{
 .color000{
     color: #000;
 }
+// canvas{
+//     height: 128%;
+// }
 #app{
-    background: url('http://www.palingking.com/images/bg.jpg') no-repeat;
-    background-size: cover;
-    background-attachment: fixed ;
-    z-index: -1;
+    // background: url('http://www.palingking.com/images/bg.jpg') no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed ;
+    // z-index: -1;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
   .app-content{
     // width: 1400px;
     // margin: auto;
   }
+  canvas{
+        position:absolute;
+        width:100%;
+        height:100%;
+        z-index: 0;
+    }
 
 }
 // canvas{
-//     background: url('./assets/bg.jpg') no-repeat;
-//     opacity: 0.3;
+//     //background: url('http://www.palingking.com/images/bg.jpg') no-repeat;
+//     //background: black;
+//     // opacity: 0.5;
+//     position: absolute;
+//     z-index: 3;
 // }
+
 </style>

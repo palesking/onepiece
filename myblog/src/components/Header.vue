@@ -1,5 +1,5 @@
 <template>
-    <div class="header" style="width:100%;position:fixed;z-index:1;top:0px;">
+    <div class="header" style="width:100%;position:fixed;z-index:2;top:0px;">
       <div class="header-content">
         <el-menu
         mode="horizontal"

@@ -57,8 +57,9 @@ export default {
     //width: 1400px;
     //margin: auto;
     // color: white;
+    position: relative;
     .about-content{
-      overflow: visible;
+      // overflow: visible;
       height:600px;
       padding-left: 20px;
       p{

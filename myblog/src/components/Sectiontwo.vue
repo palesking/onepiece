@@ -27,51 +27,22 @@
                 </el-tooltip>
             </div> 
         </el-card>
-        <a-player :audio="audio" style="margin:0; margin-top: 10px;"></a-player>
+        <music></music>
     </div>
 </template>
 <script>
+//import music from "../components/Music.vue"
+const music =()=>import("../components/Music.vue")
 export default {
     name:'Sectiontwo',
     data() {
         return {
-           audio: [
-                {
-                    name: '一路向北',
-                    artist: '周杰伦',
-                    url: 'http://music.palingking.com/1.mp3',
-                    cover: 'http://music.palingking.com/1.jpg', // prettier-ignore
-                    lrc: '',
-                },
-                {
-                    name: '死性不改',
-                    artist: "Twins/Boy'z",
-                    url: 'http://music.palingking.com/2.mp3',
-                    cover: 'https://p1.music.126.net/AUGVPQ_rVrngDH9ocQrn3Q==/109951163613037822.jpg?param=300y300', // prettier-ignore
-                    lrc: '',
-                },
-                {
-                    name: '倒数',
-                    artist: '邓紫棋',
-                    url: 'http://music.palingking.com/3.mp3',
-                    cover: 'http://music.palingking.com/3.jpg', // prettier-ignore
-                    lrc: '',
-                },
-                {
-                    name: 'I Never Told You',
-                    artist: '陈冠希',
-                    url: 'http://music.palingking.com/4.mp3',
-                    cover: 'http://music.palingking.com/4.jpg', // prettier-ignore
-                    lrc: '',
-                },
-            ]
+           
         }
     },
-    methods: {
-        randomColor() {
-            return `#${((Math.random() * 0xffffff) << 0).toString(16)}`;
-        },
-    },
+    components:{
+        music
+    }
 }
 </script>
 <style lang="less">

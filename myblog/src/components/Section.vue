@@ -129,5 +129,8 @@ export default {
         .el-col-24{
         margin-bottom: 20px;
       }
+      .el-col:last-child{
+          margin-bottom: 100px;
+      }
     }
 </style>

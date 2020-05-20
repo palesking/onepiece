@@ -1,21 +1,21 @@
 <template>
     <div class="content">
       <div class="content-title">
-      <el-card class="box-card" shadow="hover">
-      <div slot="header" class="clearfix">
-        <span v-html="data.titleContent[index]"></span>
-      </div>
-      <div class="text item">
-          <span v-html="data.content[index]">
-          </span>
-          <div class="text-button">
-            <el-button type="primary" plain><a :href="link" target="_blank">查看效果</a></el-button>
-            <el-button type="primary" plain><a :href="code" target="_blank">查看源码</a></el-button>
+        <el-card class="box-card" shadow="hover">
+          <div slot="header" class="clearfix">
+            <span v-html="data.titleContent[index]"></span>
           </div>
+          <div class="text item">
+              <span v-html="data.content[index]">
+              </span>
+              <div class="text-button">
+                <el-button type="primary" plain><a :href="link" target="_blank">查看效果</a></el-button>
+                <el-button type="primary" plain><a :href="code" target="_blank">查看源码</a></el-button>
+              </div>
+          </div>
+        </el-card>
       </div>
-    </el-card>
-    </div>
-      <div class="content-all" style="margin: 20px 0;">
+      <div class="content-all" style="margin: 20px 0; margin-bottom:120px;">
         <el-row>
           <el-col>
             <el-card>
@@ -54,7 +54,7 @@ export default {
       console.log(this.codes())
     },
     methods: {
-      //这个方法用了我整整3天,项目的精华所在
+      //if判断值,然后根据结果渲染
       imge(){
         let index = this.$route.params.aid
         if(index == 0){
@@ -66,10 +66,10 @@ export default {
           }
         }else if(index == 1){
           return {
-                0:'http://www.palingking.com/images/2.1.jpg',
-                1:'http://www.palingking.com/images/2.2.jpg',
-                2:'http://www.palingking.com/images/2.3.jpg',
-                3:'http://www.palingking.com/images/2.4.jpg',
+                0:'https://www.palingking.com/images/2.1.png',
+                1:'https://www.palingking.com/images/2.2.png',
+                2:'https://www.palingking.com/images/2.3.png',
+                3:'https://www.palingking.com/images/2.4.png',
             }
         }else if(index == 2){
           return {
@@ -88,9 +88,9 @@ export default {
       links(){
         let index = this.$route.params.aid
         if(index == 0){
-          return `http://texttwo.palingking.com/`
-        }else if(index == 1){
           return `http://textone.palingking.com/`
+        }else if(index == 1){
+          return `http://texttwo.palingking.com/`
         }else if(index == 2){
           return `http://textthree.palingking.com/`
         }else if(index == 3){
@@ -105,7 +105,7 @@ export default {
         }else if(index == 1){
           return `https://github.com/palesking/onepiece/tree/master/texttwo`
         }else if(index == 2){
-          return `http://textthree.palingking.com/`
+          return `https://github.com/palesking/onepiece/tree/master/textthree`
         }else if(index == 3){
          return {
           }
@@ -117,11 +117,17 @@ export default {
 <style lang="less">
     .content{
       width: 1400px;
+      height: 100%;
       // height:800px;
       margin: auto;
       // background-color: white;
       margin-top:76px;
       padding: 20px 0;
+      position: relative;
+      z-index: 1; 
+      overflow: hidden;
+      overflow-y: scroll;
+      // overflow-y:hidden;
       a{
         color:cornflowerblue;
       }
@@ -151,4 +157,7 @@ export default {
         }
       }
     }
+    .content::-webkit-scrollbar{
+        display: none;
+      }
 </style>

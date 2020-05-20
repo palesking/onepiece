@@ -2,9 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Content from '../components/Content.vue'
-import Section from '../components/Section.vue'
+// import Content from '../components/Content.vue'
+// import Section from '../components/Section.vue'
 
+const Content = () => import ("../components/Content.vue")
+const Section = () => import ("../components/Section.vue")
+// const About = () => import ("../views/About.vue")
 Vue.use(VueRouter)
 
   const routes = [
@@ -24,7 +27,7 @@ Vue.use(VueRouter)
 ]
 
 const router = new VueRouter({
-  routes
+    routes
 })
 
 export default router
