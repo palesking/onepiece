@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <!-- <h1>这是home组件</h1> -->
+    <headerone/>
+    <canvas id="canvas"></canvas>
     <div class="home-content">
         <Section></Section>
         <Sectiontwo></Sectiontwo>
@@ -9,14 +10,16 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import Section from '../components/Section.vue'
 import Sectiontwo from '../components/Sectiontwo.vue'
+import headerone from '@/components/headerone.vue'
+
 export default {
   name: 'Home',
   components: {
     Section,
-    Sectiontwo
+    Sectiontwo,
+    headerone
   }
 }
 </script>

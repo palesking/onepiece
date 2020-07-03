@@ -1,5 +1,5 @@
 <template>
-    <div class="header" style="width:100%;position:fixed;z-index:2;top:0px;">
+    <div class="headerone" style="width:100%;position:fixed;z-index:2;top:0px;">
         <div class="header-content">
             <el-menu
             mode="horizontal"
@@ -43,7 +43,7 @@ export default {
 }
 </script>
 <style lang="less">
-    .header{
+    .headerone{
         background-color: #545c64;
         width: 100%;
         .header-content{
