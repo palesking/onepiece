@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import Header from './components/Header.vue'
+import Header from './components/headerone.vue'
 // import Footer from './components/Footer.vue'
 // import Canvas from './canvas-nest.min.js'
 export default {
@@ -121,12 +121,7 @@ ul,ol,li{
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    position: relative;
-  .app-content{
-    // width: 1400px;
-    // margin: auto;
-  }
-  canvas{
+    canvas{
         position:absolute;
         width:100%;
         height:100%;

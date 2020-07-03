@@ -1,25 +1,5 @@
 let data = {
     num:[1,2,3,4,5],
-    // newsone:{
-    //     title:"原生js3d旋转效果",
-    //     image:'imageone.png',
-    //     template:`原生js自执行函数,动态添加li,实现圆,列表,螺旋,3d旋转效果`
-    // },
-    // newstwo:{
-    //     title:"原生js3d旋转效果",
-    //     image:'imageone.png',
-    //     template:`原生js自执行函数,动态添加li,实现圆`
-    // },
-    // newsthree:{
-    //     title:"原生js3d旋转效果",
-    //     image:'imageone.png',
-    //     template:`原生js自执行函数,动态添加li,实现圆,列表`
-    // },
-    // newsfour:{
-    //     title:"原生js3d旋转效果",
-    //     image:'imageone.png',
-    //     template:`原生js自执行函数,动态添加li,实现圆,列表,螺旋`
-    // }
     title:{0:"原生js3d旋转效果",1:"拼多多案例",2:"cnode案例",3:"webapp案例",4:"原型与原型对象"},
     titleContent:{
         0:`原生js自执行函数,动态添加li,实现圆,列表,螺旋,3d旋转效果。`,

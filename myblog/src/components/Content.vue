@@ -47,11 +47,7 @@ export default {
         }
     },
     created() {
-      //console.log( this.$route.params.aid )
-      //console.log(this.imge())
-      //console.log(this)
-      console.log(this.links())
-      console.log(this.codes())
+      
     },
     methods: {
       //if判断值,然后根据结果渲染
