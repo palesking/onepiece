@@ -3,13 +3,8 @@
         <el-card class="box-card boxshadow">
             <div class="box-header">
                 <img src='http://www.palingking.com/images/logo.jpg' alt="" width="100%" height="100%" style="">
-                <!-- <p class="p1">居住城市:上海<br/>兴趣爱好:动漫电影</p> -->
             </div>
-            <!-- <p style="padding: 0px 10px 5px 10px;font-weight:700;">前端小白</p> -->
             <div class="wx">
-                <!-- <p class="el-icon-chat-dot-round" style="font-size:32px;"></p> -->
-                
-                <!-- <p><img src="../assets/wx2.png" alt="微信" width="200" height="200"></p> -->
                 <el-tooltip content="微信" placement="bottom">
                     <a href="http://wx.palingking.com/" target="_blank">
                         <el-button class="el-icon-chat-dot-round"></el-button>
@@ -32,9 +27,9 @@
 </template>
 <script>
 //import music from "../components/Music.vue"
-const music =()=>import("../components/Music.vue")
+const music = () => import("../components/Music.vue")
 export default {
-    name:'Sectiontwo',
+    name:'sectiontwo',
     data() {
         return {
            
@@ -45,7 +40,7 @@ export default {
     }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .sectiontwo{
         position: relative;
         width:310px;

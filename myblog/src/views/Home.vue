@@ -1,29 +1,29 @@
 <template>
   <div class="home">
+    <!-- <canvas id="canvas"></canvas> -->
     <headerone/>
-    <canvas id="canvas"></canvas>
     <div class="home-content">
-        <Section></Section>
-        <Sectiontwo></Sectiontwo>
+        <sectionone></sectionone>
+        <sectiontwo></sectiontwo>
     </div>
   </div>
 </template>
 
 <script>
-import Section from '../components/Section.vue'
-import Sectiontwo from '../components/Sectiontwo.vue'
+import sectionone from '../components/sectionone.vue'
+import sectiontwo from '../components/Sectiontwo.vue'
 import headerone from '@/components/headerone.vue'
 
 export default {
-  name: 'Home',
+  name: 'home',
   components: {
-    Section,
-    Sectiontwo,
+    sectionone,
+    sectiontwo,
     headerone
   }
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .home{
       // background-color: #f9f9f9;
       //z-index: 1;

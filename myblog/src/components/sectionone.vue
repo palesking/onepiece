@@ -6,7 +6,6 @@
                     <div style="display:flex; justify-content:space-around;">
                         <div class = 'section-img'>
                             <img :src="images[index]" alt="" class="image"/>
-                            <!-- <img src="../assets/defalut.jpg" alt="" class="image"> -->
                             <time class="time">{{ date}}</time>
                         </div>
                         <div class="bottom clearfix" style="width:340px;margin-top:-15px;">
@@ -30,7 +29,7 @@ import data from './data.js'
 let date = new Date()
 // let data = this.data
 export default {
-    name:"Section",
+    name:"sectionone",
     data() {
         return {
             date:date.toLocaleString(),
@@ -64,7 +63,7 @@ export default {
     },
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .section{
         width: 800px;
         a{

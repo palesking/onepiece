@@ -6,7 +6,7 @@ import About from '../views/About.vue'
 // import Section from '../components/Section.vue'
 
 const Content = () => import ("../components/Content.vue")
-const Section = () => import ("../components/Section.vue")
+const section = () => import ("../components/sectionone.vue")
 // const About = () => import ("../views/About.vue")
 Vue.use(VueRouter)
 
@@ -26,7 +26,7 @@ Vue.use(VueRouter)
       component: About
     },
     {path:'/content/:aid',name:'Content',component:Content},
-    {path:'/section',name:"Section",component:Section}
+    {path:'/section',name:"sectionone",component:section}
   ]
 
 const router = new VueRouter({
