@@ -1,20 +1,18 @@
 # palingking
 
-这是一个简单的博客,基于vue和elementui
+Hello my friend.This is a blog written in Vue
 
-
-
-## Project setup
+## Project setup(初始化)
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development(项目运行)
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production(打包)
 ```
 npm run build
 ```
