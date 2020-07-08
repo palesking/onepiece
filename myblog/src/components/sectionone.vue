@@ -65,7 +65,7 @@ export default {
 </script>
 <style lang="less" scoped>
     .section{
-        width: 800px;
+        // width: 800px;
         a{
             color: green;
         }

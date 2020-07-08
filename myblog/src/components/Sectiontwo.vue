@@ -42,12 +42,12 @@ export default {
 </script>
 <style lang="less" scoped>
     .sectiontwo{
-        position: relative;
-        width:310px;
-        height:800px;
-        margin-top: 10px;
-        margin-left:40px;
-        margin-right: 190px;
+        margin: auto;
+        // width:310px;
+        // height:800px;
+        // margin-top: 10px;
+        // margin-left:40px;
+        // margin-right: 190px;
         .box-card{
             // margin: auto;
             .wx{
@@ -69,11 +69,11 @@ export default {
                     margin:8px 16px;
                 }
             }
-            .box-header{
-                padding:10px;
-                width: 250px;
-                height: 250px;
-            }
+            // .box-header{
+            //     padding:10px;
+            //     width: 250px;
+            //     height: 250px;
+            // }
         }
         .boxshadow{
             &:hover{

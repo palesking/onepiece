@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import home from '@/views/Home.vue'
+import index from '@/views/index.vue'
 import About from '../views/About.vue'
 // import Content from '../components/Content.vue'
 // import Section from '../components/Section.vue'
@@ -13,12 +13,12 @@ Vue.use(VueRouter)
   const routes = [
     {
       path : '/',
-      redirect : home
+      redirect : index
     },
     {
-      path:'/home',
-      name:'home',
-      component:home,
+      path:'/index',
+      name:'index',
+      component:index,
     },
     {
       path:'/about',

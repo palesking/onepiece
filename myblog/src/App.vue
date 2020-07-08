@@ -12,10 +12,10 @@
     @import url("./assets/css/common.css");
 
     #app{
-        width: 100%;
-        height: 100%;
+        // width: 100%;
+        // height: 100%;
         margin: 0 auto;
-        background-color: black;
+        background-color: #E9EEF3;
         #canvas{
             position:fixed;
             width:100%;

@@ -33,11 +33,9 @@ export default {
     },
 }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     .headerone{
         background-color: #545c64;
-        width: 100%;
-        top:0px;
         .header-content{
             width: 1400px;
             margin: auto;
@@ -45,12 +43,12 @@ export default {
               float: right;
             }
             .header-title{
-                height:76px;
-                line-height:76px;
+                // height:76px;
+                // line-height:76px;
                 .header-a{
                     display:block;
-                    width:68px;
-                    height:76px;
+                    // width:68px;
+                    // height:76px;
                     text-align:center;
                 }
             }
