@@ -17,8 +17,7 @@
         </el-tab-pane>
         <el-tab-pane label="关于项目">
           <div class="about-content">
-              <p>项目经验不多,我写这个网站遇到的问题都是小问题,因为内容不多,欠缺处理很多数据的经验,还有各种效果的实现都需要更多的代码</p>
-              <p>从入门到踹门,路还很长</p>
+              
           </div>
         </el-tab-pane>
         <el-tab-pane label="工作状态">

@@ -26,7 +26,8 @@
     </div>
 </template>
 <script>
-//import music from "../components/Music.vue"
+
+
 const music = () => import("../components/Music.vue")
 export default {
     name:'sectiontwo',

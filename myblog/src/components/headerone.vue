@@ -8,7 +8,7 @@
             active-text-color="#ffd04b"
             style='border:0;'>
                 <el-menu-item index="1" class="header-title">
-                    <router-link to="/home" exact class="header-a">首页</router-link>
+                    <router-link to="/index" exact class="header-a">首页</router-link>
                 </el-menu-item>
                 <el-menu-item index="2" class="header-title">
                     <router-link to="/about" class="header-a">关于</router-link>
