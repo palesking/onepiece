@@ -28,7 +28,7 @@
 <script>
 
 
-const music = () => import("../components/Music.vue")
+const music = () => import("@/components/music.vue")
 export default {
     name:'sectiontwo',
     data() {

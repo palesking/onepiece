@@ -1,5 +1,5 @@
 <template>
-    <aplayer :audio="audio" style="margin:0;" :lrcType="3" listFolded></aplayer>
+    <aplayer :audio="audio" style="margin:0;" :lrcType='3' listFolded></aplayer>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
                     artist: '周杰伦',
                     url: 'http://music.palingking.com/1.mp3',
                     cover: 'http://music.palingking.com/1.jpg', // prettier-ignore
-                    lrc: '',
+                    lrc: 'http://music.palingking.com/一路向北.lrc',
                 },
                 {
                     name: '死性不改',
@@ -46,10 +46,10 @@ export default {
                     lrc: '',
                 },
                  {
-                    name: '一路向北',
-                    artist: '周杰伦',
-                    url: 'http://music.palingking.com/1.mp3',
-                    cover: 'http://music.palingking.com/1.jpg', // prettier-ignore
+                    name: '光年之外',
+                    artist: '邓紫棋',
+                    url: 'http://music.palingking.com/6.mp3',
+                    cover: 'http://music.palingking.com/3.jpg', // prettier-ignore
                     lrc: '',
                 },
                 {
