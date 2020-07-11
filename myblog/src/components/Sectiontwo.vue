@@ -43,43 +43,61 @@ export default {
 </script>
 <style lang="less" scoped>
     .sectiontwo{
+        width: 100%;
         margin: auto;
-        // width:310px;
-        // height:800px;
-        // margin-top: 10px;
-        // margin-left:40px;
-        // margin-right: 190px;
+        overflow: hidden;
+        position: relative;
         .box-card{
-            // margin: auto;
+            line-height: 100px;
+            height: 100px;
             .wx{
-                // width: 50px;
+                position: absolute;
+                left: 100px;
+                width: 150px;
                 padding:0 10px;
                 // width: 50px;
-                // height: 50px;
+                height: 50px;
                 //display:flex;justify-content:space-around;
                 //flex-wrap:wrap;
                 //padding-left:35px ;
                 .el-icon-chat-dot-round,.el-icon-chat-line-round,.el-icon-notebook-2{
+                    display: inline-block;
                     font-size: 24px;
                     width: 50px;
                     height: 50px;
                     // color: coral;
                     border-radius: 50%;
                     padding: 0;
-                    margin: 0;
-                    margin:8px 16px;
+                    margin-left:5px;
+                }
+                a{
+                    button{
+
+                    }
                 }
             }
-            // .box-header{
-            //     padding:10px;
-            //     width: 250px;
-            //     height: 250px;
-            // }
+            .box-header{
+                position: absolute;
+                // box-sizing: content-box;
+                // height: 50px;
+                // width: 250px;
+                // height: 250px;
+                left: 50px;
+                img{
+                    width: 50px;
+                    height: 50px;
+                }
+            }
         }
         .boxshadow{
             &:hover{
                 box-shadow: 0 0 15px skyblue !important;
             } 
+        }
+        ::v-deep.el-card__body{
+            height: 250px;
+            // display: flex;
+            padding: 0;
         }
     }
 </style>

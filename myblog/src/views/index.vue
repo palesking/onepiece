@@ -29,8 +29,8 @@
 </template>
 
 <script>
-import sectionone from '../components/sectionone.vue'
-import sectiontwo from '../components/Sectiontwo.vue'
+import sectionone from '@/components/sectionone.vue'
+import sectiontwo from '@/components/sectiontwo.vue'
 import headerone from '@/components/headerone.vue'
 
 export default {
@@ -74,14 +74,12 @@ export default {
             background-color: #D3DCE6;
             color: #333;
             text-align: center;
-            line-height: 200px;
         }
 
         .el-main {
             
             color: #333;
             text-align: center;
-            line-height: 160px;
         }
         
         body > .el-container {
@@ -90,11 +88,11 @@ export default {
         
         .el-container:nth-child(5) .el-aside,
         .el-container:nth-child(6) .el-aside {
-            line-height: 260px;
+            // line-height: 260px;
         }
         
         .el-container:nth-child(7) .el-aside {
-            line-height: 320px;
+            // line-height: 320px;
         }
         .el-header{
             padding: 0;

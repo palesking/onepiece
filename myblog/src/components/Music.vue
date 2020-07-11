@@ -1,5 +1,5 @@
 <template>
-    <aplayer :audio="audio" style="margin:0;" :lrcType='3' listFolded></aplayer>
+    <aplayer :audio="audio" style="margin:0;" :lrcType='0'></aplayer>
 </template>
 
 <script>
@@ -15,7 +15,7 @@ export default {
                     artist: '周杰伦',
                     url: 'http://music.palingking.com/1.mp3',
                     cover: 'http://music.palingking.com/1.jpg', // prettier-ignore
-                    lrc: 'http://music.palingking.com/一路向北.lrc',
+                    lrc: '',
                 },
                 {
                     name: '死性不改',
@@ -90,6 +90,25 @@ export default {
     },
 }
 </script>
-<style lang="less">
-    
+<style lang="less" scoped>
+    ::v-deep.aplayer{
+        ol{
+            li{
+                position: relative;
+                overflow: hidden;
+                .aplayer-list-index{
+                    position: absolute;
+                    left: 50px;
+                }
+                .aplayer-list-title{
+                    position: absolute;
+                    left: 80px;
+                }
+                .aplayer-list-author{
+                    position: absolute;
+                    left: 200px;
+                }
+            }
+        }
+    }
 </style>
