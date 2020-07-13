@@ -11,12 +11,12 @@
             <el-container>
                 <el-row>
                     <el-col :span="8">
-                        <el-aside>
+                        <el-aside class="">
                             <sectiontwo></sectiontwo>
                         </el-aside>
                     </el-col>
                     <el-col :span="16">
-                        <el-main>
+                        <el-main class="">
                             <sectionone></sectionone>
                         </el-main>
                     </el-col>
@@ -47,6 +47,7 @@ export default {
     .index{
         width: 100%;
         height: 100%;
+        background-color: #D3DCE6;
         .home-content{
             // position: relative;
             // top: 0;
@@ -71,7 +72,7 @@ export default {
     }
 
         .el-aside {
-            background-color: #D3DCE6;
+            // background-color: #D3DCE6;
             color: #333;
             text-align: center;
         }

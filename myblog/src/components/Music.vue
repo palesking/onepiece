@@ -46,9 +46,9 @@ export default {
                     lrc: '',
                 },
                  {
-                    name: '光年之外',
-                    artist: '邓紫棋',
-                    url: 'http://music.palingking.com/6.mp3',
+                    name: '七号公园',
+                    artist: '许嵩',
+                    url: 'http://music.palingking.com/许嵩 - 七号公园.mp3',
                     cover: 'http://music.palingking.com/3.jpg', // prettier-ignore
                     lrc: '',
                 },

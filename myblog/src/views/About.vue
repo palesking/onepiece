@@ -27,11 +27,11 @@
         </el-tab-pane>
         </el-tabs>
     </div>
-    <Sectiontwo></Sectiontwo>
+    <sectiontwo></sectiontwo>
   </div>
 </template>
 <script>
-import Sectiontwo from '../components/Sectiontwo'
+import sectiontwo from '../components/sectiontwo'
 export default {
   name:'About',
   data() {
@@ -40,7 +40,7 @@ export default {
     }
   },
   components:{
-    Sectiontwo
+    sectiontwo
   }
 }
 </script>

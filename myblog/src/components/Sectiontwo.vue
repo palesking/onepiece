@@ -2,24 +2,11 @@
     <div class="sectiontwo">
         <el-card class="box-card boxshadow">
             <div class="box-header">
-                <img src='http://www.palingking.com/images/logo.jpg' alt="" width="100%" height="100%" style="">
             </div>
             <div class="wx">
-                <el-tooltip content="微信" placement="bottom">
-                    <a href="http://wx.palingking.com/" target="_blank">
-                        <el-button class="el-icon-chat-dot-round"></el-button>
-                    </a>
-                </el-tooltip>
-                <el-tooltip content="github" placement="bottom">
-                    <a href="https://github.com/palesking" target="_blank">
-                        <el-button class="el-icon-chat-line-round"></el-button>
-                    </a>
-                </el-tooltip>
-                <el-tooltip content="简历" placement="bottom">
-                    <a href="http://resume.palingking.com/" target="_blank">
-                        <el-button class="el-icon-notebook-2"></el-button>
-                    </a>
-                </el-tooltip>
+                <a href="http://wx.palingking.com/" target="_blank">微信</a>
+                <a href="https://github.com/palesking" target="_blank">GitHub</a>
+                <a href="http://resume.palingking.com/" target="_blank">简历</a>
             </div> 
         </el-card>
         <music></music>
@@ -45,57 +32,40 @@ export default {
     .sectiontwo{
         width: 100%;
         margin: auto;
-        overflow: hidden;
-        position: relative;
+        padding-top: 30px;
         .box-card{
-            line-height: 100px;
-            height: 100px;
             .wx{
-                position: absolute;
-                left: 100px;
-                width: 150px;
-                padding:0 10px;
-                // width: 50px;
-                height: 50px;
-                //display:flex;justify-content:space-around;
-                //flex-wrap:wrap;
-                //padding-left:35px ;
-                .el-icon-chat-dot-round,.el-icon-chat-line-round,.el-icon-notebook-2{
+                padding: 15px;
+                a{ 
                     display: inline-block;
-                    font-size: 24px;
-                    width: 50px;
-                    height: 50px;
-                    // color: coral;
-                    border-radius: 50%;
-                    padding: 0;
-                    margin-left:5px;
+                    color: black;
+                    font-weight: bold;
+                    margin-left: 10px;
                 }
-                a{
-                    button{
-
-                    }
+                a:hover{
+                    color: blue;
+                }
+                a:active{
+                    color: blue;
                 }
             }
             .box-header{
-                position: absolute;
-                // box-sizing: content-box;
-                // height: 50px;
-                // width: 250px;
-                // height: 250px;
-                left: 50px;
-                img{
-                    width: 50px;
-                    height: 50px;
-                }
+               
+                width: 50px;
+                height: 50px;
+                margin: auto;
+                background: url('http://www.palingking.com/images/logo.jpg') ;
+                background-size: cover;
+                margin-top: 20px;
             }
         }
-        .boxshadow{
-            &:hover{
-                box-shadow: 0 0 15px skyblue !important;
-            } 
-        }
+        // .boxshadow{
+        //     &:hover{
+        //         box-shadow: 0 0 15px skyblue !important;
+        //     } 
+        // }
         ::v-deep.el-card__body{
-            height: 250px;
+            height: 100px;
             // display: flex;
             padding: 0;
         }
