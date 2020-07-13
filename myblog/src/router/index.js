@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import index from '@/views/index.vue'
 import About from '../views/About.vue'
 
-const Content = () => import ("../components/Content.vue")
+const content = () => import ("../components/content.vue")
 const section = () => import ("../components/sectionone.vue")
 Vue.use(VueRouter)
 
@@ -23,7 +23,7 @@ Vue.use(VueRouter)
       name:'About',
       component: About
     },
-    {path:'/content/:aid',name:'Content',component:Content},
+    {path:'/content/:aid',name:'content',component:content},
     {path:'/section',name:"sectionone",component:section}
   ]
 

@@ -59,11 +59,6 @@ export default {
                 margin-top: 20px;
             }
         }
-        // .boxshadow{
-        //     &:hover{
-        //         box-shadow: 0 0 15px skyblue !important;
-        //     } 
-        // }
         ::v-deep.el-card__body{
             height: 100px;
             // display: flex;

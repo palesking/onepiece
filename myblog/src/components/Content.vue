@@ -6,12 +6,12 @@
             <span v-html="data.titleContent[index]"></span>
           </div>
           <div class="text item">
-              <span v-html="data.content[index]">
-              </span>
-              <div class="text-button">
-                <el-button type="primary" plain><a :href="link" target="_blank">查看效果</a></el-button>
-                <el-button type="primary" plain><a :href="code" target="_blank">查看源码</a></el-button>
-              </div>
+				<span v-html="data.content[index]">
+				</span>
+				<div class="text-button">
+					<el-button type="primary" plain><a :href="link" target="_blank">查看效果</a></el-button>
+					<el-button type="primary" plain><a :href="code" target="_blank">查看源码</a></el-button>
+				</div>
           </div>
         </el-card>
       </div>
