@@ -14,7 +14,6 @@
 </template>
 <script>
 
-
 const music = () => import("@/components/music.vue")
 export default {
     name:'sectiontwo',

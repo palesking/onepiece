@@ -36,7 +36,7 @@
 <script>
 import data from './data.js'
 export default {
-    name:'Content',
+    name:'content',
     data() {
         return {
             data,

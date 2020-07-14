@@ -99,7 +99,7 @@ export default {
             padding: 0;
         }
         .el-container{
-            padding: 0 200px;
+            padding: 10px 200px;
         }
     }
 </style>
