@@ -89,8 +89,7 @@ export default {
             margin: auto;
         }
         .header{
-            margin-top: 200px;
-           
+            margin-top: 120px;
             .header-content{
                 // margin-top: 200px;
             }

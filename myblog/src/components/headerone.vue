@@ -17,24 +17,20 @@
         </div> -->
         <ul class="layui-nav layui-this" lay-filter="">
             <li class="layui-nav-item">
-                <a href="">首页</a>
+                <router-link to='/index'>首页</router-link>
             </li>
             <li class="layui-nav-item ">
-                <a href="">文章</a>
+                <router-link to='/version'>文章</router-link>
             </li>
             <li class="layui-nav-item">
-                <a href="">音乐</a>
+                <router-link to='/music'>音乐</router-link>
             </li>
             <li class="layui-nav-item">
-                <a href="javascript:;">电影</a>
-                <!-- 二级菜单 -->
-                <!-- <dl class="layui-nav-child"> 
-                    <dd><a href="">移动模块</a></dd>
-                    <dd><a href="">后台模版</a></dd>
-                    <dd><a href="">电商平台</a></dd>
-                </dl> -->
+                <router-link to='/movie'>电影</router-link>
             </li>
-            <li class="layui-nav-item"><a href="">社区</a></li>
+            <li class="layui-nav-item">
+                <router-link to='/community'>社区</router-link>
+            </li>
         </ul>
         <el-backtop :bottom="100">
             <div class="upone">UP</div>
@@ -68,7 +64,7 @@ export default {
         overflow: hidden;
         margin: auto;
         // background-color: rgba(255, 255, 255, 0.2);
-        background-color: rgba(0, 127, 127, 0.5);
+        // background-color: rgba(0, 127, 127, 0.5);
         border: 1px solid rgba(127, 255, 255, 0.25);
         box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
         .layui-nav{

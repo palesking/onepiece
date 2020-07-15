@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>电影的主要内容</h1>
+        <h1>文章的主要内容</h1>
     </div>
 </template>
 <script>
