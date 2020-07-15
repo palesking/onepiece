@@ -33,7 +33,7 @@
 <script>
 import sectiontwo from '../components/sectiontwo'
 export default {
-  name:'About',
+  name:'about',
   data() {
     return {
       tabPosition: 'left'

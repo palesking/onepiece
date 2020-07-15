@@ -10,7 +10,7 @@
             <el-container class="main">
                 <el-main>
                     <el-row>
-                        <el-col :span="16">
+                        <el-col :span="14">
                             <sectionone></sectionone>
                         </el-col>
                     </el-row>
@@ -40,23 +40,9 @@ export default {
     .index{
         width: 100%;
         height: 100%;
-        background-color: #D3DCE6;
-        .home-content{
-            // position: relative;
-            // top: 0;
-            // left: 0;
-            // right: 0;
-            // bottom: 0;
-            // margin: auto;
-            // display: flex;
-            // justify-content: center;
-            // justify-content: space-between;
-            // width: 1400px;
-            // height: 100%;
-            // margin: auto;
-            // margin-top: 75px;
-            // margin-bottom: 50px;
-        }
+        background-image: url('../assets/images/bl1.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         .el-header, .el-footer {
             background-color: #B3C0D1;
             color: #333;
@@ -65,7 +51,6 @@ export default {
     }
 
         .el-aside {
-            // background-color: #D3DCE6;
             color: #333;
             text-align: center;
         }
@@ -104,10 +89,10 @@ export default {
             margin: auto;
         }
         .header{
-            height: 260px !important;
-            background-image: url('../assets/images/headerbg.webp');
+            margin-top: 200px;
+           
             .header-content{
-                margin-top: 200px;
+                // margin-top: 200px;
             }
         }
     }
