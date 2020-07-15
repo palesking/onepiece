@@ -53,16 +53,16 @@ export default {
                     lrc: '',
                 },
                 {
-                    name: '死性不改',
-                    artist: "Twins/Boy'z",
-                    url: 'http://music.palingking.com/2.mp3',
+                    name: '我乐意',
+                    artist: "许嵩",
+                    url: 'http://music.palingking.com/许嵩 - 我乐意.mp3',
                     cover: 'https://p1.music.126.net/AUGVPQ_rVrngDH9ocQrn3Q==/109951163613037822.jpg?param=300y300', // prettier-ignore
                     lrc: '',
                 },
                 {
-                    name: '倒数',
-                    artist: '邓紫棋',
-                    url: 'http://music.palingking.com/3.mp3',
+                    name: '雨幕',
+                    artist: '许嵩',
+                    url: 'http://music.palingking.com/许嵩 - 雨幕.mp3',
                     cover: 'http://music.palingking.com/3.jpg', // prettier-ignore
                     lrc: '',
                 },

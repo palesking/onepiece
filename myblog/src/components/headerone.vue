@@ -1,6 +1,6 @@
 <template>
     <div class="headerone">
-        <div class="header-content">
+        <!-- <div class="header-content">
             <el-menu
             mode="horizontal"
             background-color="#545c64"
@@ -14,7 +14,28 @@
                     <router-link to="/about" class="header-a">关于</router-link>
                 </el-menu-item>
             </el-menu>
-        </div>
+        </div> -->
+        <ul class="layui-nav layui-this" lay-filter="">
+            <li class="layui-nav-item">
+                <a href="">首页</a>
+            </li>
+            <li class="layui-nav-item ">
+                <a href="">文章</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="">音乐</a>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">电影</a>
+                <!-- 二级菜单 -->
+                <!-- <dl class="layui-nav-child"> 
+                    <dd><a href="">移动模块</a></dd>
+                    <dd><a href="">后台模版</a></dd>
+                    <dd><a href="">电商平台</a></dd>
+                </dl> -->
+            </li>
+            <li class="layui-nav-item"><a href="">社区</a></li>
+        </ul>
         <el-backtop :bottom="100">
             <div class="upone">UP</div>
         </el-backtop>
@@ -31,24 +52,35 @@ export default {
             ]
         }
     },
+    mounted() {
+        //注意：导航 依赖 element 模块，否则无法进行功能性操作
+        layui.use('element', function(){
+            var element = layui.element;
+            
+            //…
+        });
+    },
 }
 </script>
 <style lang="less" scoped>
     .headerone{
         background-color: #545c64;
+        overflow: hidden;
+        margin: auto;
+        .layui-nav{
+            width: 100%;
+            li{
+                float: left;
+            }
+        }
         .header-content{
-            width: 1400px;
             margin: auto;
             .aplayermusic{
               float: right;
             }
             .header-title{
-                // height:76px;
-                // line-height:76px;
                 .header-a{
                     display:block;
-                    // width:68px;
-                    // height:76px;
                     text-align:center;
                 }
             }

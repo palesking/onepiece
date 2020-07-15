@@ -30,7 +30,6 @@ export default {
 <style lang="less" scoped>
     .sectiontwo{
         width: 100%;
-        margin: auto;
         padding-top: 30px;
         .box-card{
             .wx{

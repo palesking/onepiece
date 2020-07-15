@@ -1,29 +1,22 @@
 <template>
     <div class="index">
         <el-container>
-            <el-header>
-                <el-row>
+            <el-header class="header">
+                <el-row class="header-content">
                     <el-col :span="24"><headerone/></el-col>
                 </el-row>
-                
             </el-header>
            
-            <el-container>
-                <el-row>
-                    <el-col :span="8">
-                        <el-aside class="">
-                            <sectiontwo></sectiontwo>
-                        </el-aside>
-                    </el-col>
-                    <el-col :span="16">
-                        <el-main class="">
+            <el-container class="main">
+                <el-main>
+                    <el-row>
+                        <el-col :span="16">
                             <sectionone></sectionone>
-                        </el-main>
-                    </el-col>
-                </el-row>
+                        </el-col>
+                    </el-row>
+                </el-main>
             </el-container>
-
-            <el-footer>Footer</el-footer>
+            <el-footer class="footer">Footer</el-footer>
         </el-container>
     </div>
 </template>
@@ -99,7 +92,23 @@ export default {
             padding: 0;
         }
         .el-container{
-            padding: 10px 200px;
+            // padding: 10px 200px;
+        }
+        .el-header{
+        }
+        .el-main{
+            padding: 0;
+        }
+        .header,.main,.footer{
+            width: 1280px !important;
+            margin: auto;
+        }
+        .header{
+            height: 260px !important;
+            background-image: url('../assets/images/headerbg.webp');
+            .header-content{
+                margin-top: 200px;
+            }
         }
     }
 </style>
