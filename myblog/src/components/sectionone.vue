@@ -24,6 +24,7 @@
         </el-row>
     </div>
 </template>
+
 <script>
 import data from './data.js'
 let date = new Date()

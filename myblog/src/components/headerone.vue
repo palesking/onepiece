@@ -60,9 +60,11 @@ export default {
 </script>
 <style lang="less" scoped>
     .headerone{
+        // position: fixed;
         background-color: #545c64;
         overflow: hidden;
         margin: auto;
+        // z-index: 1000;
         // background-color: rgba(255, 255, 255, 0.2);
         // background-color: rgba(0, 127, 127, 0.5);
         border: 1px solid rgba(127, 255, 255, 0.25);
