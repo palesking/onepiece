@@ -9,11 +9,7 @@
            
             <el-container class="main">
                 <el-main>
-                    <el-row>
-                        <el-col :span="14">
-                            <sectionone></sectionone>
-                        </el-col>
-                    </el-row>
+                    <sectionone></sectionone>
                 </el-main>
             </el-container>
             <el-footer class="footer">Footer</el-footer>
@@ -89,12 +85,16 @@ export default {
         .header,.main,.footer{
             width: 1280px !important;
             margin: auto;
+            // position: fixed;
+            // z-index: -1;
         }
         .header{
             margin-top: 120px;
             .header-content{
                 // margin-top: 200px;
             }
+        }
+        .main{
         }
     }
 </style>

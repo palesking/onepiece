@@ -1,7 +1,7 @@
 <template>
-    <div class="section" style="margin-top:10px;margin-bottom:20px;">
+    <div class="sectionone">
         <el-row>
-            <el-col :span="24" v-for="(item,index) in data.num" :key="index">
+            <el-col :span="12" v-for="(item,index) in data.num" :key="index">
                 <el-card shadow="hover" style="height:260px;" class="boxshadow">
                     <div style="display:flex; justify-content:space-around;">
                         <div class = 'section-img'>
@@ -65,8 +65,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    .section{
-        // width: 800px;
+    .sectionone{
+        margin-top:10px;
+        margin-bottom:20px;
+        float: right;
         a{
             color: green;
         }
