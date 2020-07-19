@@ -8,19 +8,15 @@
         name:'App'
     }
 </script>
-<style lang="less">
+<style lang="less" scoped>
     @import url("./assets/css/common.css");
 
     #app{
-        // width: 100%;
-        // height: 100%;
-        margin: 0 auto;
-        background-color: #E9EEF3;
-        #canvas{
-            position:fixed;
-            width:100%;
-            height:100%;
-            top:0;
-        }
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/images/bl1.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        
     }
 </style>

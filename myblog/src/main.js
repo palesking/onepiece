@@ -92,6 +92,11 @@ Vue.use(APlayer, {
   productionTip: true,
 });
 
+//iview4.0
+import ViewUI from 'view-design';
+import 'view-design/dist/styles/iview.css';
+Vue.use(ViewUI);
+
 
 Vue.prototype.axios = axios
 Vue.use(Pagination);
