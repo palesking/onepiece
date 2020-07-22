@@ -67,9 +67,9 @@ export default {
                     lrc: '',
                 },
                 {
-                    name: 'I Never Told You',
-                    artist: '陈冠希',
-                    url: 'http://music.palingking.com/4.mp3',
+                    name: 'We Are Never Ever Getting Back Together',
+                    artist: 'Taylor Swift',
+                    url: 'http://music.palingking.com/Taylor Swift - We Are Never Ever Getting Back Together.mp3',
                     cover: 'http://music.palingking.com/4.jpg', // prettier-ignore
                     lrc: '',
                 },
@@ -103,6 +103,10 @@ export default {
                 .aplayer-list-title{
                     position: absolute;
                     left: 80px;
+                    max-width: 100px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
                 }
                 .aplayer-list-author{
                     position: absolute;
