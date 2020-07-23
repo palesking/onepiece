@@ -66,9 +66,9 @@ export default {
 </script>
 <style lang="less" scoped>
     .sectionone{
-        margin-top:10px;
-        margin-bottom:20px;
-        float: right;
+        // margin-top:10px;
+        // margin-bottom:20px;
+        // float: right;
         a{
             color: green;
         }

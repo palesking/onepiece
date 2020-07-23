@@ -51,62 +51,62 @@ export default {
     },
     methods: {
       //if判断值,然后根据结果渲染
-      imge(){
-        let index = this.$route.params.aid
-        if(index == 0){
-          return {
-              0:'http://www.palingking.com/images/1.1.jpg',
-              1:'http://www.palingking.com/images/1.2.jpg',
-              2:'http://www.palingking.com/images/1.3.jpg',
-              3:'http://www.palingking.com/images/1.4.jpg',
-          }
-        }else if(index == 1){
-          return {
-                0:'https://www.palingking.com/images/2.1.png',
-                1:'https://www.palingking.com/images/2.2.png',
-                2:'https://www.palingking.com/images/2.3.png',
-                3:'https://www.palingking.com/images/2.4.png',
+        imge(){
+            let index = this.$route.params.aid
+            if(index == 0){
+                return {
+                    0:'http://www.palingking.com/images/1.1.jpg',
+                    1:'http://www.palingking.com/images/1.2.jpg',
+                    2:'http://www.palingking.com/images/1.3.jpg',
+                    3:'http://www.palingking.com/images/1.4.jpg',
+                }
+            }else if(index == 1){
+                return {
+                    0:'https://www.palingking.com/images/2.1.png',
+                    1:'https://www.palingking.com/images/2.2.png',
+                    2:'https://www.palingking.com/images/2.3.png',
+                    3:'https://www.palingking.com/images/2.4.png',
+                }
+            }else if(index == 2){
+                return {
+                    0:'http://www.palingking.com/images/3.1.png',
+                    1:'http://www.palingking.com/images/3.2.png',
+                    2:'http://www.palingking.com/images/3.3.png'
             }
-        }else if(index == 2){
-          return {
-                  0:'http://www.palingking.com/images/3.1.png',
-                  1:'http://www.palingking.com/images/3.2.png',
-                  2:'http://www.palingking.com/images/3.3.png'
-          }
-        }else if(index == 3){
-         return {
-                  0:'http://www.palingking.com/images/4.1.png',
-                  1:'http://www.palingking.com/images/4.2.png',
-                  2:'http://www.palingking.com/images/4.3.png'
-          }
-        }   
-      },
-      links(){
-        let index = this.$route.params.aid
-        if(index == 0){
-          return `http://textone.palingking.com/`
-        }else if(index == 1){
-          return `http://texttwo.palingking.com/`
-        }else if(index == 2){
-          return `http://textthree.palingking.com/`
-        }else if(index == 3){
-         return {
-          }
-        }  
-      },
-      codes(){
-        let index = this.$route.params.aid
-        if(index == 0){
-          return `https://github.com/palesking/onepiece/tree/master/textone`
-        }else if(index == 1){
-          return `https://github.com/palesking/onepiece/tree/master/texttwo`
-        }else if(index == 2){
-          return `https://github.com/palesking/onepiece/tree/master/textthree`
-        }else if(index == 3){
-         return {
-          }
+            }else if(index == 3){
+                return {
+                    0:'http://www.palingking.com/images/4.1.png',
+                    1:'http://www.palingking.com/images/4.2.png',
+                    2:'http://www.palingking.com/images/4.3.png'
+                }
+            }   
+        },
+        links(){
+            let index = this.$route.params.aid
+            if(index == 0){
+            return `http://textone.palingking.com/`
+            }else if(index == 1){
+            return `http://texttwo.palingking.com/`
+            }else if(index == 2){
+            return `http://textthree.palingking.com/`
+            }else if(index == 3){
+            return {
+            }
+            }  
+        },
+        codes(){
+            let index = this.$route.params.aid
+            if(index == 0){
+            return `https://github.com/palesking/onepiece/tree/master/textone`
+            }else if(index == 1){
+            return `https://github.com/palesking/onepiece/tree/master/texttwo`
+            }else if(index == 2){
+            return `https://github.com/palesking/onepiece/tree/master/textthree`
+            }else if(index == 3){
+            return {
+            }
+            }
         }
-      }
     },
 }
 </script>
@@ -155,5 +155,5 @@ export default {
     }
     .content::-webkit-scrollbar{
         display: none;
-      }
+    }
 </style>

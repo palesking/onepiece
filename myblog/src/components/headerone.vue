@@ -69,7 +69,10 @@ export default {
         // background-color: rgba(0, 127, 127, 0.5);
         //border: 1px solid rgba(127, 255, 255, 0.25);
         //box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
-        width: 1280px;
+        width: 1100px;
+        ul{
+            overflow: hidden;
+        }
         .layui-nav{
             width: 100%;
             li{

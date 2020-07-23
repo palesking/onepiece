@@ -7,7 +7,7 @@
             </Header>
             <Layout class="index-mian">
                 <Sider>
-                    <sectionone></sectionone>
+                    <!-- <sectionone></sectionone> -->
                 </Sider>
                 <Content>
                     <div class="content-box">
@@ -16,11 +16,11 @@
                     </div>
                 </Content>
             </Layout>
-            <Footer class="index-footer">
+            <!-- <Footer class="index-footer">
                 Copyright © 2020 gemframework.com
                 <a href="">all rights reserved.</a>
                 <span>Version 1.0.5</span>
-            </Footer>
+            </Footer> -->
         </Layout>
 
     </div>
@@ -47,11 +47,12 @@ export default {
         .ivu-layout-header{
             position: fixed;
             padding: 0;
-            height: 50px;
-            line-height: 50px;
-            z-index: 1000;
+            height: 60px;
+            line-height: 60px;
+            // z-index: 1000;
             width: 100%;
-            overflow: hidden;
+            // overflow: hidden;
+            background: transparent;
         }
         .ivu-layout-sider{
             transition: all 0.3s linear;
@@ -64,14 +65,18 @@ export default {
         }
         .index-header{
             position: fixed;
-            margin: auto;
+            // margin: auto;
             width: 100%;
         }
         .index-mian{
             position: fixed;
-            top: 50px;
-            width: 100%;
+            top: 65px;
+            // top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            width: 1100px;
             height: 100%;
+            margin: auto;
         }
         .index-footer{
             position: fixed;
@@ -88,9 +93,40 @@ export default {
             color: #666;
             box-sizing: border-box;
             border-top: 1px solid #f5f7f9;
+           
             span{
                 float: right;
             }
+        }
+        .content-box{
+            height: 1000px;
+             margin-bottom: 100px;
+        }
+        .ivu-layout-content::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+        .ivu-layout-content::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius   : 10px;
+            background-color: skyblue;
+            background-image: -webkit-linear-gradient(
+                45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+        }
+        .ivu-layout-content::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background   : #ededed;
+            border-radius: 10px;
         }
         // .el-header, .el-footer {
         //     background-color: #B3C0D1;
