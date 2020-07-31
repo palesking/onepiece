@@ -14,9 +14,9 @@
     #app{
         width: 100%;
         height: 100%;
-        background-image: url('./assets/images/bl1.png');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        // background-image: url('./assets/images/bl1.png');
+        // background-repeat: no-repeat;
+        // background-attachment: fixed;
         
     }
 </style>

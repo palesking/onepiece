@@ -74,9 +74,9 @@ export default {
                     lrc: '',
                 },
                 {
-                    name: '来自天堂的魔鬼',
-                    artist: '邓紫棋',
-                    url: 'http://music.palingking.com/5.mp3',
+                    name: '爱的飞行日记',
+                    artist: '周杰伦',
+                    url: 'http://music.palingking.com/周杰伦 - 爱的飞行日记.ogg',
                     cover: 'http://music.palingking.com/3.jpg', // prettier-ignore
                     lrc: '',
                 },
