@@ -1,24 +1,24 @@
 <template>
     <div class="home">
-        <testone></testone>
+        <!-- <testone></testone> -->
         <!-- <testtwo></testtwo> -->
-        <testthree></testthree>
+        <!-- <testthree></testthree> -->
         <!-- <testfour></testfour> -->
         <user></user>
     </div>
 </template>
 <script>
-import testone from '@/components/testone.vue'
+// import testone from '@/components/testone.vue'
 // import testtwo from '@/components/testtwo.vue'
-import testthree from '@/components/testthree.vue'
+// import testthree from '@/components/testthree.vue'
 // import testfour from '@/components/testfour.vue'
 import user from '@/components/user.vue'
 export default {
     name:'home',
     components:{
-        testone,
+        // testone,
         // testtwo,
-        testthree,
+        // testthree,
         // testfour,
         user
     }

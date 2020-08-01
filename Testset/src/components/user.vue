@@ -1,9 +1,10 @@
 <template>
-    <div class="basic_user publicone">
+    <div class="user">
+        <h1>测试文件</h1>
         <div class="user-content">
              <Row>
                 <Col span="24">
-                    <Card dis-hover :bordered=bordered>
+                    <Card dis-hover :bordered=bordered style="padding:0 200px 200px 200px;">
                         <table class="layui-hide" id="test" lay-filter="test"></table>
                         <script type="text/html" id="toolbarDemo">
                             <div class="layui-btn-container">
@@ -23,6 +24,10 @@
                         <script type="text/html" id="checkboxTpl">
                             <input type="checkbox" name="lock" title="锁定" lay-filter="lockDemo">
                         </script>
+                        <script type="text/html" id="moveBar">
+                            <a class="layui-btn layui-btn-xs" lay-event="moveUp"><i class="layui-icon layui-icon-up"></i>上移</a>
+                            <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="moveDown"><i class="layui-icon layui-icon-down"></i>下移</a>
+                        </script>
                     </Card>
                 </Col>
             </Row>    
@@ -38,7 +43,7 @@ export default {
             bordered:false,
             alldata: [
                 {
-                    "id": "10001",
+                    "id": 10001,
                     "username": "杜甫",
                     "email": "xianxin@layui.com",
                     "sex": "男",
@@ -50,12 +55,12 @@ export default {
                     "joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10002"
+                    "id": 10002
                     ,"username": "李白"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
                     ,"city": "浙江杭州"
-                    ,"sign": "人生恰似一场修行"
+                    ,"sign": "是撒发生"
                     ,"experience": "12"
                     ,"ip": "192.168.0.8"
                     ,"logins": "106"
@@ -63,7 +68,7 @@ export default {
                     ,"LAY_CHECKED": true
                 }, 
                 {
-                    "id": "10003"
+                    "id": 10003
                     ,"username": "王勃"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -75,10 +80,10 @@ export default {
                     ,"joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10004"
+                    "id": 10004
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
+                    ,"sex": "女"
                     ,"city": "浙江杭州"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "666"
@@ -87,10 +92,10 @@ export default {
                     ,"joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10005"
+                    "id": 10005
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
+                    ,"sex": "女"
                     ,"city": "浙江杭州"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "86"
@@ -99,7 +104,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10006"
+                    "id": 10006
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -111,10 +116,10 @@ export default {
                     ,"joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10007"
+                    "id": 10007
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
+                    ,"sex": "女"
                     ,"city": "浙江杭州"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "16"
@@ -123,7 +128,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 }, 
                 {
-                    "id": "10008"
+                    "id": 10008
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -135,7 +140,19 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10009
+                    ,"username": "贤心"
+                    ,"email": "xianxin@layui.com"
+                    ,"sex": "女"
+                    ,"city": "浙江杭州"
+                    ,"sign": "人生恰似一场修行"
+                    ,"experience": "106"
+                    ,"ip": "192.168.0.8"
+                    ,"logins": "106"
+                    ,"joinTime": "2016-10-14"
+                },
+                {
+                    "id": 10010
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -147,7 +164,19 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10011
+                    ,"username": "贤心"
+                    ,"email": "xianxin@layui.com"
+                    ,"sex": "女"
+                    ,"city": "浙江杭州"
+                    ,"sign": "人生恰似一场修行"
+                    ,"experience": "106"
+                    ,"ip": "192.168.0.8"
+                    ,"logins": "106"
+                    ,"joinTime": "2016-10-14"
+                },
+                {
+                    "id": 10012
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -159,7 +188,19 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10013
+                    ,"username": "贤心"
+                    ,"email": "xianxin@layui.com"
+                    ,"sex": "女"
+                    ,"city": "浙江杭州"
+                    ,"sign": "人生恰似一场修行"
+                    ,"experience": "106"
+                    ,"ip": "192.168.0.8"
+                    ,"logins": "106"
+                    ,"joinTime": "2016-10-14"
+                },
+                {
+                    "id": 10014
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -171,7 +212,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10015
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -183,7 +224,19 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10016
+                    ,"username": "贤心"
+                    ,"email": "xianxin@layui.com"
+                    ,"sex": "女"
+                    ,"city": "浙江杭州"
+                    ,"sign": "人生恰似一场修行"
+                    ,"experience": "106"
+                    ,"ip": "192.168.0.8"
+                    ,"logins": "106"
+                    ,"joinTime": "2016-10-14"
+                },
+                {
+                    "id": 10017
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -195,7 +248,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10018
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -207,7 +260,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10019
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -219,7 +272,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10020
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -231,7 +284,7 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10021
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
@@ -243,10 +296,10 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10022
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
+                    ,"sex": "女"
                     ,"city": "浙江杭州"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "106"
@@ -255,11 +308,11 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10023
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
-                    ,"city": "浙江杭州"
+                    ,"city": "上海"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "106"
                     ,"ip": "192.168.0.8"
@@ -267,59 +320,11 @@ export default {
                     ,"joinTime": "2016-10-14"
                 },
                 {
-                    "id": "10008"
+                    "id": 10024
                     ,"username": "贤心"
                     ,"email": "xianxin@layui.com"
                     ,"sex": "男"
-                    ,"city": "浙江杭州"
-                    ,"sign": "人生恰似一场修行"
-                    ,"experience": "106"
-                    ,"ip": "192.168.0.8"
-                    ,"logins": "106"
-                    ,"joinTime": "2016-10-14"
-                },
-                {
-                    "id": "10008"
-                    ,"username": "贤心"
-                    ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
-                    ,"city": "浙江杭州"
-                    ,"sign": "人生恰似一场修行"
-                    ,"experience": "106"
-                    ,"ip": "192.168.0.8"
-                    ,"logins": "106"
-                    ,"joinTime": "2016-10-14"
-                },
-                {
-                    "id": "10008"
-                    ,"username": "贤心"
-                    ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
-                    ,"city": "浙江杭州"
-                    ,"sign": "人生恰似一场修行"
-                    ,"experience": "106"
-                    ,"ip": "192.168.0.8"
-                    ,"logins": "106"
-                    ,"joinTime": "2016-10-14"
-                },
-                {
-                    "id": "10008"
-                    ,"username": "贤心"
-                    ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
-                    ,"city": "浙江杭州"
-                    ,"sign": "人生恰似一场修行"
-                    ,"experience": "106"
-                    ,"ip": "192.168.0.8"
-                    ,"logins": "106"
-                    ,"joinTime": "2016-10-14"
-                },
-                {
-                    "id": "10008"
-                    ,"username": "贤心"
-                    ,"email": "xianxin@layui.com"
-                    ,"sex": "男"
-                    ,"city": "浙江杭州"
+                    ,"city": "北京"
                     ,"sign": "人生恰似一场修行"
                     ,"experience": "106"
                     ,"ip": "192.168.0.8"
@@ -333,13 +338,14 @@ export default {
                 {field: 'id', title: 'ID', sort: true},
                 {field: 'username', title: '用户名'},
                 {field: 'email', title: '邮箱'},
-                {field: 'sign', title: '签名'},
-                {field: 'sex', title: '性别'},
-                {field: 'city', title: '城市'},
-                {field: 'experience', title: '积分', sort: true},
+                {field: 'sign', title: '签名',filter: true},
+                {field: 'sex', title: '性别',filter: true},
+                {field: 'city', title: '城市',filter: true},
+                {field: 'experience', title: '积分', sort: true,totalRow: true},
                 {fixed: 'right', title:'操作', toolbar: '#barDemo'},
                 {field:'sex', title:'性别', templet: '#switchTpl', unresize: true},
-                {field:'lock', title:'是否锁定', templet: '#checkboxTpl', unresize: true}
+                {field:'lock', title:'是否锁定', templet: '#checkboxTpl', unresize: true},
+                {field:'tootar',title:'移动',toolbar: '#moveBar',align: 'center',type: 'toolbar'}
             ]],
         }
     },
@@ -370,14 +376,29 @@ export default {
         }
     },
     mounted() {
-        
-        layui.use('table', ()=>{
+        layui.config({base:'layui/tablePlug/'}).use(['table','tablePlug'], ()=>{
             var table = layui.table;
             var form = layui.form;
+            var tablePlug = layui.tablePlug;
+
+            // 第三个参数，主键名称，如果表格的主键名不是'id'那么这个参数必须制定，以为一般来说init会在render之前执行， 
+            // 所以如果不指定，他找不到表格配置信息，也就不知道里面配合的主键名称是什么，导致变成默认的'id'后面render出来就没有效果了
+            tablePlug.tableCheck.init('test',[{"id": 10000,}, { "id": 10001}],'id');
+
+
             //展示已知数据
             table.render({
                 elem: '#test',
                 toolbar: '#toolbarDemo', //开启头部工具栏，并为其绑定左侧模板
+                even: true,
+                checkStatus: {},
+                headers: {
+                    pageCompute: true
+                },
+                //开启合计
+                totalRow: true,
+                //反转
+                // reversal: true,
                 defaultToolbar: ['filter', 'exports', 'print', { //自定义头部工具栏右侧图标。如无需自定义，去除该参数即可
                     title: '提示',
                     layEvent: 'LAYTABLE_TIPS',
@@ -389,6 +410,8 @@ export default {
                 cellMinWidth: 80,
                 even: true,
                 page: true, //是否显示分页
+                colFilterRecord: true, //表格筛选记忆
+                smartReloadModel: true, //表格智能重载
                 //,limits: [5, 7, 10]
                 //,limit: 5 //每页默认显示的数量
                 done: function(){
@@ -396,7 +419,18 @@ export default {
                     this.rowDrop()
                     this.columnDrop()
                     $('table').css('width', '100%');
-                }.bind(this)
+                }.bind(this),
+                //表格的主键
+                primaryKey: 'id',
+                //头部工具栏固定
+                checkStatus: {
+                    // 原始已经选中的记录的主键值集合
+                    default: [10001, 10002, 10007, 10009, 10013, 10015]
+                },
+                checkDisabled: {
+                    enabled: true,
+                    data: [10000, 10001, 10002, 10003, 10004, 10005, 10009]
+                }
             });
             //头工具栏事件
             table.on('toolbar(test)', function(obj){
@@ -455,10 +489,14 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    .basic_user{
+    .user{
         position: relative;
         top: 40px;
         transition: all 0.2s linear;
         padding-bottom: 100px;
+        .user-content{
+            // width: 1200px;
+            // margin: auto;
+        }
     }
 </style>
