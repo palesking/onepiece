@@ -6,13 +6,13 @@
                 <Col span="24">
                     <Card dis-hover :bordered=bordered style="padding:0 200px 200px 200px;">
                         <table class="layui-hide" id="test" lay-filter="test"></table>
-                        <script type="text/html" id="toolbarDemo">
+                        <!-- <script type="text/html" id="toolbarDemo">
                             <div class="layui-btn-container">
                                 <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
                                 <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
                                 <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
                             </div>
-                        </script>
+                        </script> -->
                         <script type="text/html" id="barDemo">
                             <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
                             <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
@@ -27,6 +27,32 @@
                         <script type="text/html" id="moveBar">
                             <a class="layui-btn layui-btn-xs" lay-event="moveUp"><i class="layui-icon layui-icon-up"></i>上移</a>
                             <a class="layui-btn layui-btn-warm layui-btn-xs" lay-event="moveDown"><i class="layui-icon layui-icon-down"></i>下移</a>
+                        </script>
+                        <script type="text/html" id="toolbarDemo">
+                            <div class="layui-btn-container layui-inline">
+                                <span class="layui-btn layui-btn-sm" lay-event="getChecked">获得选中的数据</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getCheckedWithCache">获得选中的数据带缓存数据(跨页)</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="deleteSome">批量删除</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="1">第1页</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="2">第2页</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="reload" data-url="data_none">无数据</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="reload">重载</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabled">设置10003,10004,10010不可选</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabledNull">取消不可选</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="openSelect">弹出选择</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="openIframeSelect">弹出iframe选择</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="addTempData">添加临时数据</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getTempData">获得临时数据</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-danger" lay-event="cleanTempData">清空临时数据</span>
+
+                                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversion">行列转换(初始实现)</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversionPro">行列转换(封装)</span>
+                                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="testUpdate">积分清零</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="testUpdate10">女性积分加100</span>
+                            </div>
+                            <div class="layui-inline">
+                                <span><span style="color: red;">※</span>url模式测试用的是json文件所以翻页请用这里按钮，不要用table的中的laypage组件，实际开发中不会有这个问题</span>
+                            </div>
                         </script>
                     </Card>
                 </Col>
@@ -379,7 +405,8 @@ export default {
         layui.config({base:'layui/tablePlug/'}).use(['table','tablePlug'], ()=>{
             var table = layui.table;
             var form = layui.form;
-            var tablePlug = layui.tablePlug;
+            var tablePlug = layui.tablePlug,
+                formSelects = layui.formSelects; //多选下拉插件
 
             // 第三个参数，主键名称，如果表格的主键名不是'id'那么这个参数必须制定，以为一般来说init会在render之前执行， 
             // 所以如果不指定，他找不到表格配置信息，也就不知道里面配合的主键名称是什么，导致变成默认的'id'后面render出来就没有效果了
@@ -430,6 +457,14 @@ export default {
                 checkDisabled: {
                     enabled: true,
                     data: [10000, 10001, 10002, 10003, 10004, 10005, 10009]
+                },
+                parseData: function (ret) {
+                    return {
+                        code: ret.code,
+                        msg: ret.msg,
+                        count: ret.data ? (ret.data.total || 0) : 0,
+                        data: ret.data ? (ret.data.list || []) : []
+                    }
                 }
             });
             //头工具栏事件
