@@ -1,7 +1,25 @@
 <template>
     <div class="index">
         <el-container class="index-content">
-            <el-header class="index-header"><p>Header</p></el-header>
+            <el-header class="index-header">
+                <div class="header-content container">
+                    <a href="/" class="logo testone">
+                        <img src="../assets/logo2.png" alt="">
+                    </a>
+                    <button></button>
+                    <div>
+                        <ul>
+                            <li>首页</li>
+                            <li>说说</li>
+                            <li>分类</li>
+                            <li>相册</li>
+                            <li>生活</li>
+                            <li>心得</li>
+                            <li>关于</li>
+                        </ul>
+                    </div>
+                </div>
+            </el-header>
             <el-main>Main</el-main>
             <el-footer>Footer</el-footer>
         </el-container>
@@ -46,13 +64,27 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@media (min-width: 1200px) {
+    .container{
+        max-width: 1140px;
+    }
+}
     .index{
         .index-content{
             .index-header{
                 background: rgba(255,255,255,0.85);
-                padding: 1rem;
-                p{
-                    font-size: 20px;
+                padding: 8px 16px;
+                .header-content{
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                    margin-right: auto;
+                    margin-left: auto;
+                    .logo{
+                        display: inline-block;
+                    }
                 }
             }
         }

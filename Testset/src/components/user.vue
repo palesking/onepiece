@@ -361,16 +361,16 @@ export default {
             allcols:[[ 
                 //标题栏
                 {type: 'checkbox'},
-                {field: 'id', title: 'ID', sort: true},
-                {field: 'username', title: '用户名'},
-                {field: 'email', title: '邮箱'},
-                {field: 'sign', title: '签名',filter: true},
-                {field: 'sex', title: '性别',filter: true},
-                {field: 'city', title: '城市',filter: true},
-                {field: 'experience', title: '积分', sort: true,totalRow: true},
-                {fixed: 'right', title:'操作', toolbar: '#barDemo'},
-                {field:'sex', title:'性别', templet: '#switchTpl', unresize: true},
-                {field:'lock', title:'是否锁定', templet: '#checkboxTpl', unresize: true},
+                {field: 'id', title: 'ID', sort: true,width:80,align:'center'},
+                {field: 'username', title: '用户名',width:80,align:'center'},
+                {field: 'email', title: '邮箱',align:'center'},
+                {field: 'sign', title: '签名',filter: true,align:'center'},
+                {field: 'sex', title: '性别',filter: true,width:60,align:'center'},
+                {field: 'city', title: '城市',filter: true,align:'center'},
+                {field: 'experience', title: '积分', sort: true,totalRow: true,align:'center'},
+                {fixed: 'right', title:'操作', toolbar: '#barDemo',align:'center'},
+                {field:'sex', title:'性别', templet: '#switchTpl', unresize: true,align:'center'},
+                {field:'lock', title:'是否锁定', templet: '#checkboxTpl', unresize: true,align:'center'},
                 {field:'tootar',title:'移动',toolbar: '#moveBar',align: 'center',type: 'toolbar'}
             ]],
         }
@@ -403,15 +403,15 @@ export default {
     },
     mounted() {
         layui.config({base:'layui/tablePlug/'}).use(['table','tablePlug'], ()=>{
-            var table = layui.table;
-            var form = layui.form;
-            var tablePlug = layui.tablePlug,
-                formSelects = layui.formSelects; //多选下拉插件
-
+            var table = layui.table,
+                form = layui.form,
+                tablePlug = layui.tablePlug,
+                //多选下拉插件
+                formSelects = layui.formSelects; 
+                
             // 第三个参数，主键名称，如果表格的主键名不是'id'那么这个参数必须制定，以为一般来说init会在render之前执行， 
             // 所以如果不指定，他找不到表格配置信息，也就不知道里面配合的主键名称是什么，导致变成默认的'id'后面render出来就没有效果了
             tablePlug.tableCheck.init('test',[{"id": 10000,}, { "id": 10001}],'id');
-
 
             //展示已知数据
             table.render({
@@ -530,8 +530,6 @@ export default {
         transition: all 0.2s linear;
         padding-bottom: 100px;
         .user-content{
-            // width: 1200px;
-            // margin: auto;
         }
     }
 </style>
