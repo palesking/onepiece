@@ -1,14 +1,40 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/message/message",
+    "pages/contact/contact",
+    "pages/details/details"
   ],
   "subPackages": [],
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "uni-app",
-    "navigationBarBackgroundColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "小程序",
+    "navigationBarBackgroundColor": "#FF9966",
+    "backgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
+        "text": "信息",
+        "pagePath": "pages/message/message",
+        "iconPath": "static/tabs/message.png",
+        "selectedIconPath": "static/tabs/message-active.png"
+      },
+      {
+        "text": "我们",
+        "pagePath": "pages/contact/contact",
+        "iconPath": "./static/tabs/contact.png",
+        "selectedIconPath": "./static/tabs/contact-active.png"
+      }
+    ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap48.json"
 }

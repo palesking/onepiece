@@ -50,8 +50,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"name": "详情页",
+					"query": "id=10",
+					"id": 0,
+					"pathName": "pages/details/details"
+				}
+			]
 		}
 	}
 }
