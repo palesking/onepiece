@@ -16,5 +16,9 @@
 </script>
 
 <style>
+	@import url("./static/fonts/iconfont.css");
 	/*每个页面公共css */
+	.box2{
+		background-color: #FFC0CB;
+	}
 </style>

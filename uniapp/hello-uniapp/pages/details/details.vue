@@ -25,6 +25,9 @@
 		<button type="default" plain>按钮</button>
 		<button type="default" disabled>按钮</button>
 		<button type="default" loading>按钮</button>
+		<image src="../../static/cxk.gif"></image>
+		<image src="../../static/cxk.gif" mode="aspectFill"></image>
+		<image src="../../static/cxk.gif" mode="aspectFit"></image>
 	</view>
 </template>
 
