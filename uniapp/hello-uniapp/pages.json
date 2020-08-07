@@ -35,6 +35,10 @@
 				"navigationBarBackgroundColor":"#DD524D"
 			}
 		}
+        ,{
+            "path" : "pages/list/list",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle":"white",
