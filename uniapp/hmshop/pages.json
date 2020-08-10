@@ -17,6 +17,29 @@
         {
             "path" : "pages/news/news",
             "style" : {}
+        },
+        {
+            "path" : "pages/goods/goods",
+            "style" : {
+				"navigationBarTitleText":"商品列表",
+				"enablePullDownRefresh":true
+			}
+        },
+        {
+            "path" : "components/goodsList/goodsList",
+            "style" : {
+				
+			}
+        }
+        ,{
+            "path" : "pages/contact/contact",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/pics/pics",
+            "style" : {
+				"navigationBarTitleText":"社区图片"
+			}
         }
     ],
 	"globalStyle": {

@@ -7,53 +7,56 @@
 		</swiper>
 		<!-- 导航区域 -->
 		<view class="nav">
-			<view class="nav-item">
-				<view class="iconfont icon-ziyuan"></view>
-				<text>黑马超市</text>
-			</view>
-			<view class="nav-item">
-				<view class="iconfont icon-guanyuwomen"></view>
-				<text>联系我们</text>
-			</view>
-			<view class="nav-item">
-				<view class="iconfont icon-tupian"></view>
-				<text>社区图片</text>
-			</view>
-			<view class="nav-item">
-				<view class="iconfont icon-shipin"></view>
-				<text>学习视频</text>
+			<view class="nav-item" v-for="(item,index) in navdatas" :key='index' @click="navClick(item.path)">
+				<view :class="item.icon"></view>
+				<text>{{item.title}}</text>
 			</view>
 		</view>
 		<!-- 推荐商品 -->
 		<view class="hot-goods">
 			<view class="title">推荐商品</view>
-			<view class="goods-list">
-				<view class="goods-item" v-for="item in goods" :key='item.id'>
-					<image :src="item.img_url" mode=""></image>
-					<view class="price">
-						<text>￥{{item.sell_price}}</text>
-						<text>￥{{item.market_price}}</text>
-					</view>
-					<view class="name">{{item.title}}</view>
-				</view>
-			</view>
+			<goodsList :goods='goods'></goodsList>
 		</view>
-		<!-- 推荐商品 -->
-		
 	</view>
 </template>
 
 <script>
+	import goodsList from '../../components/goodsList/goodsList.vue'
 	export default {
 		data() {
 			return {
 				swipers:[],
-				goods:[]
+				goods:[],
+				navdatas:[
+					{
+						icon:"iconfont icon-ziyuan",
+						title:"黑马超市",
+						path:"/pages/goods/goods"
+					},
+					{
+						icon:"iconfont icon-guanyuwomen",
+						title:"联系我们",
+						path:"/pages/contact/contact"
+					},
+					{
+						icon:"iconfont icon-tupian",
+						title:"社区图片",
+						path:"/pages/pics/pics"
+					},
+					{
+						icon:"iconfont icon-shipin",
+						title:"学习视频",
+						path:"/pages/goods/goods"
+					}
+				]
 			}
 		},
 		onLoad() {
 			this.getlunbo()
 			this.getHotGoods()  
+		},
+		components:{
+			goodsList
 		},
 		methods: {
 			//获取轮播图数据
@@ -86,13 +89,19 @@
 				})
 				this.goods = res.data.message
 				console.log(res)
+			},
+			//导航点击跳转函数
+			navClick(url){
+				uni.navigateTo({
+					url
+				})
+				console.log(url)
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
-	// @import url("../../uni.scss")
 	.home{
 		swiper{
 			width: 750rpx;
@@ -138,43 +147,7 @@
 				background: #fff;
 				margin: 7rpx 0;
 			}
-			.goods-list{
-				padding: 0 15rpx;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				.goods-item{
-					background: #fff;
-					width: 355rpx;
-					margin: 10rpx 0;
-					padding: 15rpx;
-					box-sizing: border-box;
-					image{
-						display: block;
-						width: 100%;
-						height: 150px;
-						margin: 0 auto;
-						padding: 10px 0;
-					}
-					.price{
-						color: $shop-color;
-						font-size: 36rpx;
-						padding: 5px 0;
-						text:nth-child(2){
-							color: #ccc;
-							font-size: 28rpx;
-							margin-left: 15rpx;
-							text-decoration: line-through;
-						}
-					}
-					.name{
-						font-size: 28rpx;
-						line-height: 50rpx;
-						
-						
-					}
-				}
-			}
+			
 		}
 	}
 	
