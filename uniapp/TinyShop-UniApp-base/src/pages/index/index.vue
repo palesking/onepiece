@@ -364,6 +364,7 @@ export default {
 		},
 		// 获取主页数据
 		async getIndexList(type) {
+			console.log(type)
 			await this.$http
 				.get(`${indexList}`, {})
 				.then(async r => {
