@@ -1,14 +1,17 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+		<uni-drawer :visible="true">
+		    <view style="padding:30rpx;">
+		        <view class="uni-title">抽屉式导航</view>
+		    </view>
+		</uni-drawer>
 	</view>
 </template>
 
 <script>
+	import uniDrawer from "@/components/uni-drawer/uni-drawer.vue"
 	export default {
+		components: {uniDrawer},
 		data() {
 			return {
 				title: 'Hello'
