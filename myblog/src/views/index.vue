@@ -6,8 +6,8 @@
                     <a href="/" class="logo testone">
                         <img src="../assets/logo2.png" alt="">
                     </a>
-                    <button></button>
-                    <div>
+                    <!-- <button></button> -->
+                    <div class="content-title">
                         <ul>
                             <li>首页</li>
                             <li>说说</li>
@@ -76,14 +76,25 @@ export default {
                 padding: 8px 16px;
                 .header-content{
                     display: flex;
-                    align-items: center;
-                    width: 100%;
+                    // align-items: center;
+                    // width: 100%;
+                    width: 1140px;
+                    margin: auto;
                     padding-right: 15px;
                     padding-left: 15px;
-                    margin-right: auto;
-                    margin-left: auto;
+                    height: 55px;
                     .logo{
                         display: inline-block;
+                    }
+                    .content-title{
+                        
+                        ul{
+                            display: flex;
+                            flex-flow: row;
+                            li{
+
+                            }
+                        }
                     }
                 }
             }
