@@ -9,18 +9,33 @@
                     <!-- <button></button> -->
                     <div class="content-title">
                         <ul>
-                            <li>首页</li>
-                            <li>说说</li>
-                            <li>分类</li>
-                            <li>相册</li>
-                            <li>生活</li>
-                            <li>心得</li>
-                            <li>关于</li>
+                            <li><a href="">首页</a></li>
+                            <li><a href="">说说</a></li>
+                            <li><a href="">分类</a></li>
+                            <li><a href="">相册</a></li>
+                            <li><a href="">生活</a></li>
+                            <li><a href="">心得</a></li>
+                            <li><a href="">关于</a></li>
                         </ul>
                     </div>
                 </div>
             </el-header>
-            <el-main>Main</el-main>
+            <el-main class="index-main">
+                <div class="main-content">
+                    <el-row>
+                        <el-col :span="16">
+                            <el-carousel indicator-position="outside">
+                                <el-carousel-item v-for="item in 3" :key="item">
+                                <h3>{{ item }}</h3>
+                                </el-carousel-item>
+                            </el-carousel>
+                        </el-col>
+                        <el-col :span="8">
+                            <div class="grid-content bg-purple-light">
+                        </div></el-col>
+                    </el-row>
+                </div>
+            </el-main>
             <el-footer>Footer</el-footer>
         </el-container>
         <!-- <Layout>
@@ -64,39 +79,86 @@ export default {
 </script>
 
 <style lang="less" scoped>
-@media (min-width: 1200px) {
-    .container{
-        max-width: 1140px;
-    }
-}
+// @media (min-width: 1200px) {
+//     .container{
+//         max-width: 1140px;
+//     }
+// }
+.el-col {
+    border-radius: 4px;
+  }
+  .bg-purple-dark {
+    background: #99a9bf;
+  }
+  .bg-purple {
+    background: #d3dce6;
+  }
+  .bg-purple-light {
+    background: #e5e9f2;
+  }
+  .grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+  }
     .index{
         .index-content{
+            background-color: #e9eaed;
             .index-header{
                 background: rgba(255,255,255,0.85);
                 padding: 8px 16px;
+                height: auto !important;
+                align-items: center;
                 .header-content{
                     display: flex;
-                    // align-items: center;
-                    // width: 100%;
                     width: 1140px;
                     margin: auto;
                     padding-right: 15px;
                     padding-left: 15px;
-                    height: 55px;
+                    // height: 55px;
                     .logo{
                         display: inline-block;
+                        padding: 5px 0;
+                        margin-right: 16px;
+                        img{
+                            height: 45px;
+                            vertical-align: middle;
+                        }
                     }
                     .content-title{
-                        
+                        display: flex;
+                        flex-basis: auto;
+                        justify-content: flex-end;
+                        flex-grow: 1;
+                        align-items: center;
+                        box-sizing: border-box;
+                        height: 40px;
                         ul{
                             display: flex;
-                            flex-flow: row;
+                            // flex-flow: row;
+                            flex-direction: row;
+                            padding-left: 0;
+                            margin-bottom: 0;
+                            
                             li{
-
+                                box-sizing: border-box;
+                                a{
+                                    display: block;
+                                    width: 102px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    color: #ff6700 !important;
+                                    padding: 8px 16px;
+                                }
                             }
                         }
                     }
                 }
+            }
+            .index-main{
+                background-color: #e9eaed;
+                width: 1140px;
+                margin: auto;
+                margin-top: 16px;
             }
         }
         // .ivu-layout-header{

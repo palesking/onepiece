@@ -646,23 +646,21 @@ export default {
 		// 获取订单详情
 		async getOrderDetail() {
 			await this.$http
-				.get(`${orderDetail}`, {
-					id: this.order_id
-				})
-				.then(r => {
-					this.loading = false;
-					this.orderDetail = r.data;
-					if (this.invoiceItem.id && !this.orderDetail.invoice) {
-            this.$http.get(configList, { field: 'order_invoice_content' }).then(r => {
-              if (r.data.order_invoice_content) {
-                this.invoiceItem.invoiceContentArr = r.data.order_invoice_content.split(',');
-                this.orderInvoiceContent = this.invoiceItem.invoiceContentArr[0];
-                this.toggleMask('show');
-              } else {
-                this.invoiceItem.invoiceContentArr = [];
-                this.$mHelper.toast('请联系管理员配置发票类型');
-              }
-            });
+			.get(`${orderDetail}`, { id: this.order_id })
+			.then(r => {
+				this.loading = false;
+				this.orderDetail = r.data;
+				if (this.invoiceItem.id && !this.orderDetail.invoice) {
+					this.$http.get(configList, { field: 'order_invoice_content' }).then(r => {
+						if (r.data.order_invoice_content) {
+							this.invoiceItem.invoiceContentArr = r.data.order_invoice_content.split(',');
+							this.orderInvoiceContent = this.invoiceItem.invoiceContentArr[0];
+							this.toggleMask('show');
+						} else {
+							this.invoiceItem.invoiceContentArr = [];
+							this.$mHelper.toast('请联系管理员配置发票类型');
+						}
+						});
 					}
 				})
 				.catch(err => {
@@ -683,13 +681,13 @@ export default {
 		// 取消订单
 		async handleOrderClose(id) {
 			await this.$http
-				.get(`${orderClose}`, {
-					id
-				})
-				.then(() => {
-					this.$mHelper.toast('订单取消成功');
-					this.getOrderDetail();
-				});
+			.get(`${orderClose}`, {
+				id
+			})
+			.then(() => {
+				this.$mHelper.toast('订单取消成功');
+				this.getOrderDetail();
+			});
 		},
 		// 删除已关闭订单
 		async handleOrderDelete(id) {
@@ -701,32 +699,30 @@ export default {
 		// 确认收货
 		async handleOrderTakeDelivery(id) {
 			await this.$http
-				.get(`${orderTakeDelivery}`, {
-					id
-				})
-				.then(() => {
-					this.$mHelper.toast('确认收货成功');
-					this.getOrderDetail();
-				});
+			.get(`${orderTakeDelivery}`, {id} )
+			.then(() => {
+				this.$mHelper.toast('确认收货成功');
+				this.getOrderDetail();
+			});
 		},
 		// 产品退款/退货关闭申请
 		async handleCloseOrderRefundApply(status, id) {
-      uni.showModal({
-				content: '取消退款后将无法再次提交申请，是否继续取消退款?',
-				success: async e => {
-					if (e.confirm) {
-            let closeOrderApi = closeOrderRefundApply;
+		uni.showModal({
+			content: '取消退款后将无法再次提交申请，是否继续取消退款?',
+			success: async e => {
+				if (e.confirm) {
+				let closeOrderApi = closeOrderRefundApply;
 						if (parseInt(status, 10) === 4) {
 							closeOrderApi = orderCustomerRefundClose;
 						}
 						await this.$http
-							.post(`${closeOrderApi}`, {
-								id
-							})
-							.then(r => {
-								this.$mHelper.toast('取消成功');
-								this.getOrderDetail();
-							});
+						.post(`${closeOrderApi}`, {
+							id
+						})
+						.then(r => {
+							this.$mHelper.toast('取消成功');
+							this.getOrderDetail();
+						});
 					}
 				}
 			});
