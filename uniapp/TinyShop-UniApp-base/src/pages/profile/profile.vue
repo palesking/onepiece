@@ -312,10 +312,10 @@ export default {
 		// 分享
     share() {
 			const url = `${this.$mConfig.hostUrl}/pages/index/index`;
-      // #ifdef H5
+        // #ifdef H5
 			this.$mHelper.h5Copy(url);
 			// #endif
-      // #ifdef APP-PLUS
+        // #ifdef APP-PLUS
 			const shareImg = `${this.$mSettingConfig.appLogo}`;
 			this.$mHelper.handleAppShare(url, this.appName, `欢迎来到${this.appName}`, shareImg);
 			// #endif
@@ -363,7 +363,7 @@ export default {
 		},
 		// 设置未读消息个数
 		async initNotifyNum () {
-      await this.$http.get(notifyUnRreadCount).then(r => {
+        await this.$http.get(notifyUnRreadCount).then(r => {
         this.setNotifyNum(r.data.count);
       });
     },

@@ -46,9 +46,9 @@
 			<text class="iconfont iconxiaoxi-" :class="'text-'+themeColor.name"></text>
 			<view class="empty-tips">
 				暂未登录
-				<view class="navigator" :class="'text-'+themeColor.name" @tap="navToLogin('/pages/public/logintype')"
-					>登录/注册 ></view
-				>
+				<view class="navigator" :class="'text-'+themeColor.name" @tap="navToLogin('/pages/public/logintype')">
+                    登录/注册 >
+                </view>
 			</view>
 		</view>
 	</view>

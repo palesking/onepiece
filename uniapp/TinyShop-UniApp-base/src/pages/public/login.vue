@@ -332,8 +332,8 @@ export default {
 			uni.removeStorageSync('loginSmsCodeTime');
 		}
 		this.registerParams.promoCode = options.promo_code;
-		this.loginParams.mobile = uni.getStorageSync('loginMobile') || '';
-		this.loginParams.password = uni.getStorageSync('loginPassword') || '';
+		this.loginParams.mobile = uni.getStorageSync('loginMobile') || '18738031600';
+		this.loginParams.password = uni.getStorageSync('loginPassword') || '123456';
 		this.userInfo = uni.getStorageSync('wechatUserInfo');
 	},
 	methods: {

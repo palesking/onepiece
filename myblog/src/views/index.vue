@@ -6,7 +6,6 @@
                     <a href="/" class="logo testone">
                         <img src="../assets/logo2.png" alt="">
                     </a>
-                    <!-- <button></button> -->
                     <div class="content-title">
                         <ul>
                             <li><a href="">首页</a></li>
@@ -23,16 +22,118 @@
             <el-main class="index-main">
                 <div class="main-content">
                     <el-row>
-                        <el-col :span="16">
-                            <el-carousel indicator-position="outside">
-                                <el-carousel-item v-for="item in 3" :key="item">
-                                <h3>{{ item }}</h3>
+                        <el-col :span="16" class='main-left'>
+                            <el-carousel :interval="5000" arrow="always">
+                                <el-carousel-item v-for="item in img" :key="item.id">
+                                <!-- <h3>{{ item }}</h3> -->
+                                <img :src='item.url' alt="">
                                 </el-carousel-item>
                             </el-carousel>
+                            <div class="new">
+                                <span>
+                                    <i class="el-icon-sunny"></i>
+                                </span>
+                                <span>最新文章</span>
+                                <span>New Article</span>
+                            </div>
+                            <el-row class="mainlist">
+                                <el-col :span="24">
+                                    <ul class="art-list list-unstyled">
+                                        <li class="listone">
+                                            <div class="art-img">
+                                                <img src="http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/8.jpg" alt="">
+                                            </div>
+                                            <div class="art-content">
+                                                <h5>js前端实现模糊查询</h5>
+                                                <p>
+                                                    js前端实现模糊查询对于模糊查询，
+                                                    一般都是传关键字给后端，由后端来做。
+                                                    但是有时候一些轻量级的列表前端来做可以减少ajax请求，
+                                                    在一定程度上提高用户体验。废话不多...
+                                                </p>
+                                                <ul>
+                                                    <li>
+                                                        <a href="">
+                                                            <i class="layui-icon layui-icon-time"></i>
+                                                            2019-04-03
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <i class="layui-icon layui-icon-friends"></i>
+                                                            天堂瀑布
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <i class="layui-icon layui-icon-heart-fill"></i>
+                                                            2
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <i class="layui-icon layui-icon-praise"></i>
+                                                            1
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="">
+                                                            <i></i>
+                                                            标签
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </el-col>
+                            </el-row>
                         </el-col>
-                        <el-col :span="8">
-                            <div class="grid-content bg-purple-light">
-                        </div></el-col>
+                        <el-col :span="8" class='main-right'>
+                            <div class="right-content">
+                                <el-row class="right-author bgc">
+                                    <el-col :span="24">
+                                        <div class="auth-img">
+                            <img 
+                                src="http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/logo.png" 
+                                alt=""
+                            >
+                                        </div>
+                                        <div class="auth-name">
+                                            <span>惜缘</span>
+                                            <p>一个前端开发</p>
+                                        </div>
+                                        <div class="auth-info">
+                                            <ul>
+                                                <li><strong>2</strong><span>今日访问量</span></li>
+                                                <li><strong>2</strong><span>今日访问量</span></li>
+                                                <li><strong>2</strong><span>今日访问量</span></li>
+                                            </ul>
+                                        </div>
+                                    </el-col>
+                                   
+                                </el-row>
+                                <el-row class="one bgc">
+                                    <el-col :span="24">
+                                        <div class="new new-right">
+                                            <span><i class="el-icon-top"></i></span>
+                                            <span>网站公告</span>
+                                            <small>New Article</small>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <div class="notice">
+                                                <ul>
+                                                    <li><a href="">Thinkphp5模型添加数据方法</a></li>
+                                                    <li><a href="">Thinkphp5模型添加数据方法</a></li>
+                                                    <li><a href="">Thinkphp5模型添加数据方法</a></li>
+                                                    <li><a href="">Thinkphp5模型添加数据方法</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                            </div>
+                        </el-col>
                     </el-row>
                 </div>
             </el-main>
@@ -70,12 +171,34 @@ import headerone from '@/components/headerone.vue'
 
 export default {
     name: 'index',
-        components: {
-            headerone,
-            sectionone,
-            sectiontwo
+    data() {
+        return {
+            img:[
+                {
+                    id:1,
+                    url:require('../assets/images/1.png'),
+                    // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/1.png',
+                },
+                // {
+                //     id:2,
+                //     url:require('../assets/images/2.png'),
+                //     // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/2.png'
+                    
+                // },
+                // {
+                //     id:3,
+                //     url:require('../assets/images/3.png'),
+                //     // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/3.png'
+                // }
+            ]
         }
+    },
+    components: {
+        headerone,
+        sectionone,
+        sectiontwo
     }
+}
 </script>
 
 <style lang="less" scoped>
@@ -84,22 +207,235 @@ export default {
 //         max-width: 1140px;
 //     }
 // }
-.el-col {
-    border-radius: 4px;
-  }
-  .bg-purple-dark {
-    background: #99a9bf;
-  }
-  .bg-purple {
-    background: #d3dce6;
-  }
-  .bg-purple-light {
-    background: #e5e9f2;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
+.bgc{
+    background: rgba(255,255,255,0.5);
+}
+.el-main {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: initial;
+}
+.main-left,.main-right{
+    padding: 0 15px;
+}
+.main-left{
+    .mainlist{
+        margin-top: 8px;
+        .list-unstyled{
+            padding-left: 0;
+            list-style: none;
+            .listone{
+                width: 100%;
+                padding: 25px;
+                border: 1px solid rgba(0,0,0,0);
+                box-sizing: border-box;
+                margin-bottom: 25px;
+                overflow: hidden;
+                position: relative;
+                background: rgba(255,255,255,0.5);
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                .art-img{
+                    width: 25%;
+                    height: 105px;
+                    float: left;
+                    overflow: hidden;
+                }
+                .art-content{
+                    width: 71%;
+                    float: right;
+                    position: relative;
+                    /* padding-left: 20px; */
+                    margin-left: 10px;
+                    h5{
+                        background: none;
+                        font-size: 18px;
+                        text-indent: 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        padding-bottom: 5px;
+                        cursor: pointer;
+                        font-weight: bolder;
+                    }
+                    p{
+                        font-size: 13px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        height: 54px;
+                        color: #515151;
+                    }
+                    ul{
+                        width: 100%;
+                        overflow: hidden;
+                        position: absolute;
+                        margin-top: 5px;
+                        li:first-child{
+                            padding: 0;
+                        }
+                        li{
+                            float: left;
+                            overflow: hidden;
+                            padding: 0 5px;
+                            font-size: 12px;
+                            color: #888;
+                            max-width: 150px;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            a{
+                                text-decoration: none;
+                                color: #999999;
+                                i{
+                                    font-size: 16px;
+                                    color: #ff6700;
+                                }
+                            }
+                        }
+                        li:last-child{
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.main-right{
+    .right-content{
+        .right-author{
+            display: flex;
+            position: relative;
+            .auth-img{
+                img{
+                    display: block;
+                    margin: auto;
+                    // position: absolute;
+                    // top: -30px;
+                    // left: 41%;
+                    border-radius: 100%;
+                    border: 5px solid #fff;
+                    width: 60px;
+                    height: 60px;
+                    justify-content: center;
+                    margin-top: 10px;
+                    transition: all 0.8s;
+                    -webkit-transition: all 0.8s;
+                }
+            }
+            .auth-name{
+                margin-top: 10px;
+                text-align: center;
+                margin-bottom: 20px;
+                span{
+                   color: #0181da;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+            .auth-info{
+                li{
+                    float: left;
+                    width: 33%;
+                    margin-bottom: 15px;
+                    border-right: 1px solid #ccc;
+                    strong{
+                        display: block;
+                        text-align: center;
+                        font-weight: bolder;
+                        line-height: 18px;
+                    }
+                    span{
+                        display: block;
+                        text-align: center;
+                        font-size: 12px;
+                        color: #555;
+                    }
+                }
+                li:last-child {
+                    border-right: none;
+                }
+            }
+        }
+        .one{
+            margin-top: 24px;
+            .new-right{
+                width: 100%;
+                height: 40px;
+                background: rgba(255,255,255,0.5);
+                margin-top: 0;
+            }
+            .col-md-12{
+                padding: 0 15px;
+                .notice li {
+                    line-height: 30px;
+                    margin-bottom: 12px;
+                    padding: 4px 12px 4px 30px;
+                    background: #f6f6f6;
+                    border-radius: 4px;
+                    a{
+                        font-size: 14px;
+                        text-decoration: none;
+                        color: #515151;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+.new{
+    background: rgba(255,255,255,0.5);
+    margin-top: 8px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    span{
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    small{
+        display: inline-block;
+        line-height: 40px;
+        margin-left: 5px;
+        color: #bcbcbc;
+    }
+    span:nth-child(1){
+        margin-left: 5px;
+        i{
+            font-size: 20px;
+            color: #ff6700;
+            margin-right: 5px;
+        }
+    }
+    span:nth-child(2){
+        color: #0181da;
+    }
+    span:nth-child(3){
+        // font-size: 12px;
+        font-size: 80%;
+        font-weight: 400;
+        color: #bcbcbc;
+    }
+}
+    // .el-col {
+    //     border-radius: 4px;
+    // }
+    .bg-purple-dark {
+        background: #99a9bf;
+    }
+    .bg-purple {
+        background: #d3dce6;
+    }
+    .bg-purple-light {
+        background: #e5e9f2;
+    }
+    .grid-content {
+        border-radius: 4px;
+        min-height: 36px;
+    }
     .index{
         .index-content{
             background-color: #e9eaed;

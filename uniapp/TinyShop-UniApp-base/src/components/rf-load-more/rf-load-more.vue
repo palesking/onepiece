@@ -24,7 +24,6 @@
 			class="cu-load"
 			:class="status === 'more' ? 'loading' : 'over'"
 		></view>
-		<!--<text class="rf-load-more__text" :style="{color:color}">{{status === 'more' ? contentText.contentdown : (status === 'loading' ? contentText.contentrefresh : contentText.contentnomore)}}</text>-->
 	</view>
 </template>
 
