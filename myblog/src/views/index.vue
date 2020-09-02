@@ -39,9 +39,9 @@
                             <el-row class="mainlist">
                                 <el-col :span="24">
                                     <ul class="art-list list-unstyled">
-                                        <li class="listone">
+                                        <li class="listone" v-for="(item,index) in 10" :key="index">
                                             <div class="art-img">
-                                                <img src="http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/8.jpg" alt="">
+                                                <img src="../assets/images/8.jpg" alt="">
                                             </div>
                                             <div class="art-content">
                                                 <h5>js前端实现模糊查询</h5>
@@ -78,7 +78,7 @@
                                                     </li>
                                                     <li>
                                                         <a href="">
-                                                            <i></i>
+                                                            <i class="layui-icon layui-icon-template-1"></i>
                                                             标签
                                                         </a>
                                                     </li>
@@ -91,13 +91,11 @@
                         </el-col>
                         <el-col :span="8" class='main-right'>
                             <div class="right-content">
+
                                 <el-row class="right-author bgc">
                                     <el-col :span="24">
                                         <div class="auth-img">
-                            <img 
-                                src="http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/logo.png" 
-                                alt=""
-                            >
+                                            <img src="../assets/logo.jpg" alt="">
                                         </div>
                                         <div class="auth-name">
                                             <span>惜缘</span>
@@ -111,8 +109,8 @@
                                             </ul>
                                         </div>
                                     </el-col>
-                                   
                                 </el-row>
+
                                 <el-row class="one bgc">
                                     <el-col :span="24">
                                         <div class="new new-right">
@@ -127,6 +125,61 @@
                                                     <li><a href="">Thinkphp5模型添加数据方法</a></li>
                                                     <li><a href="">Thinkphp5模型添加数据方法</a></li>
                                                     <li><a href="">Thinkphp5模型添加数据方法</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+
+                                <el-row class="two bgc mt-3">
+                                    <el-col :span="24">
+                                        <div class="search">
+                                            <input type="text" class="search-input" placeholder="First name">
+                                            <input class="search-submit" value=" " type="submit">
+                                            <i class="layui-icon layui-icon-search"></i>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                
+                                <el-row class="three bgc mt-3">
+                                    <el-col :span="24">
+                                        <div class="new new-right">
+                                            <span><i class="el-icon-s-grid"></i>说说</span>
+                                            <small>New Article</small>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <div class="tab-pane">
+                                                <ul class="art-sort">
+                                                    <li>
+                                                        <span class='layui-badge layui-bg-orange'>1</span>
+                                                        <a href="#">thinkphp5随机抽取数据的方法
+                                                            <b>(235)</b>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span class='layui-badge layui-bg-green'>2</span>
+                                                        <a href="#">thinkphp5随机抽取数据的方法
+                                                            <b>(235)</b>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span class='layui-badge layui-bg-cyan'>3</span>
+                                                        <a href="#">thinkphp5随机抽取数据的方法
+                                                            <b>(235)</b>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span class='layui-badge layui-bg-blue'>4</span>
+                                                        <a href="#">thinkphp5随机抽取数据的方法
+                                                            <b>(235)</b>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <span class='layui-badge layui-bg-black'>5</span>
+                                                        <a href="#">thinkphp5随机抽取数据的方法
+                                                            <b>(235)</b>
+                                                        </a>
+                                                    </li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -207,6 +260,23 @@ export default {
 //         max-width: 1140px;
 //     }
 // }
+.mt-5{
+    margin-top: 48px;
+}
+.mt-4{
+    margin-top: 24px;
+}
+.mt-3{
+    margin-top: 16px;
+}
+.row{
+    // display: -ms-flexbox;
+    display: flex;
+    // -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
 .bgc{
     background: rgba(255,255,255,0.5);
 }
@@ -225,6 +295,9 @@ export default {
         .list-unstyled{
             padding-left: 0;
             list-style: none;
+            .listone:hover{
+                border: 1px solid #ff6700;
+            }
             .listone{
                 width: 100%;
                 padding: 25px;
@@ -361,12 +434,7 @@ export default {
         }
         .one{
             margin-top: 24px;
-            .new-right{
-                width: 100%;
-                height: 40px;
-                background: rgba(255,255,255,0.5);
-                margin-top: 0;
-            }
+            
             .col-md-12{
                 padding: 0 15px;
                 .notice li {
@@ -383,6 +451,55 @@ export default {
                 }
             }
             
+        }
+        .two{
+            .search{
+                width: 100%;
+                height: 35px;
+                position: relative;
+                .search-input{
+                    width: 80%;
+                    height: 35px;
+                    border: 1px solid #ddd;
+                    margin: 0;
+                    float: left;
+                    padding-left: 10px;
+                }
+                .search-submit{
+                    width: 20%;
+                    height: 35px;
+                    line-height: 35px;
+                    // float: right;
+                    border: 1px solid #ccc;
+                    /* margin-left: -4.9px; */
+                    /* margin-top: -1px; */
+                    padding: 0;
+                    background: rgba(255,255,255,0.8);
+                }
+                i{
+                    font-size: 16px;
+                    float: right;
+                    position: absolute;
+                    right: 6%;
+                    top: 8px;
+                    color: #ff6700;
+                    margin-right: 5px;
+                }
+            }
+        }
+        .three{
+            .col-md-12{
+                padding: 0 15px;
+                ul{
+                    li{
+                        width: 100%;
+                        padding: 10px 0;
+                        border-bottom: 1px dashed #ccc;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                }
+            }
         }
     }
 }
@@ -419,6 +536,12 @@ export default {
         font-weight: 400;
         color: #bcbcbc;
     }
+}
+.new-right{
+    width: 100%;
+    height: 40px;
+    background: rgba(255,255,255,0.5);
+    margin-top: 0;
 }
     // .el-col {
     //     border-radius: 4px;
