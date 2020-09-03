@@ -8,13 +8,24 @@
                     </a>
                     <div class="content-title">
                         <ul>
-                            <li><a href="">首页</a></li>
-                            <li><a href="">说说</a></li>
-                            <li><a href="">分类</a></li>
-                            <li><a href="">相册</a></li>
-                            <li><a href="">生活</a></li>
-                            <li><a href="">心得</a></li>
-                            <li><a href="">关于</a></li>
+                            <li>
+                                <router-link to='/'>首页</router-link>
+                            </li>
+                            <li>
+                                <router-link to='/version'>说说</router-link>
+                            </li>
+                            <li>
+                                <router-link to='/movie'>电影</router-link>
+                            </li>
+                            <li>
+                                <router-link to='/community'>文章</router-link>
+                            </li>
+                            <li>
+                                <router-link to='/music'>音乐</router-link>
+                            </li>
+                            <li>
+                                <router-link to='/about'>关于</router-link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -29,7 +40,7 @@
                                 <img :src='item.url' alt="">
                                 </el-carousel-item>
                             </el-carousel>
-                            <div class="new">
+                            <div class="new mt-2">
                                 <span>
                                     <i class="el-icon-sunny"></i>
                                 </span>
@@ -86,6 +97,74 @@
                                             </div>
                                         </li>
                                     </ul>
+                                </el-col>
+                            </el-row>
+                            <el-row class="bgc">
+                                <el-col :span="24">
+                                    <div class="new">
+                                        <span>
+                                            <i class="el-icon-sunny"></i>
+                                        </span>
+                                        <span>推荐图文</span>
+                                        <span>New Article</span>
+                                    </div>
+                                </el-col>
+                            </el-row>
+                            <el-row class="bgc mt-4 codeone">
+                                <el-col :span="24">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-4 bgc  ">
+                                                <div class="card mb-4 box-shadow  mt-4">
+                                                    <div class="showimg">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/7.jpg" data-holder-rendered="true">
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <a href="#">测试图文</a>
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="btn-group showtitle">
+                                                                <i class="el-time"></i>2019-04-03
+                                                            </div>
+                                                            <small class="text-muted"><i class="el-fire"></i>9 mins</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 bgc ">
+                                                <div class="card mb-4 box-shadow mt-4">
+                                                    <div class="showimg">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/9.jpg" data-holder-rendered="true">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <a href="#">测试图文</a>
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="btn-group showtitle">
+                                                                <i class="el-time"></i>2019-04-03
+                                                            </div>
+                                                            <small class="text-muted">9 mins</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 bgc ">
+                                                <div class="card  box-shadow mt-4">
+                                                    <div class="showimg">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/9.jpg" data-holder-rendered="true">
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <a href="#">测试图文</a>
+                                                        <div class="d-flex justify-content-between align-items-center">
+                                                            <div class="btn-group showtitle">
+                                                                <i class="el-time"></i>2019-04-03
+                                                            </div>
+                                                            <small class="text-muted">9 mins</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </el-col>
                             </el-row>
                         </el-col>
@@ -190,29 +269,119 @@
                     </el-row>
                 </div>
             </el-main>
-            <el-footer>Footer</el-footer>
-        </el-container>
-        <!-- <Layout>
-            <Header class="index-header">
-                <headerone></headerone>
-            </Header>
-            <Layout class="index-mian">
-                <Sider>
-                    <sectionone></sectionone>
-                </Sider>
-                <Content>
-                    <div class="content-box">
-                        <router-view></router-view>
-                        <contentone v-if=" $route.path ==='/basic/sider' "></contentone>
+            <el-footer id="footer">
+                <div class="container">
+                    <div class="row footer-row">
+                        <div class="col-md-6">
+                            <div class="fooder-title">
+                                <h5>说说排行</h5>
+                            </div>
+                            <div class="something">
+                                <ul class="art-sort">
+                                    <li>
+                                        <span>1</span>
+                                        <a href="#">thinkphp5随机抽取数据的方法
+                                            <b>(235)</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>2</span>
+                                        <a href="#">thinkphp5随机抽取数据的方法
+                                            <b>(235)</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>3</span>
+                                        <a href="#">thinkphp5随机抽取数据的方法
+                                            <b>(235)</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>4</span>
+                                        <a href="#">thinkphp5随机抽取数据的方法
+                                            <b>(235)</b>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <span>5</span>
+                                        <a href="#">thinkphp5随机抽取数据的方法
+                                            <b>(235)</b>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="fooder-title">
+                                <h5>说说排行</h5>
+                            </div>
+                            <ul class="list-unstyled footer-list">
+                                <li class="media">
+                                    <div class="footer-img">
+                                        <img class="mr-3" src="images/10.jpg" alt="Generic placeholder image">
+                                    </div>
+                                    <div class="media-body art-content footer-content">
+                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                        <!--<ul>
+                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                        </ul>-->
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="footer-img">
+                                        <img class="mr-3" src="images/9.jpg" alt="Generic placeholder image">
+                                    </div>
+                                    <div class="media-body art-content footer-content">
+                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                        <!--<ul>
+                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                        </ul>-->
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="footer-img">
+                                        <img class="mr-3" src="images/8.jpg" alt="Generic placeholder image">
+                                    </div>
+                                    <div class="media-body art-content footer-content">
+                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                        <!--<ul>
+                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                        </ul>-->
+                                    </div>
+                                </li>
+                                <li class="media">
+                                    <div class="footer-img">
+                                        <img class="mr-3" src="images/7.jpg" alt="Generic placeholder image">
+                                    </div>
+                                    <div class="media-body art-content footer-content">
+                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                        <!--<ul>
+                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                        </ul>-->
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        <!--<div class="col-md-3">dASDsadASDasdASDas</div>
+                        <div class="col-md-3">dASDsadASDasdASDas</div>-->
                     </div>
-                </Content>
-            </Layout>
-            <Footer class="index-footer">
-                Copyright © 2020 gemframework.com
-                <a href="">all rights reserved.</a>
-                <span>Version 1.0.5</span>
-            </Footer>
-        </Layout> -->
+
+                    <div class="row">
+
+                    </div>
+                </div>
+            </el-footer>
+        </el-container>
 
     </div>
 </template>
@@ -230,19 +399,7 @@ export default {
                 {
                     id:1,
                     url:require('../assets/images/1.png'),
-                    // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/1.png',
-                },
-                // {
-                //     id:2,
-                //     url:require('../assets/images/2.png'),
-                //     // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/2.png'
-                    
-                // },
-                // {
-                //     id:3,
-                //     url:require('../assets/images/3.png'),
-                //     // url:'http://view.jqueryfuns.com/2020/4/26/4f767eb5c8f9e65ebf843fe517826907/images/3.png'
-                // }
+                }
             ]
         }
     },
@@ -260,6 +417,70 @@ export default {
 //         max-width: 1140px;
 //     }
 // }
+@media (min-width: 1200px){
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px){
+    .container, .container-sm, .container-md, .container-lg {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px){
+    .container, .container-sm, .container-md {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px){
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+@media (min-width: 768px){
+    .col-md-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.mt-2{
+    margin-top: 8px;
+}
 .mt-5{
     margin-top: 48px;
 }
@@ -269,6 +490,15 @@ export default {
 .mt-3{
     margin-top: 16px;
 }
+.mb-4{
+    margin-bottom: 24px;
+}
+.col-md-4{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
 .row{
     // display: -ms-flexbox;
     display: flex;
@@ -277,8 +507,50 @@ export default {
     margin-right: -15px;
     margin-left: -15px;
 }
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    a{
+        text-decoration: none;
+        color: #ff6700;
+    }
+}
 .bgc{
     background: rgba(255,255,255,0.5);
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+.justify-content-between {
+    -ms-flex-pack: justify !important;
+    justify-content: space-between !important;
+}
+.d-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.text-muted {
+    color: #6c757d !important;
+}
+.small, .small {
+    font-size: 80%;
+    font-weight: 400;
 }
 .el-main {
     padding: 0;
@@ -286,8 +558,25 @@ export default {
     width: 100%;
     overflow: initial;
 }
+.showtitle {
+    font-size: 12px;
+    height: 10px;
+    line-height: 10px;
+}
+.btn-group, .btn-group-vertical {
+    position: relative;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    vertical-align: middle;
+}
 .main-left,.main-right{
     padding: 0 15px;
+}
+#footer{
+    width: 100%;
+    background: rgba(74, 168, 206, 0.65);
+    margin-top: 35px;
+    clear: both;
 }
 .main-left{
     .mainlist{
@@ -372,6 +661,15 @@ export default {
                     }
                 }
             }
+        }
+    }
+    .codeone{
+        .container {
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
         }
     }
 }
@@ -505,7 +803,7 @@ export default {
 }
 .new{
     background: rgba(255,255,255,0.5);
-    margin-top: 8px;
+    // margin-top: 8px;
     height: 40px;
     line-height: 40px;
     padding: 0 15px;

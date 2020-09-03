@@ -1,6 +1,7 @@
 module.exports = {
-    publicPath: '',//基本路径
-    
+    publicPath: './',//基本路径
+    assetsDir: 'static',
+    parallel: false,
     // css: {
     //     loaderOptions: {
     //         postcss: {
