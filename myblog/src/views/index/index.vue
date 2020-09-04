@@ -1,10 +1,10 @@
 <template>
     <div class="index">
         <el-container class="index-content">
-            <el-header class="index-header">
+            <el-header class="index-header navbar-expand-lg">
                 <div class="header-content container">
                     <a href="/" class="logo testone">
-                        <img src="../assets/logo2.png" alt="">
+                        <img src="../../assets/logo2.png" alt="">
                     </a>
                     <div class="content-title">
                         <ul>
@@ -52,7 +52,7 @@
                                     <ul class="art-list list-unstyled">
                                         <li class="listone" v-for="(item,index) in 10" :key="index">
                                             <div class="art-img">
-                                                <img src="../assets/images/8.jpg" alt="">
+                                                <img src="../../assets/images/8.jpg" alt="">
                                             </div>
                                             <div class="art-content">
                                                 <h5>js前端实现模糊查询</h5>
@@ -117,7 +117,7 @@
                                             <div class="col-md-4 bgc  ">
                                                 <div class="card mb-4 box-shadow  mt-4">
                                                     <div class="showimg">
-                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/7.jpg" data-holder-rendered="true">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/7.jpg" data-holder-rendered="true">
                                                     </div>
 
                                                     <div class="card-body">
@@ -134,7 +134,7 @@
                                             <div class="col-md-4 bgc ">
                                                 <div class="card mb-4 box-shadow mt-4">
                                                     <div class="showimg">
-                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/9.jpg" data-holder-rendered="true">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/9.jpg" data-holder-rendered="true">
                                                     </div>
                                                     <div class="card-body">
                                                         <a href="#">测试图文</a>
@@ -150,7 +150,7 @@
                                             <div class="col-md-4 bgc ">
                                                 <div class="card  box-shadow mt-4">
                                                     <div class="showimg">
-                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../assets/images/9.jpg" data-holder-rendered="true">
+                                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/9.jpg" data-holder-rendered="true">
                                                     </div>
                                                     <div class="card-body">
                                                         <a href="#">测试图文</a>
@@ -174,7 +174,7 @@
                                 <el-row class="right-author bgc">
                                     <el-col :span="24">
                                         <div class="auth-img">
-                                            <img src="../assets/logo.jpg" alt="">
+                                            <img src="../../assets/logo.jpg" alt="">
                                         </div>
                                         <div class="auth-name">
                                             <span>惜缘</span>
@@ -264,122 +264,67 @@
                                         </div>
                                     </el-col>
                                 </el-row>
+                                <el-row class="four bgc mt-4 container">
+                                    <el-col :span="24">
+                                        <div class="row bgc">
+                                            <div class="new new-right">
+
+                                                <span><i class="el-asl"></i>推荐图文</span>
+                                                <small>New Article</small>
+                                            </div>
+                                            <ul class="list-unstyled artimg-list">
+                                                <li class="media">
+                                                    <div class="artimg-img">
+                                                        <img class="mr-3" src="../../assets/images/7.jpg" alt="Generic placeholder image">
+                                                    </div>
+                                                    <div class="media-body art-content">
+                                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                                        <ul>
+                                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="artimg-img">
+                                                        <img class="mr-3" src="../../assets/images/8.jpg" alt="Generic placeholder image">
+                                                    </div>
+                                                    <div class="media-body art-content">
+                                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                                        <ul>
+                                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="media">
+                                                    <div class="artimg-img">
+                                                        <img class="mr-3" src="../../assets/images/9.jpg" alt="Generic placeholder image">
+                                                    </div>
+                                                    <div class="media-body art-content">
+                                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
+                                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
+                                                        <ul>
+                                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
+                                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+
+                                            </ul>
+
+                                        </div>
+                                    </el-col>
+                                </el-row>
                             </div>
                         </el-col>
                     </el-row>
                 </div>
             </el-main>
             <el-footer id="footer">
-                <div class="container">
-                    <div class="row footer-row">
-                        <div class="col-md-6">
-                            <div class="fooder-title">
-                                <h5>说说排行</h5>
-                            </div>
-                            <div class="something">
-                                <ul class="art-sort">
-                                    <li>
-                                        <span>1</span>
-                                        <a href="#">thinkphp5随机抽取数据的方法
-                                            <b>(235)</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>2</span>
-                                        <a href="#">thinkphp5随机抽取数据的方法
-                                            <b>(235)</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>3</span>
-                                        <a href="#">thinkphp5随机抽取数据的方法
-                                            <b>(235)</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>4</span>
-                                        <a href="#">thinkphp5随机抽取数据的方法
-                                            <b>(235)</b>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <span>5</span>
-                                        <a href="#">thinkphp5随机抽取数据的方法
-                                            <b>(235)</b>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="fooder-title">
-                                <h5>说说排行</h5>
-                            </div>
-                            <ul class="list-unstyled footer-list">
-                                <li class="media">
-                                    <div class="footer-img">
-                                        <img class="mr-3" src="images/10.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="media-body art-content footer-content">
-                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
-                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
-                                        <!--<ul>
-                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
-                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
-                                        </ul>-->
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <div class="footer-img">
-                                        <img class="mr-3" src="images/9.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="media-body art-content footer-content">
-                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
-                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
-                                        <!--<ul>
-                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
-                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
-                                        </ul>-->
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <div class="footer-img">
-                                        <img class="mr-3" src="images/8.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="media-body art-content footer-content">
-                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
-                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
-                                        <!--<ul>
-                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
-                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
-                                        </ul>-->
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <div class="footer-img">
-                                        <img class="mr-3" src="images/7.jpg" alt="Generic placeholder image">
-                                    </div>
-                                    <div class="media-body art-content footer-content">
-                                        <h5 class="mt-0 mb-1">js前端实现模糊查询</h5>
-                                        <p>js前端实现模糊查询对于模糊查询，一般都是传关键字给后端</p>
-                                        <!--<ul>
-                                            <li><a title="惜缘2019-04-03发表"><i class="el-time"></i>2019-04-03</a></li>
-                                            <li class="d-none d-sm-none d-md-none d-lg-block"><a href="/index/article/index/id/32.html" title="查看分类"><i class="el-fire"></i>5</a></li>
-                                        </ul>-->
-                                    </div>
-                                </li>
-
-
-                            </ul>
-                        </div>
-                        <!--<div class="col-md-3">dASDsadASDasdASDas</div>
-                        <div class="col-md-3">dASDsadASDasdASDas</div>-->
-                    </div>
-
-                    <div class="row">
-
-                    </div>
-                </div>
+                <footerone></footerone>
             </el-footer>
         </el-container>
 
@@ -390,6 +335,8 @@
 import sectionone from '@/components/sectionone.vue'
 import sectiontwo from '@/components/sectiontwo.vue'
 import headerone from '@/components/headerone.vue'
+import footerone from '@/views/footer/footerone.vue'
+
 
 export default {
     name: 'index',
@@ -398,7 +345,7 @@ export default {
             img:[
                 {
                     id:1,
-                    url:require('../assets/images/1.png'),
+                    url:require('../../assets/images/1.png'),
                 }
             ]
         }
@@ -406,7 +353,8 @@ export default {
     components: {
         headerone,
         sectionone,
-        sectiontwo
+        sectiontwo,
+        footerone
     }
 }
 </script>
@@ -417,53 +365,55 @@ export default {
 //         max-width: 1140px;
 //     }
 // }
+// @media (min-width: 1200px){
+//     .container, .container-sm, .container-md, .container-lg, .container-xl {
+//         max-width: 1140px;
+//     }
+// }
+@media (min-width: 992px){
+    .navbar-expand-lg {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        .container, .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+// @media (min-width: 992px){
+//     .container, .container-sm, .container-md, .container-lg {
+//         max-width: 960px;
+//     }
+// }
+
+// @media (min-width: 768px){
+//     .container, .container-sm, .container-md {
+//         max-width: 720px;
+//     }
+// }
+
+
 @media (min-width: 1200px){
-    .container, .container-sm, .container-md, .container-lg, .container-xl {
+    .container {
         max-width: 1140px;
     }
 }
 
-@media (min-width: 992px){
-    .container, .container-sm, .container-md, .container-lg {
-        max-width: 960px;
-    }
-}
+// @media (min-width: 992px){
+//     .container {
+//         max-width: 960px;
+//     }
+// }
 
-@media (min-width: 768px){
-    .container, .container-sm, .container-md {
-        max-width: 720px;
-    }
-}
+// @media (min-width: 768px){
+//     .container {
+//         max-width: 720px;
+//     }
+// }
 
-@media (min-width: 576px){
-    .container, .container-sm {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 1200px){
-    .container {
-        max-width: 1140px;
-    }
-}
-
-@media (min-width: 992px){
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 768px){
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 576px){
-    .container {
-        max-width: 540px;
-    }
-}
 @media (min-width: 768px){
     .col-md-4 {
         -ms-flex: 0 0 33.333333%;
@@ -471,6 +421,16 @@ export default {
         max-width: 33.333333%;
     }
 }
+// @media (min-width: 576px){
+//     .container {
+//         max-width: 540px;
+//     }
+// }
+// @media (min-width: 576px){
+//     .container, .container-sm {
+//         max-width: 540px;
+//     }
+// }
 .container {
     width: 100%;
     padding-right: 15px;
@@ -519,6 +479,7 @@ export default {
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.25rem;
+    align-items: stretch;
 }
 .card-body {
     -ms-flex: 1 1 auto;
@@ -528,6 +489,12 @@ export default {
     a{
         text-decoration: none;
         color: #ff6700;
+    }
+}
+.showimg{
+    img{
+        width: 210px;
+        height: 160px;
     }
 }
 .bgc{
@@ -799,6 +766,9 @@ export default {
                 }
             }
         }
+        .four{
+
+        }
     }
 }
 .new{
@@ -867,10 +837,16 @@ export default {
                 align-items: center;
                 .header-content{
                     display: flex;
-                    width: 1140px;
-                    margin: auto;
+                    // width: 1140px;
+                    // margin: auto;
                     padding-right: 15px;
                     padding-left: 15px;
+                    // -ms-flex-wrap: wrap;
+                    // flex-wrap: wrap;
+                    // -ms-flex-align: center;
+                    // align-items: center;
+                    // -ms-flex-pack: justify;
+                    // justify-content: space-between;
                     // height: 55px;
                     .logo{
                         display: inline-block;
@@ -918,146 +894,120 @@ export default {
                 margin-top: 16px;
             }
         }
-        // .ivu-layout-header{
-        //     position: fixed;
-        //     padding: 0;
-        //     height: 60px;
-        //     line-height: 60px;
-        //     // z-index: 1000;
-        //     width: 100%;
-        //     // overflow: hidden;
-        //     background: transparent;
-        // }
-        // .ivu-layout-sider{
-        //     transition: all 0.3s linear;
-        //     min-width: 235px !important;
-        // }
-        // .ivu-layout-content{
-        //     position: initial;
-        //     transition: all 0.3s linear;
-        //     // overflow-x: visible !important;
-        // }
-        // .index-header{
-        //     position: fixed;
-        //     // margin: auto;
-        //     width: 100%;
-        // }
-        // .index-mian{
-        //     position: fixed;
-        //     top: 65px;
-        //     // top: 50%;
-        //     left: 50%;
-        //     transform: translate(-50%);
-        //     width: 1100px;
-        //     height: 100%;
-        //     margin: auto;
-        // }
-        // .index-footer{
-        //     position: fixed;
-        //     width:~'calc(100% - 235px)';
-        //     bottom: 0;
-        //     left: 235px;
-        //     height: 44px;
-        //     padding: 0 15px;
-        //     background: #fff;
-        //     transition: all .3s linear;
-        //     overflow: hidden;
-        //     line-height: 44px;
-        //     font-size: 14px;
-        //     color: #666;
-        //     box-sizing: border-box;
-        //     border-top: 1px solid #f5f7f9;
-           
-        //     span{
-        //         float: right;
-        //     }
-        // }
-        // .content-box{
-        //     height: 1000px;
-        //      margin-bottom: 100px;
-        // }
-        // .ivu-layout-content::-webkit-scrollbar {
-        //     /*滚动条整体样式*/
-        //     width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
-        //     height: 1px;
-        // }
-        // .ivu-layout-content::-webkit-scrollbar-thumb {
-        //     /*滚动条里面小方块*/
-        //     border-radius   : 10px;
-        //     background-color: skyblue;
-        //     background-image: -webkit-linear-gradient(
-        //         45deg,
-        //         rgba(255, 255, 255, 0.2) 25%,
-        //         transparent 25%,
-        //         transparent 50%,
-        //         rgba(255, 255, 255, 0.2) 50%,
-        //         rgba(255, 255, 255, 0.2) 75%,
-        //         transparent 75%,
-        //         transparent
-        //     );
-        // }
-        // .ivu-layout-content::-webkit-scrollbar-track {
-        //     /*滚动条里面轨道*/
-        //     box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
-        //     background   : #ededed;
-        //     border-radius: 10px;
-        // }
-        // .el-header, .el-footer {
-        //     background-color: #B3C0D1;
-        //     color: #333;
-        //     text-align: center;
-        //     line-height: 60px;
-        // }
-
-        // .header-content{
-        // }
-        // .el-aside {
-        //     color: #333;
-        //     text-align: center;
-        // }
-
-        // .el-main {
-            
-        //     color: #333;
-        //     text-align: center;
-        // }
-        
-        // body > .el-container {
-        //     margin-bottom: 40px;
-        // }
-        
-        // .el-container:nth-child(5) .el-aside,
-        // .el-container:nth-child(6) .el-aside {
-        //     // line-height: 260px;
-        // }
-        
-        // .el-container:nth-child(7) .el-aside {
-        //     // line-height: 320px;
-        // }
-        // .el-header{
-        //     padding: 0;
-        // }
-        // .el-container{
-        //     // padding: 10px 200px;
-        // }
-        // .el-header{
-        // }
-        // .el-main{
-        //     padding: 0;
-        // }
-        // .header,.main,.footer{
-        //     width: 1280px !important;
-        //     margin: auto;
-        //     // position: fixed;
-        //     // z-index: -1;
-        // }
-        // .header{
-        //     margin-top: 120px;
-        //     .header-content{
-        //         // margin-top: 200px;
-        //     }
-        // }
-        // .main{
-        // }
     }
+    ::v-deep.el-footer{
+        height: auto !important;
+    }
+    ::v-deep.el-footer {
+        padding: 0 0px;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+    .media {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: start;
+        align-items: flex-start;
+    }
+    .artimg-list>li {
+        width: 100%;
+        /* margin: auto; */
+        padding: 25px;
+        border: 1px solid rgba(0,0,0,0);
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        overflow: hidden;
+        position: relative;
+        /* background: rgba(255,255,255,0.5); */
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+    .artimg-img {
+        width: 45%;
+        height: 85px;
+        float: left;
+        overflow: hidden;
+    }
+    .artimg-img img {
+        width: 100%;
+        height: 100%;
+        transition: all 0.6s;
+    }
+    .art-content {
+        width: 71%;
+        float: right;
+        position: relative;
+        /* padding-left: 20px; */
+        margin-left: 10px;
+    }
+    .artimg-list h5 {
+        font-weight: bolder;
+        font-size: 14px !important;
+    }
+    .art-content h5 {
+        background: none;
+        font-size: 18px;
+        text-indent: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-bottom: 5px;
+        cursor: pointer;
+        font-weight: bolder;
+    }
+    .artimg-list>li p {
+        font-size: 13px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 54px;
+        color: #515151;
+    }
+    .art-content>ul {
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+    }
+    .art-content>ul>li {
+        float: left;
+        overflow: hidden;
+        padding: 0 5px;
+        font-size: 12px;
+        color: #888;
+        max-width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .art-content>ul>li:last-child {
+        float: right;
+    }
+    .art-content>ul>li {
+        float: left;
+        overflow: hidden;
+        padding: 0 5px;
+        font-size: 12px;
+        color: #888;
+        max-width: 150px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    @media (min-width: 992px){
+        .d-lg-block {
+            display: block !important;
+        }
+    }
+
+    @media (min-width: 768px){
+        .d-md-none {
+            display: none !important;
+        }
+    }
+    
+    @media (min-width: 576px){
+        .d-sm-none {
+            display: none !important;
+        }
+    }
+    
 </style>

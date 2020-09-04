@@ -10,7 +10,6 @@
 </script>
 <style lang="less" scoped>
     @import url("./assets/css/common.css");
-    
     #app{
         width: 100%;
         height: 100%;

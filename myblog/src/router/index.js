@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from '@/views/index.vue'
+import index from '@/views/index/index.vue'
 import about from '@/views/about.vue'
 
 const content = () => import ("@/components/content.vue")
