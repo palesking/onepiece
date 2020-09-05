@@ -268,8 +268,10 @@
                                     <el-col :span="24">
                                         <div class="row bgc">
                                             <div class="new new-right">
-
-                                                <span><i class="el-asl"></i>推荐图文</span>
+                                                <span>
+                                                    <i class="el-asl"></i>
+                                                    推荐图文
+                                                </span>
                                                 <small>New Article</small>
                                             </div>
                                             <ul class="list-unstyled artimg-list">
@@ -318,6 +320,18 @@
                                         </div>
                                     </el-col>
                                 </el-row>
+                                <el-row class="five bgc mt-5">
+                                    <el-col :span="24">
+                                        <el-tabs v-model="activeName" @tab-click="handleClick">
+                                            <el-tab-pane label="用户管理" name="first" class="five-title">
+                                                用户管理
+                                            </el-tab-pane>
+                                            <el-tab-pane label="任务补偿" name="second" class="five-title">
+                                                任务补偿
+                                            </el-tab-pane>
+                                        </el-tabs>
+                                    </el-col>
+                                </el-row>
                             </div>
                         </el-col>
                     </el-row>
@@ -342,6 +356,7 @@ export default {
     name: 'index',
     data() {
         return {
+            activeName: 'first',
             img:[
                 {
                     id:1,
@@ -768,6 +783,30 @@ export default {
         }
         .four{
 
+        }
+        .five{
+            ::v-deep.el-tabs__nav{
+                width: 100%;
+                .el-tabs__item{
+                    float: left;
+                    display: block;
+                    width: 50%;
+                    text-align: center;
+                    height: 48px;
+                    line-height: 48px;
+                }
+                .is-active{
+                    background: #ff6700;
+                    color: #ffffff !important;
+                }
+                .el-tabs__active-bar{
+                    width: auto !important;
+                }
+            }
+            
+            .five-title{
+                width: 50%;
+            }
         }
     }
 }
