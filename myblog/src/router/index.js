@@ -47,8 +47,8 @@ Vue.use(VueRouter)
   ]
 
 const router = new VueRouter({
-    base: './',
-    mode: 'history',
+    // base: './',
+    // mode: 'history',
     routes
 })
 

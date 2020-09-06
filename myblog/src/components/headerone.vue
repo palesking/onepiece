@@ -1,20 +1,5 @@
 <template>
     <div class="headerone">
-        <!-- <div class="header-content">
-            <el-menu
-            mode="horizontal"
-            background-color="#545c64"
-            text-color="#fff"
-            active-text-color="#ffd04b"
-            style='border:0;'>
-                <el-menu-item index="1" class="header-title">
-                    <router-link to="/index" exact class="header-a">首页</router-link>
-                </el-menu-item>
-                <el-menu-item index="2" class="header-title">
-                    <router-link to="/about" class="header-a">关于</router-link>
-                </el-menu-item>
-            </el-menu>
-        </div> -->
         <ul class="layui-nav layui-this" lay-filter="">
             <li class="layui-nav-item">
                 <router-link to='/index'>首页</router-link>
@@ -60,15 +45,7 @@ export default {
 </script>
 <style lang="less" scoped>
     .headerone{
-        // position: fixed;
-        // background-color: #545c64;
-        overflow: hidden;
         margin: auto;
-        // z-index: 1000;
-        // background-color: rgba(255, 255, 255, 0.2);
-        // background-color: rgba(0, 127, 127, 0.5);
-        //border: 1px solid rgba(127, 255, 255, 0.25);
-        //box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
         width: 1100px;
         ul{
             overflow: hidden;

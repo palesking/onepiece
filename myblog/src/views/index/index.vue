@@ -4,26 +4,30 @@
             <el-header class="index-header navbar-expand-lg">
                 <div class="header-content container">
                     <a href="/" class="logo testone">
+                        <!-- <span>天</span>
+                        <span>堂</span>
+                        <span>瀑</span>
+                        <span>布</span> -->
                         <img src="../../assets/logo2.png" alt="">
                     </a>
                     <div class="content-title">
-                        <ul>
-                            <li>
+                        <ul class="layui-nav layui-this" lay-filter="">
+                            <li class="layui-nav-item">
                                 <router-link to='/'>首页</router-link>
                             </li>
-                            <li>
+                            <li class="layui-nav-item">
                                 <router-link to='/version'>说说</router-link>
                             </li>
-                            <li>
+                            <li class="layui-nav-item">
                                 <router-link to='/movie'>电影</router-link>
                             </li>
-                            <li>
+                            <li class="layui-nav-item">
                                 <router-link to='/community'>文章</router-link>
                             </li>
-                            <li>
+                            <li class="layui-nav-item">
                                 <router-link to='/music'>音乐</router-link>
                             </li>
-                            <li>
+                            <li class="layui-nav-item">
                                 <router-link to='/about'>关于</router-link>
                             </li>
                         </ul>
@@ -177,7 +181,7 @@
                                             <img src="../../assets/logo.jpg" alt="">
                                         </div>
                                         <div class="auth-name">
-                                            <span>惜缘</span>
+                                            <span>天堂瀑布</span>
                                             <p>一个前端开发</p>
                                         </div>
                                         <div class="auth-info">
@@ -322,14 +326,195 @@
                                 </el-row>
                                 <el-row class="five bgc mt-5">
                                     <el-col :span="24">
-                                        <el-tabs v-model="activeName" @tab-click="handleClick">
+                                        <el-tabs v-model="activeName">
                                             <el-tab-pane label="用户管理" name="first" class="five-title">
-                                                用户管理
+                                                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                    <ul class="hd-ul">
+                                                        <li>
+                                                            <div class="art-hd-list-left">
+                                                                <a href="#"><img src="images/logo.png" alt=""></a>
+                                                            </div>
+                                                            <div class="art-hd-list-right">
+                                                                <span><i class="el-user"></i>惜缘</span>
+                                                                <time>2020-3-7</time>
+                                                                <p>一般都是传关键字给后端，由后端来做...</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="art-hd-list-left">
+                                                                <a href="#"><img src="images/logo.png" alt=""></a>
+                                                            </div>
+                                                            <div class="art-hd-list-right">
+                                                                <span><i class="el-user"></i>惜缘</span>
+                                                                <time>2020-3-7</time>
+                                                                <p>一般都是传关键字给后端，由后端来做...</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="art-hd-list-left">
+                                                                <a href="#"><img src="images/logo.png" alt=""></a>
+                                                            </div>
+                                                            <div class="art-hd-list-right">
+                                                                <span><i class="el-user"></i>惜缘</span>
+                                                                <time>2020-3-7</time>
+                                                                <p>一般都是传关键字给后端，由后端来做...</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="art-hd-list-left">
+                                                                <a href="#"><img src="images/logo.png" alt=""></a>
+                                                            </div>
+                                                            <div class="art-hd-list-right">
+                                                                <span><i class="el-user"></i>惜缘</span>
+                                                                <time>2020-3-7</time>
+                                                                <p>一般都是传关键字给后端，由后端来做...</p>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="art-hd-list-left">
+                                                                <a href="#"><img src="images/logo.png" alt=""></a>
+                                                            </div>
+                                                            <div class="art-hd-list-right">
+                                                                <span><i class="el-user"></i>惜缘</span>
+                                                                <time>2020-3-7</time>
+                                                                <p>一般都是传关键字给后端，由后端来做...</p>
+                                                            </div>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
                                             </el-tab-pane>
                                             <el-tab-pane label="任务补偿" name="second" class="five-title">
-                                                任务补偿
+                                                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                    <ul class="art-sort">
+                                                        <li>
+                                                            <span>1</span>
+                                                            <a href="#">thinkphp5随机抽取数据的方法
+                                                                <b>(235)</b>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span>2</span>
+                                                            <a href="#">thinkphp5随机抽取数据的方法
+                                                                <b>(235)</b>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span>3</span>
+                                                            <a href="#">thinkphp5随机抽取数据的方法
+                                                                <b>(235)</b>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span>4</span>
+                                                            <a href="#">thinkphp5随机抽取数据的方法
+                                                                <b>(235)</b>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <span>5</span>
+                                                            <a href="#">thinkphp5随机抽取数据的方法
+                                                                <b>(235)</b>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </el-tab-pane>
                                         </el-tabs>
+                                    </el-col>
+                                </el-row>
+                                <el-row class="six bgc mt-5">
+                                    <el-col :span="24">
+                                        <div class="new new-right">
+                                            <span><i class="el-tags"></i>标签云</span>
+                                            <small>New Article</small>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <ul class="label">
+                                                <li>
+                                                    <a href="#" title="生活">生活&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="模糊查询">模糊查询&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="遍历二维数组">遍历二维数组&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Mui">Mui&nbsp;&nbsp;(2)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="随机">随机&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="文章月统计">文章月统计&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="时间戳">时间戳&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="一周每天的数据">一周每天的数据&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="无限极分类">无限极分类&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="tp5">tp5&nbsp;&nbsp;(2)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="面试">面试&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="layui">layui&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="Thinkphp5">Thinkphp5&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="QQ互联">QQ互联&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="惜缘">惜缘&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="发斯蒂芬">发斯蒂芬&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="擦擦">擦擦&nbsp;&nbsp;(3)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="发">发&nbsp;&nbsp;(2)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="测试">测试&nbsp;&nbsp;(5)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="fasdfasd">fasdfasd&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="测试数据2">测试数据2&nbsp;&nbsp;(1)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#" title="测试数据">测试数据&nbsp;&nbsp;(2)</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </el-col>
+                                </el-row>
+                                <el-row class="seven bgc mt-5">
+                                    <el-col :span="24">
+                                        <div class="new new-right">
+                                            <span><i class="el-paper-clip"></i>友情连接</span>
+                                            <small>Friend Links</small>
+                                        </div>
+                                        <div class="col-md-12 ">
+                                            <ul class="links">
+                                                <li><a href="">百度一下</a></li>
+                                                <li><a href="">惜缘个人博客</a></li>
+                                                <li><a href="">百度一下</a></li>
+                                                <li><a href="">百度一下</a></li>
+                                            </ul>
+                                        </div>
                                     </el-col>
                                 </el-row>
                             </div>
@@ -365,6 +550,12 @@ export default {
             ]
         }
     },
+    mounted() {
+        layui.use('element', function(){
+            var element = layui.element;
+            element.init()
+        });
+    },
     components: {
         headerone,
         sectionone,
@@ -385,6 +576,18 @@ export default {
 //         max-width: 1140px;
 //     }
 // }
+.logoone{
+    color: #009688;
+}
+.logotwo{
+    color: #5fb878;
+}
+.logothree{
+    color: #393d49;
+}
+.logofour{
+    color: #1e9fff;
+}
 @media (min-width: 992px){
     .navbar-expand-lg {
         -ms-flex-flow: row nowrap;
@@ -876,21 +1079,16 @@ export default {
                 align-items: center;
                 .header-content{
                     display: flex;
-                    // width: 1140px;
-                    // margin: auto;
                     padding-right: 15px;
                     padding-left: 15px;
-                    // -ms-flex-wrap: wrap;
-                    // flex-wrap: wrap;
-                    // -ms-flex-align: center;
-                    // align-items: center;
-                    // -ms-flex-pack: justify;
-                    // justify-content: space-between;
-                    // height: 55px;
                     .logo{
                         display: inline-block;
                         padding: 5px 0;
                         margin-right: 16px;
+                        span{
+                            font-size: 24px;
+                            color: tomato;
+                        }
                         img{
                             height: 45px;
                             vertical-align: middle;
@@ -903,7 +1101,7 @@ export default {
                         flex-grow: 1;
                         align-items: center;
                         box-sizing: border-box;
-                        height: 40px;
+                        height: 50px;
                         ul{
                             display: flex;
                             // flex-flow: row;
@@ -914,10 +1112,11 @@ export default {
                             li{
                                 box-sizing: border-box;
                                 a{
+                                    text-align: center;
+                                    font-size: 16px;
                                     display: block;
                                     width: 102px;
-                                    height: 40px;
-                                    line-height: 40px;
+                                    line-height: 50px;
                                     color: #ff6700 !important;
                                     padding: 8px 16px;
                                 }
@@ -933,6 +1132,18 @@ export default {
                 margin-top: 16px;
             }
         }
+    }
+    .layui-nav {
+        position: relative;
+        padding: 0px;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 2px;
+        font-size: 0;
+        box-sizing: border-box;
+    }
+    ::v-deep.layui-nav-bar{
+        width: 40px;
     }
     ::v-deep.el-footer{
         height: auto !important;
