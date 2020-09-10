@@ -533,7 +533,7 @@
 <script>
 import sectionone from '@/components/sectionone.vue'
 import sectiontwo from '@/components/sectiontwo.vue'
-import headerone from '@/components/headerone.vue'
+// import headerone from '@/components/headerone.vue'
 import footerone from '@/views/footer/footerone.vue'
 
 
@@ -557,7 +557,7 @@ export default {
         });
     },
     components: {
-        headerone,
+        // headerone,
         sectionone,
         sectiontwo,
         footerone

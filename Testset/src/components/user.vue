@@ -412,6 +412,38 @@ export default {
             // 第三个参数，主键名称，如果表格的主键名不是'id'那么这个参数必须制定，以为一般来说init会在render之前执行， 
             // 所以如果不指定，他找不到表格配置信息，也就不知道里面配合的主键名称是什么，导致变成默认的'id'后面render出来就没有效果了
             tablePlug.tableCheck.init('test',[{"id": 10000,}, { "id": 10001}],'id');
+            var laytpl = layui.laytpl;
+            var tplTemp = '你好！ <%d.name%> v<%layui.v%> ';
+
+            var layuiTpl = function (template, data, callback, open, close) {
+                laytpl.config({
+                open: open || '{{',
+                close: close || '}}'
+                });
+                var htmlTemp = laytpl(template).render(data, callback);
+                laytpl.config({
+                open: '{{',
+                close: '}}'
+                });
+                return htmlTemp;
+            };
+            layer.open({
+                type: 1,
+                skin: 'layer-top',
+                area: '100%',
+                offset: 't',
+                time: 3000,
+                anim: 5,
+                shade: 0,
+                title: false,
+                closeBtn: false,
+                content: layuiTpl(tplTemp, {name: 'Layui'}, null, '<%', '%>'),
+                success: function (layero, index) {
+                layero.find('.layui-layer-content').append('<i class="layui-icon layui-icon-close" onclick="layer.close(' + index + ')" style="float: right;cursor: pointer;"></i>')
+                },
+                resize: false
+
+            });
 
             //展示已知数据
             table.render({
@@ -518,6 +550,7 @@ export default {
             form.on('checkbox(lockDemo)', function(obj){
                 layer.tips(this.value + ' ' + this.name + '：'+ obj.elem.checked, obj.othis);
             });
+            
         });
         
     },

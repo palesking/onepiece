@@ -13,8 +13,7 @@
 					@tap="getProductDetail(productDetail.id)"
 					slot="refresh"
 					class="spec-color"
-					>重新加载</view
-				>
+					>重新加载</view>
 			</rf-no-data>
 		</view>
 		<!--顶部下拉菜单-->
@@ -79,30 +78,30 @@ export default {
 		},
 		// 数据初始化
 		async initData() {
-      if (this.userInfo.promo_code) {
-        this.currentUrl = `${this.$mConfig.hostUrl}/pages/product/product?id=${this.productId}&promo_code=${this.userInfo.promo_code}`;
-      } else {
-        this.currentUrl = `${this.$mConfig.hostUrl}/pages/product/product?id=${this.productId}`;
-      }
+            if (this.userInfo.promo_code) {
+                this.currentUrl = `${this.$mConfig.hostUrl}/pages/product/product?id=${this.productId}&promo_code=${this.userInfo.promo_code}`;
+            } else {
+                this.currentUrl = `${this.$mConfig.hostUrl}/pages/product/product?id=${this.productId}`;
+            }
 			this.hasLogin = this.$mStore.getters.hasLogin;
 			await this.getProductDetail();
 		},
 		// 获取产品详情
 		async getProductDetail() {
 			await this.$http
-				.get(`${productDetail}`, {
-					id: this.productId
-				})
-				.then(async r => {
-					this.loading = false;
-					this.productDetail = r.data;
-					uni.setNavigationBarTitle({ title: r.data.name });
-					await this.$mHelper.handleWxH5Share(this.appName, r.data.name, this.currentUrl, r.data.picture);
-				})
-				.catch(err => {
-					this.loading = false;
-					this.errorInfo = err;
-				});
+            .get(`${productDetail}`, {
+                id: this.productId
+            })
+            .then(async r => {
+                this.loading = false;
+                this.productDetail = r.data;
+                uni.setNavigationBarTitle({ title: r.data.name });
+                await this.$mHelper.handleWxH5Share(this.appName, r.data.name, this.currentUrl, r.data.picture);
+            })
+            .catch(err => {
+                this.loading = false;
+                this.errorInfo = err;
+            });
 		}
 	}
 };

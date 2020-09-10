@@ -591,10 +591,10 @@
 	import rfLive from '@/components/rf-live';
 	import { cartItemCount, cartItemCreate } from '@/api/product';
 	import { collectCreate, collectDel, pickupPointIndex, transmitCreate } from '@/api/basic';
-  import { couponReceive, addressList } from '@/api/userInfo';
+    import { couponReceive, addressList } from '@/api/userInfo';
 	import { mapMutations } from 'vuex';
-  export default {
-    name: 'rfProductDetail',
+    export default {
+        name: 'rfProductDetail',
     props: {
 			product: {
 				type: Object,
