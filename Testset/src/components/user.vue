@@ -30,7 +30,7 @@
                         </script>
                         <script type="text/html" id="toolbarDemo">
                             <div class="layui-btn-container layui-inline">
-                                <span class="layui-btn layui-btn-sm" lay-event="getChecked">获得选中的数据</span>
+                                <span class="layui-btn layui-btn-sm" lay-event="getCheckData">获得选中的数据</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getCheckedWithCache">获得选中的数据带缓存数据(跨页)</span>
                                 <span class="layui-btn layui-btn-sm" lay-event="deleteSome">批量删除</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="1">第1页</span>
@@ -44,7 +44,6 @@
                                 <span class="layui-btn layui-btn-sm" lay-event="addTempData">添加临时数据</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getTempData">获得临时数据</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-danger" lay-event="cleanTempData">清空临时数据</span>
-
                                 <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversion">行列转换(初始实现)</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversionPro">行列转换(封装)</span>
                                 <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="testUpdate">积分清零</span>
@@ -405,6 +404,7 @@ export default {
         layui.config({base:'layui/tablePlug/'}).use(['table','tablePlug'], ()=>{
             var table = layui.table,
                 form = layui.form,
+                $ = layui.$,
                 tablePlug = layui.tablePlug,
                 //多选下拉插件
                 formSelects = layui.formSelects; 
@@ -414,6 +414,24 @@ export default {
             tablePlug.tableCheck.init('test',[{"id": 10000,}, { "id": 10001}],'id');
             var laytpl = layui.laytpl;
             var tplTemp = '你好！ <%d.name%> v<%layui.v%> ';
+            // 处理操作列
+            var fn1 = function (field) {
+                return function (data) {
+                // return data[field];
+                var value = data[field];
+                return [
+                    '<select name="city" lay-filter="city_select" lay-search="true" value="' + value + '">',
+                    '<option value="" >请选择或搜索</option>',
+                    '<option value="北京" ' + (value === '北京' ? 'selected' : '') + '>北京</option>',
+                    '<option value="天津" ' + (value === '天津' ? 'selected' : '') + '>天津</option>',
+                    '<option value="上海" ' + (value === '上海' ? 'selected' : '') + '>上海</option>',
+                    '<option value="广州" ' + (value === '广州' ? 'selected' : '') + '>广州</option>',
+                    '<option value="深圳" ' + (value === '深圳' ? 'selected' : '') + '>深圳</option>',
+                    '<option value="佛山" ' + (value === '佛山' ? 'selected' : '') + '>佛山</option>',
+                    '</select>'
+                ].join('');
+                };
+            };
 
             var layuiTpl = function (template, data, callback, open, close) {
                 laytpl.config({
@@ -501,24 +519,30 @@ export default {
             });
             //头工具栏事件
             table.on('toolbar(test)', function(obj){
+                var that = this;
+                var config = obj.config;
+                var btnElem = $(that);
                 var checkStatus = table.checkStatus(obj.config.id);
                 switch(obj.event){
                     case 'getCheckData':
                         var data = checkStatus.data;
                         layer.alert(JSON.stringify(data));
-                        break;
+                    break;
                     case 'getCheckLength':
                         var data = checkStatus.data;
                         layer.msg('选中了：'+ data.length + ' 个');
-                        break;
+                    break;
                     case 'isAll':
                         layer.msg(checkStatus.isAll ? '全选': '未全选');
-                        break;
-                    
+                    break;
                     //自定义头工具栏右侧图标 - 提示
                     case 'LAYTABLE_TIPS':
                         layer.alert('这是工具栏右侧自定义的一个图标按钮');
-                        break;
+                    break;
+                    case 'jump':
+                        var pageCurr = btnElem.data('page');
+                        table.reload(config.id, {url: 'json/data1' + pageCurr + '.json', page: {curr: pageCurr}});
+                    break;
                 };
             });
             
