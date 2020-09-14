@@ -8,6 +8,7 @@
         <!-- <offset></offset> -->
         <iviewtabs></iviewtabs>
         <iviewtabstwo></iviewtabstwo>
+        <usertwo></usertwo>
     </div>
 </template>
 <script>
@@ -19,6 +20,7 @@ import user from '@/components/user.vue'
 import offset from '@/components/offset.vue'
 import iviewtabs from '@/components/iviewtabs.vue'
 import iviewtabstwo from '@/components/iviewtabstwo.vue'
+import usertwo from '@/components/usertwo.vue'
 export default {
     name:'home',
     components:{
@@ -29,7 +31,8 @@ export default {
         user,
         // offset,
         iviewtabs,
-        iviewtabstwo
+        iviewtabstwo,
+        usertwo
     }
 }
 </script>
