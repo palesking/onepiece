@@ -4,11 +4,11 @@
         <!-- <testtwo></testtwo> -->
         <!-- <testthree></testthree> -->
         <!-- <testfour></testfour> -->
-        <user></user>
+        <!-- <user></user> -->
         <!-- <offset></offset> -->
-        <iviewtabs></iviewtabs>
-        <iviewtabstwo></iviewtabstwo>
-        <usertwo></usertwo>
+        <!-- <iviewtabs></iviewtabs> -->
+        <!-- <iviewtabstwo></iviewtabstwo> -->
+        <!-- <usertwo></usertwo> -->
     </div>
 </template>
 <script>
@@ -16,6 +16,7 @@
 // import testtwo from '@/components/testtwo.vue'
 // import testthree from '@/components/testthree.vue'
 // import testfour from '@/components/testfour.vue'
+
 import user from '@/components/user.vue'
 import offset from '@/components/offset.vue'
 import iviewtabs from '@/components/iviewtabs.vue'
