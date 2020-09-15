@@ -3,14 +3,15 @@
         <el-container class="index-content">
             <el-header class="index-header navbar-expand-lg">
                 <div class="header-content container">
-                    <a href="/" class="logo testone">
-                        <!-- <span>天</span>
+                    <!-- <a href="/" class="logo testone">
+                        <span>天</span>
                         <span>堂</span>
                         <span>瀑</span>
-                        <span>布</span> -->
+                        <span>布</span>
                         <img src="../../assets/logo2.png" alt="">
-                    </a>
-                    <div class="content-title">
+                    </a> -->
+
+                    <!-- <div class="content-title">
                         <ul class="layui-nav layui-this" lay-filter="">
                             <li class="layui-nav-item">
                                 <router-link to='/'>首页</router-link>
@@ -31,7 +32,8 @@
                                 <router-link to='/about'>关于</router-link>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
+                    <headerone></headerone>
                 </div>
             </el-header>
             <el-main class="index-main">
@@ -535,7 +537,7 @@ import sectionone from '@/components/sectionone.vue'
 import sectiontwo from '@/components/sectiontwo.vue'
 // import headerone from '@/components/headerone.vue'
 import footerone from '@/views/footer/footerone.vue'
-
+import headerone from '@/components/header/index.vue'
 
 export default {
     name: 'index',
@@ -557,7 +559,7 @@ export default {
         });
     },
     components: {
-        // headerone,
+        headerone,
         sectionone,
         sectiontwo,
         footerone
