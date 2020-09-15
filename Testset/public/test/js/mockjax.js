@@ -6,17 +6,17 @@
 
  */
 layui.define(['jquery'], function (exports) {
-  "use strict";
-  var modelName = 'mockjax';
-  window.$ = window.$ || layui.$;
+    "use strict";
+    var modelName = 'mockjax';
+    window.$ = window.$ || layui.$;
 
-  var scriptElement = document.createElement('script');
-  var scriptElementFirst = document.getElementsByTagName('script')[0];
-  scriptElement.async = true;
-  scriptElement.charset = 'utf-8';
-  scriptElement.src = 'test/js/jquery-mockjax/jquery.mockjax.js';
-  scriptElementFirst.parentNode.insertBefore(scriptElement, scriptElementFirst);
+    var scriptElement = document.createElement('script');
+    var scriptElementFirst = document.getElementsByTagName('script')[0];
+    scriptElement.async = true;
+    scriptElement.charset = 'utf-8';
+    scriptElement.src = 'test/js/jquery-mockjax/jquery.mockjax.js';
+    scriptElementFirst.parentNode.insertBefore(scriptElement, scriptElementFirst);
 
 
-  exports(modelName, {});
+    exports(modelName, {});
 });

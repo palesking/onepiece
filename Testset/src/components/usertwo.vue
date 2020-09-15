@@ -1,28 +1,5 @@
 <template>
     <div class="usertwo">
-        <!-- <div class="layui-container">
-            <div class="layui-row layui-col-space10">
-                <div class="layui-col-xs12" style="margin-top: 10px;">
-                <div class="layui-form">
-                    <div class="layui-form-item">
-                    <label class="layui-form-label">是否跨页记录</label>
-                    <div class="layui-input-inline">
-                        <input type="checkbox" name="status" lay-skin="switch" checked="checked" lay-filter="statusSwitch">
-                    </div>
-                    <div class="layui-input-inline">
-                        <span class="layui-btn layui-btn-sm layui-btn-danger" onclick="resetCheckboxStatus(this)" data-id="demo">重置选中状态</span>
-                    </div>
-                    <label class="layui-form-label">固定列滚动支持</label>
-                    <div class="layui-input-inline">
-                        <input type="checkbox" lay-skin="switch" checked="checked" lay-filter="tableFixedScrollSwitch"
-                            lay-text="开启|关闭">
-                    </div>
-                    </div>
-                </div>
-                
-                </div>
-            </div>
-        </div> -->
         <table id="demo" class="table_th_search" lay-filter="test"></table>
         <script type="text/html" id="barDemo">
             <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
@@ -35,30 +12,26 @@
         </script>
 
         <script type="text/html" id="toolbarDemo">
-        <div class="layui-btn-container layui-inline">
-            <span class="layui-btn layui-btn-sm" lay-event="getChecked">获得选中的数据</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getCheckedWithCache">获得选中的数据带缓存数据(跨页)</span>
-            <span class="layui-btn layui-btn-sm" lay-event="deleteSome">批量删除</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="1">第1页</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="2">第2页</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="reload" data-url="data_none">无数据</span>
-            <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="reload">重载</span>
-            <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabled">设置10003,10004,10010不可选</span>
-            <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabledNull">取消不可选</span>
-            <span class="layui-btn layui-btn-sm" lay-event="openSelect">弹出选择</span>
-            <span class="layui-btn layui-btn-sm" lay-event="openIframeSelect">弹出iframe选择</span>
-            <span class="layui-btn layui-btn-sm" lay-event="addTempData">添加临时数据</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getTempData">获得临时数据</span>
-            <span class="layui-btn layui-btn-sm layui-btn-danger" lay-event="cleanTempData">清空临时数据</span>
-
-            <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversion">行列转换(初始实现)</span>
-            <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversionPro">行列转换(封装)</span>
-            <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="testUpdate">积分清零</span>
-            <span class="layui-btn layui-btn-sm" lay-event="testUpdate10">女性积分加100</span>
-        </div>
-        <!-- <div class="layui-inline">
-            <span><span style="color: red;">※</span>url模式测试用的是json文件所以翻页请用这里按钮，不要用table的中的laypage组件，实际开发中不会有这个问题</span>
-        </div> -->
+            <div class="layui-btn-container layui-inline">
+                <span class="layui-btn layui-btn-sm" lay-event="getChecked">获得选中的数据</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getCheckedWithCache">获得选中的数据带缓存数据(跨页)</span>
+                <span class="layui-btn layui-btn-sm" lay-event="deleteSome">批量删除</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="1">第1页</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="jump" data-page="2">第2页</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="reload" data-url="data_none">无数据</span>
+                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="reload">重载</span>
+                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabled">设置10003,10004,10010不可选</span>
+                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="setDisabledNull">取消不可选</span>
+                <span class="layui-btn layui-btn-sm" lay-event="openSelect">弹出选择</span>
+                <span class="layui-btn layui-btn-sm" lay-event="openIframeSelect">弹出iframe选择</span>
+                <span class="layui-btn layui-btn-sm" lay-event="addTempData">添加临时数据</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="getTempData">获得临时数据</span>
+                <span class="layui-btn layui-btn-sm layui-btn-danger" lay-event="cleanTempData">清空临时数据</span>
+                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversion">行列转换(初始实现)</span>
+                <span class="layui-btn layui-btn-sm layui-btn-primary" lay-event="ranksConversionPro">行列转换(封装)</span>
+                <span class="layui-btn layui-btn-sm layui-btn-warm" lay-event="testUpdate">积分清零</span>
+                <span class="layui-btn layui-btn-sm" lay-event="testUpdate10">女性积分加100</span>
+            </div>
         </script>
     </div>
 </template>
@@ -131,37 +104,6 @@ export default {
 
             var laytpl = layui.laytpl;
             var tplTemp = '你好！ <%d.name%> v<%layui.v%> ';
-
-            // var layuiTpl = function (template, data, callback, open, close) {
-            //     laytpl.config({
-            //         open: open || '{{',
-            //         close: close || '}}'
-            //     });
-            //     var htmlTemp = laytpl(template).render(data, callback);
-            //     laytpl.config({
-            //         open: '{{',
-            //         close: '}}'
-            //     });
-            //     return htmlTemp;
-            // };
-
-            // layer.open({
-            //     type: 1,
-            //     skin: 'layer-top',
-            //     area: '100%',
-            //     offset: 't',
-            //     time: 3000,
-            //     anim: 5,
-            //     shade: 0,
-            //     title: false,
-            //     closeBtn: false,
-            //     content: layuiTpl(tplTemp, {name: 'Layui'}, null, '<%', '%>'),
-            //     success: function (layero, index) {
-            //         layero.find('.layui-layer-content').append('<i class="layui-icon layui-icon-close" onclick="layer.close(' + index + ')" style="float: right;cursor: pointer;"></i>')
-            //     },
-            //     resize: false
-
-            // });
 
             formSelects.opened(function (id) {
                 alert('打开了...1');
@@ -367,6 +309,9 @@ export default {
 </script>
 <style lang="less" scoped>
     @import '../../public/test/js/formSelects/formSelects-v4.css';
+    .usertwo{
+        width: 100%;
+    }
     .layui-form-label {
       width: 100px;
     }

@@ -1,7 +1,3 @@
-/**
- * @file layui - 测试
- * @author xuexb <fe.xiaowu@gmail.com>
- */
 
 /* global layui */
 /* eslint-disable max-nested-callbacks, fecs-indent */

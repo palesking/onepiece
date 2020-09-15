@@ -358,7 +358,7 @@ export default {
                 //标题栏
                 {type: 'checkbox'},
                 {field: 'id', title: 'ID', sort: true,width:80,align:'center'},
-                {field: 'username', title: '用户名',width:80,align:'center'},
+                {field: 'username', title: '用户名',width:80,align:'center',edit: true},
                 {field: 'email', title: '邮箱',align:'center'},
                 {field: 'sign', title: '签名',filter: true,align:'center'},
                 {field: 'sex', title: '性别',filter: true,width:60,align:'center'},

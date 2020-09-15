@@ -35,30 +35,30 @@ layui.config({base: 'layui/plug/'})
         };
 
     // mylayui公告
-    layer.open({
-        type: 1
-        ,title: false //不显示标题栏
-        ,closeBtn: false
-        ,area: '300px;'
-        ,shade: 0.8
-        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
-        ,btn: ['前往试试', '下次再说']
-        ,btnAlign: 'c'
-        ,moveType: 1 //拖拽模式，0或者1
-        ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +
-            '感谢各位小伙伴一直以来的认可支持，提供了很多很好的思路、意见以及赞助<i class="layui-icon layui-icon-face-smile"></i><br><br>' +
-            '基于开发中积累，为了让表格以及其他模块更加好用，对开发更加友好，启动了一个<a style="color: skyblue" href="https://sun_zoro.gitee.io/mylayui/doc/api.html#/" target="_blank">MyLayui</a>的开源项目，其中关于表格的修改会囊括tablePlug的所有功能，' +
-            '并且是以更加合理的方式去实现，力求使用更加方便高效。<br><br>' +
-            '由于精力有限，后面会比较偏向MyLayui，当然关于table新的修改会保持两个项目的同步性。<br><br>' +
-            '希望大家可以试试新的项目，多提宝贵意见^_^</div>'
-        ,success: function(layero){
-            var btn = layero.find('.layui-layer-btn');
-            btn.find('.layui-layer-btn0').attr({
-            href: 'https://gitee.com/sun_zoro/mylayui'
-            ,target: '_blank'
-            });
-        }
-    });
+    // layer.open({
+    //     type: 1
+    //     ,title: false //不显示标题栏
+    //     ,closeBtn: false
+    //     ,area: '300px;'
+    //     ,shade: 0.8
+    //     ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+    //     ,btn: ['前往试试', '下次再说']
+    //     ,btnAlign: 'c'
+    //     ,moveType: 1 //拖拽模式，0或者1
+    //     ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +
+    //         '感谢各位小伙伴一直以来的认可支持，提供了很多很好的思路、意见以及赞助<i class="layui-icon layui-icon-face-smile"></i><br><br>' +
+    //         '基于开发中积累，为了让表格以及其他模块更加好用，对开发更加友好，启动了一个<a style="color: skyblue" href="https://sun_zoro.gitee.io/mylayui/doc/api.html#/" target="_blank">MyLayui</a>的开源项目，其中关于表格的修改会囊括tablePlug的所有功能，' +
+    //         '并且是以更加合理的方式去实现，力求使用更加方便高效。<br><br>' +
+    //         '由于精力有限，后面会比较偏向MyLayui，当然关于table新的修改会保持两个项目的同步性。<br><br>' +
+    //         '希望大家可以试试新的项目，多提宝贵意见^_^</div>'
+    //     ,success: function(layero){
+    //         var btn = layero.find('.layui-layer-btn');
+    //         btn.find('.layui-layer-btn0').attr({
+    //         href: 'https://gitee.com/sun_zoro/mylayui'
+    //         ,target: '_blank'
+    //         });
+    //     }
+    // });
 
     // 是否跨页的开关监听
     form.on('switch(statusSwitch)', function (data) {
