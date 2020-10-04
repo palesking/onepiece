@@ -2,16 +2,11 @@
     <div class="index">
         <el-container class="index-content">
             <el-header class="index-header navbar-expand-lg">
-                <div class="header-content container">
-                    <!-- <a href="/" class="logo testone">
-                        <span>天</span>
-                        <span>堂</span>
-                        <span>瀑</span>
-                        <span>布</span>
+                <!-- <div class="header-content container">
+                    <a href="/" class="logo testone">
                         <img src="../../assets/logo2.png" alt="">
-                    </a> -->
-
-                    <!-- <div class="content-title">
+                    </a>
+                    <div class="content-title">
                         <ul class="layui-nav layui-this" lay-filter="">
                             <li class="layui-nav-item">
                                 <router-link to='/'>首页</router-link>
@@ -32,9 +27,9 @@
                                 <router-link to='/about'>关于</router-link>
                             </li>
                         </ul>
-                    </div> -->
-                    <headerone></headerone>
-                </div>
+                    </div>
+                </div> -->
+                <headerone></headerone>
             </el-header>
             <el-main class="index-main">
                 <div class="main-content">
