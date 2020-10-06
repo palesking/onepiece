@@ -9,7 +9,6 @@
                 <a href="http://resume.palingking.com/" target="_blank">简历</a>
             </div> 
         </el-card>
-        <music></music>
     </div>
 </template>
 <script>

@@ -42,6 +42,11 @@ Vue.use(VueRouter)
                 name:'music',
                 component: ()=>import('@/components/music')
             },
+            {
+                path:'/index',
+                name: 'index',
+                component: ()=>import('@/components/contentone/index.vue')
+            }
         ]
     },
     
@@ -51,7 +56,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
     // base: './',
-    // mode: 'history',
+    mode: 'history',
     routes
 })
 

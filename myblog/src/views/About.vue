@@ -27,7 +27,7 @@
         </el-tab-pane>
         </el-tabs>
     </div>
-    <sectiontwo></sectiontwo>
+    <!-- <sectiontwo></sectiontwo> -->
   </div>
 </template>
 <script>
@@ -46,17 +46,17 @@ export default {
 </script>
 <style lang="less">
   .about{
-    width: 1400px;
-    margin: auto;
-    height: 880px;
-    margin-top: 75px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    //width: 1400px;
-    //margin: auto;
-    // color: white;
-    position: relative;
+    // width: 1400px;
+    // margin: auto;
+    // height: 880px;
+    // margin-top: 75px;
+    // padding: 5px 0;
+    // display: flex;
+    // justify-content: space-between;
+    // //width: 1400px;
+    // //margin: auto;
+    // // color: white; 
+    // position: relative;
     .about-content{
       // overflow: visible;
       height:600px;

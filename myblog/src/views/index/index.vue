@@ -6,7 +6,10 @@
             </el-header>
             <el-main class="index-main">
                 <div class="main-content">
-                    <contentone></contentone>
+                    <router-view>
+                        
+                    </router-view>
+                    <!-- <contentone></contentone> -->
                 </div>
             </el-main>
             <el-footer id="footer">
