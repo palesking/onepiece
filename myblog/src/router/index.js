@@ -45,7 +45,14 @@ Vue.use(VueRouter)
             {
                 path:'/index',
                 name: 'index',
-                component: ()=>import('@/components/contentone/index.vue')
+                component: ()=>import('@/components/contentone/index.vue'),
+                children: [
+                    {
+                        path: '/details',
+                        name: 'details',
+                        component: ()=>import('@/components/details/index.vue')
+                    }
+                ]
             }
         ]
     },
@@ -55,7 +62,6 @@ Vue.use(VueRouter)
   ]
 
 const router = new VueRouter({
-    // base: './',
     mode: 'history',
     routes
 })

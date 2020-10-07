@@ -4,7 +4,6 @@
             <el-col :span="16" class='main-left'>
                 <el-carousel :interval="5000" arrow="always">
                     <el-carousel-item v-for="item in img" :key="item.id">
-                    <!-- <h3>{{ item }}</h3> -->
                     <img :src='item.url' alt="" class="lunbotu">
                     </el-carousel-item>
                 </el-carousel>
@@ -23,40 +22,44 @@
                                     <img src="../../assets/images/8.jpg" alt="">
                                 </div>
                                 <div class="art-content">
-                                    <h5>js前端实现模糊查询</h5>
-                                    <p>
+                                    <h5 @click="handledetails">js前端实现模糊查询</h5>
+                                    <p @click="handledetails">
+                                        js前端实现模糊查询对于模糊查询，
+                                        一般都是传关键字给后端，由后端来做。
+                                        但是有时候一些轻量级的列表前端来做可以减少ajax请求，
+                                        在一定程度上提高用户体验。废话不多...
                                         js前端实现模糊查询对于模糊查询，
                                         一般都是传关键字给后端，由后端来做。
                                         但是有时候一些轻量级的列表前端来做可以减少ajax请求，
                                         在一定程度上提高用户体验。废话不多...
                                     </p>
-                                    <ul>
+                                    <ul class="art-links">
                                         <li>
-                                            <a href="">
+                                            <a href="/">
                                                 <i class="layui-icon layui-icon-time"></i>
                                                 2019-04-03
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="/">
                                                 <i class="layui-icon layui-icon-friends"></i>
                                                 天堂瀑布
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="/">
                                                 <i class="layui-icon layui-icon-heart-fill"></i>
                                                 2
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="/">
                                                 <i class="layui-icon layui-icon-praise"></i>
                                                 1
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="">
+                                            <a href="/">
                                                 <i class="layui-icon layui-icon-template-1"></i>
                                                 标签
                                             </a>
@@ -350,33 +353,33 @@
                                 </el-tab-pane>
                                 <el-tab-pane label="任务补偿" name="second" class="five-title">
                                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                        <ul class="art-sort">
+                                        <ul class="art-sort pb-4 mt-2">
                                             <li>
-                                                <span>1</span>
+                                                <span class="layui-badge layui-bg-orange">1</span>
                                                 <a href="#">thinkphp5随机抽取数据的方法
                                                     <b>(235)</b>
                                                 </a>
                                             </li>
                                             <li>
-                                                <span>2</span>
+                                                <span class="layui-badge layui-bg-green">2</span>
                                                 <a href="#">thinkphp5随机抽取数据的方法
                                                     <b>(235)</b>
                                                 </a>
                                             </li>
                                             <li>
-                                                <span>3</span>
+                                                <span class="layui-badge layui-bg-cyan">3</span>
                                                 <a href="#">thinkphp5随机抽取数据的方法
                                                     <b>(235)</b>
                                                 </a>
                                             </li>
                                             <li>
-                                                <span>4</span>
+                                                <span class="layui-badge layui-bg-blue">4</span>
                                                 <a href="#">thinkphp5随机抽取数据的方法
                                                     <b>(235)</b>
                                                 </a>
                                             </li>
                                             <li>
-                                                <span>5</span>
+                                                <span class="layui-badge layui-bg-black">5</span>
                                                 <a href="#">thinkphp5随机抽取数据的方法
                                                     <b>(235)</b>
                                                 </a>
@@ -390,76 +393,58 @@
                     <el-row class="six bgc mt-5">
                         <el-col :span="24">
                             <div class="new new-right">
-                                <span><i class="el-tags"></i>标签云</span>
+                                <span><i class="layui-icon layui-icon-link"></i>标签云</span>
                                 <small>New Article</small>
                             </div>
                             <div class="col-md-12 ">
-                                <ul class="label">
-                                    <li>
-                                        <a href="#" title="生活">生活&nbsp;&nbsp;(1)</a>
+                                <ul class="label mt-4 pb-4">
+                                    <li class="layui-btn layui-btn-xs">
+                                        <a href="#">生活&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="模糊查询">模糊查询&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-red layui-btn layui-btn-xs">
+                                        <a href="#" >模糊查询&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="遍历二维数组">遍历二维数组&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-orange layui-btn layui-btn-xs">
+                                        <a href="#" >遍历二维数组&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="Mui">Mui&nbsp;&nbsp;(2)</a>
+                                    <li class="layui-bg-green layui-btn layui-btn-xs">
+                                        <a href="#">Mui&nbsp;&nbsp;(2)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="随机">随机&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-cyan layui-btn layui-btn-xs">
+                                        <a href="#">随机&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="文章月统计">文章月统计&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-blue layui-btn layui-btn-xs">
+                                        <a href="#">文章月统计&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="时间戳">时间戳&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-black layui-btn layui-btn-xs">
+                                        <a href="#">时间戳&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="一周每天的数据">一周每天的数据&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-gray layui-btn layui-btn-xs">
+                                        <a href="#" style="color:#999;">一周每天的数据&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="无限极分类">无限极分类&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-btn layui-btn-xs">
+                                        <a href="#">生活&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="tp5">tp5&nbsp;&nbsp;(2)</a>
+                                    <li class="layui-bg-red layui-btn layui-btn-xs">
+                                        <a href="#" >模糊查询&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="面试">面试&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-orange layui-btn layui-btn-xs">
+                                        <a href="#" >遍历二维数组&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="layui">layui&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-green layui-btn layui-btn-xs">
+                                        <a href="#">Mui&nbsp;&nbsp;(2)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="Thinkphp5">Thinkphp5&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-cyan layui-btn layui-btn-xs">
+                                        <a href="#">随机&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="QQ互联">QQ互联&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-blue layui-btn layui-btn-xs">
+                                        <a href="#">文章月统计&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="惜缘">惜缘&nbsp;&nbsp;(1)</a>
+                                    <li class="layui-bg-black layui-btn layui-btn-xs">
+                                        <a href="#">时间戳&nbsp;&nbsp;(1)</a>
                                     </li>
-                                    <li>
-                                        <a href="#" title="发斯蒂芬">发斯蒂芬&nbsp;&nbsp;(1)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="擦擦">擦擦&nbsp;&nbsp;(3)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="发">发&nbsp;&nbsp;(2)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="测试">测试&nbsp;&nbsp;(5)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="fasdfasd">fasdfasd&nbsp;&nbsp;(1)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="测试数据2">测试数据2&nbsp;&nbsp;(1)</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" title="测试数据">测试数据&nbsp;&nbsp;(2)</a>
+                                    <li class="layui-bg-gray layui-btn layui-btn-xs">
+                                        <a href="#" style="color:#999;">一周每天的数据&nbsp;&nbsp;(1)</a>
                                     </li>
                                 </ul>
                             </div>
@@ -472,9 +457,9 @@
                                 <small>Friend Links</small>
                             </div>
                             <div class="col-md-12 ">
-                                <ul class="links">
-                                    <li class="layui-btn layui-btn-xs"><a href="">百度一下</a></li>
-                                    <li class="layui-btn layui-btn-xs"><a href="">惜缘个人博客</a></li>
+                                <ul class="links mt-4 pb-4">
+                                    <li class="layui-btn layui-btn-xs"><a href="https:/www.baidu.com" target="_blank">百度一下</a></li>
+                                    <li class="layui-btn layui-btn-xs"><a href="">博客</a></li>
                                     <li class="layui-btn layui-btn-xs"><a href="">百度一下</a></li>
                                     <li class="layui-btn layui-btn-xs"><a href="">百度一下</a></li>
                                 </ul>
@@ -505,6 +490,11 @@ export default {
                     url:require('../../assets/images/3.png'),
                 }
             ]
+        }
+    },
+    methods: {
+        handledetails(){
+            console.log(123)
         }
     },
 }
@@ -564,10 +554,14 @@ export default {
                             font-weight: bolder;
                         }
                         p{
+                            height: 60px;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                            overflow: hidden;
                             font-size: 13px;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            height: 54px;
                             color: #515151;
                         }
                         ul{
@@ -575,6 +569,7 @@ export default {
                             overflow: hidden;
                             position: absolute;
                             margin-top: 5px;
+                            // position: absolute;
                             li:first-child{
                                 padding: 0;
                             }
@@ -765,7 +760,30 @@ export default {
                 }
                 
                 .five-title{
-                    width: 50%;
+                    // width: 50%;
+                }
+            }
+            .six{
+                .label {
+                    width: 95%;
+                    overflow: hidden;
+                    // margin-bottom: 10px;
+                    li{
+                        padding: 0.1em 0.5em 0.1em 0.5em;
+                        float: left;
+                        text-align: center;
+                        // border-radius: 0.5em;
+                        margin: 0.3em 1% 0.3em 1%;
+                        -moz-transition: all 0.5s;
+                        -webkit-transition: all 0.5s;
+                        -o-transition: all 0.5s;
+                        transition: all 0.5s;
+                        a{
+                            color: #FFF;
+                            font-size: 12px;
+                            text-decoration: none;
+                        }
+                    }
                 }
             }
         }
@@ -932,6 +950,12 @@ export default {
         /* background: rgba(255,255,255,0.5); */
         transition: all 0.5s;
         -webkit-transition: all 0.5s;
+    }
+    .art-img{
+        img{
+            width: 100%;
+            height: 100%;
+        }
     }
     .artimg-img {
         width: 45%;

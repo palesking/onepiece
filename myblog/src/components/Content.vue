@@ -112,46 +112,46 @@ export default {
 </script>
 <style lang="less">
     .content{
-      width: 1400px;
-      height: 100%;
-      // height:800px;
-      margin: auto;
-      // background-color: white;
-      margin-top:76px;
-      padding: 20px 0;
-      position: relative;
-      z-index: 1; 
-      overflow: hidden;
-      overflow-y: scroll;
-      // overflow-y:hidden;
-      a{
-        color:cornflowerblue;
-      }
-      .content-title{
-        .clearfix span{
-          font-size: 22px;
-          font-weight: 700;
+        width: 1400px;
+        height: 100%;
+        // height:800px;
+        margin: auto;
+        // background-color: white;
+        margin-top:76px;
+        padding: 20px 0;
+        position: relative;
+        z-index: 1; 
+        overflow: hidden;
+        overflow-y: scroll;
+        // overflow-y:hidden;
+        a{
+            color:cornflowerblue;
         }
-        .text{
-          font-size: 15px;
-          line-height: 25px;
-          .text-button{
-            padding: 20px 0;
-          }
+        .content-title{
+            .clearfix span{
+                font-size: 22px;
+                font-weight: 700;
+            }
+            .text{
+                font-size: 15px;
+                line-height: 25px;
+                .text-button{
+                    padding: 20px 0;
+                }
+            }
         }
-      }
-      .el-divider--horizontal{
-        margin: 0;
-      }
-      .content-all{
-        .content-all-title{
-          font-size: 22px;
-          padding-bottom: 20px;
+        .el-divider--horizontal{
+            margin: 0;
         }
-        .image{
-          padding: 5px 0;
+        .content-all{
+            .content-all-title{
+                font-size: 22px;
+                padding-bottom: 20px;
+            }
+            .image{
+                padding: 5px 0;
+            }
         }
-      }
     }
     .content::-webkit-scrollbar{
         display: none;

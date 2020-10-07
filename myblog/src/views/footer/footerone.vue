@@ -113,9 +113,12 @@
         <el-row>
             <el-col :span="24">
                 <div class="foot-nav text-center">
-                    <div class="copy-right"><span>Copyright © xxxxxxxx 2018 </span></div>
+                    <div class="copy-right">
+                        <span>Copyright © 2020 </span>
+                        <span>豫ICP备19046453号</span>
+                    </div>
                     <div class="bottom-nav">
-                        <span>ICP备xxxx号 </span>
+                        
                     </div>
 
                 </div>
