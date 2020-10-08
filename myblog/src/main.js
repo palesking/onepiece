@@ -98,6 +98,9 @@ import ViewUI from 'view-design';
 import 'view-design/dist/styles/iview.css';
 Vue.use(ViewUI);
 
+// import animated from 'animate.css'
+// Vue.use(animated)
+
 
 Vue.prototype.axios = axios
 Vue.use(Pagination);
