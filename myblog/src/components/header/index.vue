@@ -56,7 +56,6 @@ export default {
             var element = layui.element;
             element.init()
         });
-        console.log(this.$router)
         console.log(this.$route.path)
     },
 }
