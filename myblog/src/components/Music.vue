@@ -1,5 +1,5 @@
 <template>
-    <aplayer :audio="audio" style="margin:0;" :lrcType='0'></aplayer>
+    <aplayer :audio="audio" style="margin:0;" listFolded :lrcType='0'></aplayer>
 </template>
 
 <script>

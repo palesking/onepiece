@@ -1,31 +1,18 @@
 <template>
     <div class="header-content container">
-        <a href="/" class="logo testone">
-            <!-- <span>天</span>
-            <span>堂</span>
-            <span>瀑</span>
-            <span>布</span> -->
-            <img src="../../assets/logo2.png" alt="">
+        <a href="/" class="logo testone" >
+            <span>Paling</span>
+            <span>King</span>
         </a>
         <div class="content-title">
-            <ul class="layui-nav layui-this" lay-filter="">
-                <li class="layui-nav-item">
-                    <router-link to='/'>首页</router-link>
-                </li>
-                <li class="layui-nav-item">
-                    <router-link to='/version'>说说</router-link>
-                </li>
-                <li class="layui-nav-item">
-                    <router-link to='/movie'>电影</router-link>
-                </li>
-                <li class="layui-nav-item">
-                    <router-link to='/community'>文章</router-link>
-                </li>
-                <li class="layui-nav-item">
-                    <router-link to='/music'>音乐</router-link>
-                </li>
-                <li class="layui-nav-item">
-                    <router-link to='/about'>关于</router-link>
+            <ul class="layui-nav" lay-filter="">
+                <li 
+                    class="layui-nav-item" 
+                    v-for="(item,index) in list" 
+                    :key="index"
+                    :class="item.router === router ? 'layui-this' : '' "
+                >
+                    <router-link :to='item.router'>{{item.title}}</router-link>
                 </li>
             </ul>
         </div>
@@ -33,7 +20,45 @@
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            list:[
+                {
+                   title:'首页',
+                   router:'/index' 
+                },
+                {
+                   title:'说说',
+                   router:'/version' 
+                },
+                {
+                   title:'电影',
+                   router:'/movie' 
+                },
+                {
+                   title:'文章',
+                   router:'/community' 
+                },
+                {
+                   title:'音乐',
+                   router:'/music' 
+                },
+                {
+                   title:'关于',
+                   router:'/about' 
+                }
+            ],
+            router:this.$route.path
+        }
+    },
+    mounted() {
+        layui.use('element', function(){
+            var element = layui.element;
+            element.init()
+        });
+        console.log(this.$router)
+        console.log(this.$route.path)
+    },
 }
 </script>
 <style lang="less" scoped>

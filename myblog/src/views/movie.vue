@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>电影的主要内容</h1>
+        <h1 class="animate__animated animate__bounceInDown">An animated element</h1>
     </div>
 </template>
 <script>

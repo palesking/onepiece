@@ -20,12 +20,12 @@ Vue.use(VueRouter)
             {
                 path:'/version',
                 name:'version',
-                component:()=>import('@/views/version')
+                component:()=>import('@/views/version.vue')
             },
             {
                 path:'/movie',
                 name:'movie',
-                component:()=>import('@/views/movie')
+                component:()=>import('@/views/movie.vue')
             },
             {
                 path:'/about',
@@ -35,24 +35,29 @@ Vue.use(VueRouter)
             {
                 path:'/community',
                 name:'community',
-                component:()=>import('@/views/community')
+                component:()=>import('@/views/community.vue')
             },
             {
                 path:'/music',
                 name:'music',
-                component: ()=>import('@/components/music')
+                component: ()=>import('@/components/music.vue')
             },
             {
                 path:'/index',
                 name: 'index',
                 component: ()=>import('@/components/contentone/index.vue'),
-                children: [
-                    {
-                        path: '/details',
-                        name: 'details',
-                        component: ()=>import('@/components/details/index.vue')
-                    }
-                ]
+                // children: [
+                //     {
+                //         path: '/detailsone',
+                //         name: 'detailsone',
+                //         component: ()=>import('@/components/details/index.vue')
+                //     }
+                // ]
+            },
+            {
+                path: '/detailsone',
+                name: 'detailsone',
+                component: ()=>import('@/components/details/index.vue')
             }
         ]
     },
