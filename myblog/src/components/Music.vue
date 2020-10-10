@@ -1,9 +1,16 @@
 <template>
-    <aplayer :audio="audio" style="margin:0;" listFolded :lrcType='0'></aplayer>
+    <aplayer 
+        :audio="audio" 
+        class="music" 
+        style="margin:0;" 
+        showlrc 
+        listFolded 
+        theme='#41b883'
+    >
+    </aplayer>
 </template>
 
 <script>
-
 
 export default {
     name:"music",
@@ -13,9 +20,10 @@ export default {
                 {
                     name: '一路向北',
                     artist: '周杰伦',
-                    url: 'http://music.palingking.com/1.mp3',
-                    cover: 'http://music.palingking.com/1.jpg', // prettier-ignore
-                    lrc: '',
+                    url: 'http://music.palingking.com/一路向北.mp3',
+                    cover: 'http://music.palingking.com/1.jpg',
+                    // lrc:'http://music.palingking.com/%E4%B8%80%E8%B7%AF%E5%90%91%E5%8C%97.lrc'
+                    lrc: require('../assets/music/一路向北.lrc'),
                 },
                 {
                     name: '死性不改',
@@ -91,28 +99,39 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+    .one{
+        background-color: #b7daff;
+        width: 10%;
+        height: 100%;
+    }
+    .music{
+        position: fixed;
+        z-index: 1;
+        bottom: 0;
+        left: 0;
+    }
     ::v-deep.aplayer{
-        ol{
-            li{
-                position: relative;
-                overflow: hidden;
-                .aplayer-list-index{
-                    position: absolute;
-                    left: 50px;
-                }
-                .aplayer-list-title{
-                    position: absolute;
-                    left: 80px;
-                    max-width: 100px;
-                    overflow: hidden;
-                    text-overflow:ellipsis;
-                    white-space: nowrap;
-                }
-                .aplayer-list-author{
-                    position: absolute;
-                    left: 200px;
-                }
-            }
-        }
+        // ol{
+        //     li{
+        //         position: relative;
+        //         overflow: hidden;
+        //         .aplayer-list-index{
+        //             position: absolute;
+        //             left: 50px;
+        //         }
+        //         .aplayer-list-title{
+        //             position: absolute;
+        //             left: 80px;
+        //             max-width: 100px;
+        //             overflow: hidden;
+        //             text-overflow:ellipsis;
+        //             white-space: nowrap;
+        //         }
+        //         .aplayer-list-author{
+        //             position: absolute;
+        //             left: 200px;
+        //         }
+        //     }
+        // }
     }
 </style>

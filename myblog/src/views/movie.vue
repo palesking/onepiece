@@ -1,6 +1,5 @@
 <template>
     <div class="movie">
-        <!-- <h1 class="animate__animated animate__bounceInDown">An animated element</h1> -->
         <el-row class="">
             <el-col :span="16" class="row-left">
                 <el-col :span="24" class="one bgc mb-4">
@@ -9,10 +8,10 @@
                         <span>New Article</span>
                     </div>
                 </el-col>
-                <el-col :span="24" class="two bgc">
-                    <div class="two-content">
-                        <ul>
-                            <li v-for="item in 20" class="two-list">
+                <el-col :span="24" class="two bgc animate__animated animate__bounceInRight">
+                    <div class="two-content ">
+                        <ul class="">
+                            <li v-for="item in 20" class="two-list ">
                                 <a href="/moviecontent" class="two-list-img">
                                     <div class="two-img">
                                         <img src="../assets/images/movie/movie01.jpg" alt="">

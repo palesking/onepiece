@@ -4,12 +4,14 @@
             <leftcontent></leftcontent>
             <rightcontent></rightcontent>
         </el-row>
+        <music></music>
     </div>
 </template>
 <script>
 import author from '@/components/contentone/author.vue'
 import leftcontent from '@/components/contentone/leftcontent.vue'
 import rightcontent from '@/components/contentone/rightcontent.vue'
+import music from '@/components/music.vue'
 export default {
     data() {
         return {
@@ -38,7 +40,8 @@ export default {
     components: {
         author,
         leftcontent,
-        rightcontent
+        rightcontent,
+        music
     }
 }
 </script>

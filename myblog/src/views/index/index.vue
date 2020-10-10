@@ -13,6 +13,7 @@
                 <footerone></footerone>
             </el-footer>
         </el-container>
+        <!-- <music></music> -->
     </div>
 </template>
 
@@ -23,6 +24,7 @@ import sectiontwo from '@/components/sectiontwo.vue'
 import footerone from '@/views/footer/footerone.vue'
 import headerone from '@/components/header/index.vue'
 import contentone from '@/components/contentone/index.vue'
+import music from '@/components/music.vue'
 
 export default {
     name: 'index',
@@ -42,7 +44,8 @@ export default {
         sectionone,
         sectiontwo,
         footerone,
-        contentone
+        contentone,
+        music
     }
 }
 </script>
@@ -537,6 +540,7 @@ export default {
         min-height: 36px;
     }
     .index{
+        position: relative;
         .index-content{
             background-color: #e9eaed;
             .index-header{
