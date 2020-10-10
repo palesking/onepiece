@@ -54,7 +54,7 @@ export default {
         margin-right: 15px;
     }
     .container{
-        padding-left: 0;
+        padding-left: 15px;
         padding-right: 0;
     }
 </style>

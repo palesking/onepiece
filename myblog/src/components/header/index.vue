@@ -28,19 +28,19 @@ export default {
                    router:'/index' 
                 },
                 {
-                   title:'说说',
+                   title:'精彩文章',
                    router:'/version' 
                 },
                 {
-                   title:'电影',
+                   title:'精彩视频',
                    router:'/movie' 
                 },
+                // {
+                //    title:'文章',
+                //    router:'/community' 
+                // },
                 {
-                   title:'文章',
-                   router:'/community' 
-                },
-                {
-                   title:'音乐',
+                   title:'好听音乐',
                    router:'/music' 
                 },
                 {
@@ -56,7 +56,6 @@ export default {
             var element = layui.element;
             element.init()
         });
-        console.log(this.$route.path)
     },
 }
 </script>

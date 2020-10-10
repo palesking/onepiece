@@ -76,6 +76,15 @@
                         </li>
                     </ul>
                 </el-col>
+                <el-col>
+                    <el-pagination
+                        background
+                        layout="prev, pager, next"
+                        :total="1000"
+                        class="pag mt-4"
+                    >
+                    </el-pagination>
+                </el-col>
             </el-row>
         </el-col>
         <rightcontent></rightcontent>
@@ -94,6 +103,21 @@ export default {
     @import url("../assets/css/index.less");
     .two{
         padding: 20px 20px;
+    }
+    .row{
+        margin-left: 0;
+        margin-right: 0px;
+    }
+    .container{
+        padding-left: 0;
+        padding-right: 15px;
+    }
+    .pag{
+        padding: 0;
+        ::v-deep.btn-prev{
+            margin: 0;
+            margin-right: 5px;
+        }
     }
     .version{
         .version-content{
@@ -160,13 +184,7 @@ export default {
             }
         }
     }
-    .row{
-        margin-right: 15px;
-    }
-    .container{
-        padding-left: 0;
-        padding-right: 0;
-    }
+    
     .art-content{
         width: 71%;
         float: right;

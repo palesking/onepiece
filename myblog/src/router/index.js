@@ -58,6 +58,11 @@ Vue.use(VueRouter)
                 path: '/detailsone',
                 name: 'detailsone',
                 component: ()=>import('@/components/details/index.vue')
+            },
+            {
+                path: '/moviecontent',
+                name: 'moviecontent',
+                component: ()=>import('@/views/moviecontent.vue')
             }
         ]
     },
