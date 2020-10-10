@@ -4,7 +4,7 @@
             <leftcontent></leftcontent>
             <rightcontent></rightcontent>
         </el-row>
-        <music></music>
+        <!-- <music></music> -->
     </div>
 </template>
 <script>
