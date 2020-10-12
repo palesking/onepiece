@@ -8,7 +8,7 @@
                         <span>Don't stop</span>
                     </div>
                 </el-col>
-                <el-col :span="24" class="one bgc">
+                <el-col :span="24" class="one bgc" id="vue">
                     <div class="new">
                         <span>Vue基础知识</span>
                     </div>
@@ -51,6 +51,26 @@
                         </ul>
                     </div>
                 </el-col>
+                <el-col :span="24" class="one bgc">
+                    <div class="new">
+                        <span>Vue组件</span>
+                    </div>
+                </el-col>
+                <el-col :span="24" class="two bgc mb-2">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="">Vue组件基础用法</a>
+                            </li>
+                            <li>
+                                <a href="">Vue自定义事件</a>
+                            </li>
+                            <li><a href="">Vue数组更新及过滤排序</a></li>
+                            <li><a href="">Vue模板内容</a></li>
+                            <li><a href="">Vue模板逻辑</a></li>
+                        </ul>
+                    </div>
+                </el-col>
             </el-col>
             <el-col :span="8" class="row-right">
                 <el-col :span="24" class="one bgc">
@@ -68,7 +88,7 @@
                         <div class="col-md-12 ">
                             <ul class="label mt-2 pb-4">
                                 <li class="layui-btn">
-                                    <a href="#">vue</a>
+                                    <a href="#vue">vue</a>
                                 </li>
                                 <li class="layui-bg-red layui-btn">
                                     <a href="#" >js</a>
@@ -140,13 +160,14 @@ export default {
                 ul{
                     li{
                         // cursor: pointer;
-                        padding: 10px 15px ;
+                        padding: 10px 0px ;
                         border-bottom: 1px solid #999;
-                        margin-left: 20px;
-                        margin-right: 20px;
+                        margin-left: 40px;
+                        margin-right: 40px;
                         a{
                             // font-size: 20px;
                             color: #515a6e;
+                            display: block;
                         }
                         a:hover{
                             color: tomato;

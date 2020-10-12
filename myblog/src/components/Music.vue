@@ -15,7 +15,6 @@
                         style="margin:0;" 
                         theme='#41b883'
                         :lrcType="1"
-                        volume='0.5'
                     >
                     </aplayer>
                 </el-col>
@@ -139,7 +138,6 @@ export default {
 <style lang="less" scoped>
     @import url('../assets/css/index.less');
     .row-left{
-        // margin-right: -15px;
         padding-right: 15px;
         .two{
             .two-content{
@@ -173,7 +171,6 @@ export default {
         }
     }
     .row-right{
-        // margin-left: -15px;
         padding-left: 15px;
     }
     // .one{

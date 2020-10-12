@@ -36,6 +36,7 @@ Vue.use(VueRouter)
                 path:'/community',
                 name:'community',
                 component:()=>import('@/views/community.vue')
+                
             },
             {
                 path:'/music',

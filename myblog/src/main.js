@@ -86,12 +86,20 @@ import {
   Notification
 } from 'element-ui';
 
+//vue-aplayer音乐播放器
 import APlayer from '@moefe/vue-aplayer';
-
 Vue.use(APlayer, {
-//   defaultCover: 'https://github.com/u3u.png',
   productionTip: true,
 });
+
+//图片懒加载
+import VueLazyLoad from 'vue-lazyload'
+Vue.use(VueLazyLoad, {
+    preLoad: 1,
+    //error: require('./assets/img/error.jpg'),
+    //loading: require('./assets/img/homePage_top.jpg'),
+    attempt: 2,
+})
 
 //iview4.0
 import ViewUI from 'view-design';

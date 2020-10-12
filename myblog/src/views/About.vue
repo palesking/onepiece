@@ -1,7 +1,28 @@
 <template>
     <div class="about">
-        <div class="about-content"> 
-        </div>
+        <el-row class="">
+            <el-col :span="16" class="row-left">
+                <el-col :span="24" class="one bgc mb-4">
+                    <div class="new">
+                        <span>关于我</span>
+                        <span>About me</span>
+                    </div>
+                </el-col>
+                <el-col :span="24" class="two bgc mb-4">
+                    <div class="new">
+
+                    </div>
+                </el-col>
+            </el-col>
+            <el-col :span="8" class="row-right">
+                <el-col :span="24" class="one bgc">
+                    <div class="new">
+                        <span>音乐排行榜</span>
+                        <span>New Article</span>
+                    </div>
+                </el-col>
+            </el-col>
+        </el-row>
     </div>
 </template>
 <script>
@@ -10,7 +31,7 @@
         name:'about',
         data() {
             return {
-                
+
             }
         },
         components:{
@@ -18,11 +39,21 @@
         }
     }
 </script>
-<style lang="less">
-  .about{
+<style lang="less" scoped>
+    @import url('../assets/css/index.less');
+    .about{
+        .row-left{
+            padding-right: 15px;
+            .two{
+                height: 600px;
+            }
+        }
+        .row-right{
+            padding-left: 15px;
+        }
     // width: 1400px;
     // margin: auto;
-    // height: 880px;
+    
     // margin-top: 75px;
     // padding: 5px 0;
     // display: flex;

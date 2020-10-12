@@ -7,7 +7,7 @@
                 class="animate__animated animate__bounceInDown animate__delay-0.5s"
             >
                 <el-carousel-item v-for="item in img" :key="item.id">
-                    <img :src='item.url' alt="" class="lunbotu">
+                    <img v-lazy='item.url' alt="" class="lunbotu">
                 </el-carousel-item>
             </el-carousel>
             <el-row class="">
@@ -171,7 +171,8 @@ export default {
                     id:3,
                     url:require('../../assets/images/3.png'),
                 }
-            ]
+            ],
+            loading: true
         }
     },
     methods: {
