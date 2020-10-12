@@ -484,7 +484,6 @@ export default {
                 .label {
                     width: 95%;
                     overflow: hidden;
-                    // margin-bottom: 10px;
                     li{
                         padding: 0.1em 0.5em 0.1em 0.5em;
                         float: left;

@@ -28,6 +28,10 @@ export default {
                    router:'/index' 
                 },
                 {
+                   title:'快乐前端',
+                   router:'/community' 
+                },
+                {
                    title:'精彩文章',
                    router:'/version' 
                 },

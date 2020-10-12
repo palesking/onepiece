@@ -54,7 +54,6 @@ export default {
     @import url('../assets/css/index.less');
     .movie{
         .row-left{
-            // margin-right: -15px;
             padding-right: 15px;
             .two{
                 .two-content{
@@ -62,7 +61,6 @@ export default {
                         display: flex;
                         flex-wrap: wrap;
                         padding-top: 20px;
-                        // justify-content: space-between;
                         .two-list{
                             width: 160px;
                             height: 304px;
@@ -88,7 +86,6 @@ export default {
             }
         }
         .row-right{
-            // margin-left: -15px;
             padding-left: 15px;
         }
     }

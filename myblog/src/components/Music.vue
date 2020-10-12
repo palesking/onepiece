@@ -8,7 +8,7 @@
                         <span>New Article</span>
                     </div>
                 </el-col>
-                <el-col :span="24" class="two bgc mt-2">
+                <el-col :span="24" class="two bgc ">
                     <aplayer 
                         :audio="audio" 
                         class="music" 
