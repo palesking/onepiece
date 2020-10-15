@@ -13,7 +13,6 @@
                 <footerone></footerone>
             </el-footer>
         </el-container>
-        <!-- <music></music> -->
     </div>
 </template>
 

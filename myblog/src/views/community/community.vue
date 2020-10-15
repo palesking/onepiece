@@ -17,7 +17,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a href="">Vue入门基础</a>
+                                <a href="/vueone">Vue入门基础</a>
                             </li>
                             <li>
                                 <a href="">Vue自定义指令</a>
@@ -144,7 +144,7 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    @import url('../assets/css/index.less');
+    @import url('../../assets/css/index.less');
     .community{
         .row-left{
             padding-right: 15px;
@@ -153,19 +153,17 @@ export default {
                 .two-img{
                     width: 10%;
                     height: 100%;
-                    background-image: url('../assets/images/vueicon.png');
+                    background-image: url('../../assets/images/vueicon.png');
                     background-size: contain;
                     background-repeat: no-repeat;
                 }
                 ul{
                     li{
-                        // cursor: pointer;
                         padding: 10px 0px ;
                         border-bottom: 1px solid #999;
                         margin-left: 40px;
                         margin-right: 40px;
                         a{
-                            // font-size: 20px;
                             color: #515a6e;
                             display: block;
                         }
@@ -188,19 +186,6 @@ export default {
                     li{
                         margin-bottom: 10px;
                         width: 30%;
-                        // padding: 0.1em 0.5em 0.1em 0.5em;
-                        // float: left;
-                        // text-align: center;
-                        // margin: 0.3em 1% 0.3em 1%;
-                        // -moz-transition: all 0.5s;
-                        // -webkit-transition: all 0.5s;
-                        // -o-transition: all 0.5s;
-                        // transition: all 0.5s;
-                        // a{
-                        //     color: #FFF;
-                        //     font-size: 12px;
-                        //     text-decoration: none;
-                        // }
                     }
                     li:nth-child(1){
                         margin-left: 10px;

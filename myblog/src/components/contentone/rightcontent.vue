@@ -144,7 +144,7 @@
                                                 <a href="#"><img src="images/logo.png" alt=""></a>
                                             </div>
                                             <div class="art-hd-list-right">
-                                                <span><i class="el-user"></i>惜缘</span>
+                                                <span><i class="el-user"></i></span>
                                                 <time>2020-3-7</time>
                                                 <p>一般都是传关键字给后端，由后端来做...</p>
                                             </div>
@@ -154,7 +154,7 @@
                                                 <a href="#"><img src="images/logo.png" alt=""></a>
                                             </div>
                                             <div class="art-hd-list-right">
-                                                <span><i class="el-user"></i>惜缘</span>
+                                                <span><i class="el-user"></i></span>
                                                 <time>2020-3-7</time>
                                                 <p>一般都是传关键字给后端，由后端来做...</p>
                                             </div>
@@ -164,7 +164,7 @@
                                                 <a href="#"><img src="images/logo.png" alt=""></a>
                                             </div>
                                             <div class="art-hd-list-right">
-                                                <span><i class="el-user"></i>惜缘</span>
+                                                <span><i class="el-user"></i></span>
                                                 <time>2020-3-7</time>
                                                 <p>一般都是传关键字给后端，由后端来做...</p>
                                             </div>
@@ -174,7 +174,7 @@
                                                 <a href="#"><img src="images/logo.png" alt=""></a>
                                             </div>
                                             <div class="art-hd-list-right">
-                                                <span><i class="el-user"></i>惜缘</span>
+                                                <span><i class="el-user"></i></span>
                                                 <time>2020-3-7</time>
                                                 <p>一般都是传关键字给后端，由后端来做...</p>
                                             </div>
@@ -184,7 +184,7 @@
                                                 <a href="#"><img src="images/logo.png" alt=""></a>
                                             </div>
                                             <div class="art-hd-list-right">
-                                                <span><i class="el-user"></i>惜缘</span>
+                                                <span><i class="el-user"></i></span>
                                                 <time>2020-3-7</time>
                                                 <p>一般都是传关键字给后端，由后端来做...</p>
                                             </div>

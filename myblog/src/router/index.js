@@ -35,7 +35,14 @@ Vue.use(VueRouter)
             {
                 path:'/community',
                 name:'community',
-                component:()=>import('@/views/community.vue')
+                component:()=>import('@/views/community/community.vue'),
+                // children: [
+                //     {
+                //         path: 'vueone',
+                //         name: 'vueone',
+                //         component: ()=>import('@/views/community/vue/vueone.vue')
+                //     }
+                // ]
                 
             },
             {
@@ -64,6 +71,11 @@ Vue.use(VueRouter)
                 path: '/moviecontent',
                 name: 'moviecontent',
                 component: ()=>import('@/views/moviecontent.vue')
+            },
+            {
+                path: '/vueone',
+                name: 'vueone',
+                component: ()=>import('@/views/community/vue/vueone.vue')
             }
         ]
     },
