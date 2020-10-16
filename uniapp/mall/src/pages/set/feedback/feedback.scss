@@ -1,0 +1,64 @@
+page {
+	background-color: $page-color-base;
+}
+/*问题反馈*/
+.feedback-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: $spacing-base;
+	margin-top: $spacing-base;
+	font-size: $font-base;
+}
+
+.feedback-star-view.feedback-title {
+	justify-content: flex-start;
+	margin: 0;
+}
+
+.feedback-quick {
+	position: relative;
+	padding-right: 40upx;
+	.iconfont {
+		font-size: $font-sm;
+	}
+}
+
+.feedback-body {
+	background: $color-white;
+	padding: $spacing-sm $spacing-base;
+	.gender-item {
+		margin-right: 20upx;
+
+		.gender-item-text {
+			padding-left: 10upx;
+		}
+
+		radio .wx-radio-input.wx-radio-input-checked {
+			background: $uni-color-primary;
+			border-color: $uni-color-primary;
+		}
+	}
+}
+
+.feedback-textare {
+	height: 200upx;
+	font-size: 34upx;
+	line-height: 50upx;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20upx 30upx 0;
+}
+
+.feedback-input {
+	font-size: 28upx;
+	height: 72upx;
+	min-height: 50upx;
+	padding: 15upx 20upx;
+	line-height: 72upx;
+}
+
+.feedback-uploader {
+	padding: 22upx 20upx;
+}

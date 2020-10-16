@@ -1,0 +1,27 @@
+page {
+	background-color: $page-color-base;
+}
+.rf-live-list {
+	.left {
+		text-align: center;
+		.image {
+			width: 170upx;
+			height: 150upx;
+			border-radius: 12upx;
+		}
+	}
+	.mid {
+		margin: 0 $spacing-base;
+		.name {
+			font-size: $font-base;
+		}
+		.title {
+			height: 60upx;
+			line-height: 30upx;
+		}
+		.time {
+			font-size: $font-sm;
+			color: $font-color-light;
+		}
+	}
+}

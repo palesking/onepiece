@@ -1,0 +1,12 @@
+page {
+	background: $page-color-base;
+}
+.invoice-manage {
+	padding-top: $spacing-base;
+	.invoice-type-item {
+		margin-right: $spacing-base;
+		.gender-item-text {
+			margin-left: $spacing-sm;
+		}
+	}
+}

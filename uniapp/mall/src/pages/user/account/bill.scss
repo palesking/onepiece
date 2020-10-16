@@ -1,0 +1,41 @@
+page {
+	background-color: $page-color-base;
+}
+.account-bill {
+	.rf-bill-list {
+		.rf-list-item {
+			background-color: $color-white;
+			padding: $spacing-base $spacing-lg;
+			border: 1upx solid rgba(0, 0, 0, .02);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.mid {
+				text-align: left;
+				.title {
+					margin-top: 10upx;
+					font-size: $font-base + 2upx;
+					color: $font-color-dark;
+				}
+				.time {
+					margin-top: 10upx;
+					font-size: $font-base;
+					margin-left: $spacing-sm;
+					color: $font-color-light;
+				}
+			}
+			.right {
+				.change-num {
+					font-size: $font-lg + 4upx;
+					color: $font-color-base;
+				}
+				.change-num-add {
+					color: #16ac57;
+				}
+				.change-num-reduce {
+					color: #fc4141;
+				}
+			}
+		}
+	}
+}

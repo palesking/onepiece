@@ -1,0 +1,11 @@
+page {
+	background-color: $page-color-base;
+}
+.helperList {
+	margin-top: $spacing-base;
+	.helper-child-item {
+		margin: $spacing-base $spacing-lg;
+		display: flex;
+		justify-content: space-between;
+	}
+}

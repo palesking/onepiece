@@ -1,0 +1,306 @@
+page {
+	background-color: $color-white;
+}
+.rf-category {
+	/*模块分类*/
+	.category-list {
+		width: 100%;
+		background-color: #fff;
+		display: flex;
+		.left,
+		.right {
+			position: absolute;
+			top: 100upx;
+			/*  #ifdef  APP-PLUS  */
+			top: calc(100upx + var(--status-bar-height));
+			/*  #endif  */
+			bottom: 0upx;
+		}
+
+		.left {
+			width: 24%;
+			left: 0upx;
+			background-color: $page-color-base;
+			.row {
+				width: 100%;
+				height: 90upx;
+				display: flex;
+				align-items: center;
+
+				.text {
+					width: 100%;
+					position: relative;
+					font-size: 28upx;
+					display: flex;
+					justify-content: center;
+					color: #3c3c3c;
+
+					.block {
+						position: absolute;
+						width: 0upx;
+						left: 0;
+					}
+				}
+
+				&.on {
+					height: 100upx;
+					background-color: #fff;
+					.text {
+						font-size: 30upx;
+						font-weight: 600;
+						color: #2d2d2d;
+						.block {
+							width: 6upx;
+							height: 120%;
+							left: 10upx;
+						}
+					}
+				}
+			}
+		}
+		.right {
+			width: 76%;
+			left: 24%;
+			background-color: #fff;
+			.second-category {
+				z-index: 10;
+				white-space: nowrap;
+				width: 100%;
+				margin: $spacing-sm $spacing-sm $spacing-base;
+				.second-category-tag {
+					margin-right: $spacing-base;
+					padding: 5upx $spacing-lg;
+					display: inline-block;
+					border-radius: 8upx;
+					font-size: $font-sm + 2upx;
+				}
+				.second-category-normal {
+					color: $font-color-dark;
+					border: none;
+					background-color: $page-color-light;
+				}
+			}
+			.category {
+				width: 100%;
+				padding: 0 15upx $spacing-base;
+				.banner {
+					width: 96%;
+					margin: 10upx auto 30upx;
+					height: 24.262vw;
+					border-radius: 10upx;
+					overflow: hidden;
+					box-shadow: 0upx 5upx 20upx rgba(0, 0, 0, 0.05);
+					image {
+						width: 100%;
+						height: 24.262vw;
+					}
+				}
+				.order-by-wrapper {
+					height: 48upx;
+					line-height: 48upx;
+					display: flex;
+					justify-content: space-between;
+					margin: $spacing-sm 0;
+					font-size: $font-sm + 2upx;
+					.order-by {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						.order-by-item {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+              font-size: $font-sm + 2upx;
+							margin: 0 $spacing-base 0 $spacing-sm;
+							color: $font-color-light;
+							.iconfont-group {
+								margin-top: -2upx;
+							}
+							.iconfont {
+								height: 16upx;
+								line-height: 16upx;
+								display: block;
+								margin-left: 6upx;
+								font-weight: 550;
+								font-size: $font-sm - 4upx;
+							}
+						}
+					}
+				}
+				.list {
+					margin-top: $spacing-base;
+					width: 100%;
+					display: flex;
+					flex-wrap: wrap;
+					.box {
+						width: calc(71.44vw / 3);
+						margin-bottom: $spacing-lg;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-wrap: wrap;
+						image {
+							width: 64%;
+							height: calc(71.44vw / 3 * 0.64);
+						}
+						.text {
+							margin-top: 8upx;
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							font-size: 26upx;
+						}
+						.category-tag {
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: $spacing-sm;
+							font-size: $font-sm + 2upx;
+							margin-right: $spacing-base;
+							color: $font-color-dark;
+							background-color: $page-color-base;
+							border-radius: 6upx;
+						}
+					}
+				}
+				.second-category-text {
+					display: flex;
+					justify-content: space-between;
+				}
+				.no-data {
+					margin: 48upx 0;
+					color: $font-color-light;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					.iconfont {
+						margin-right: 20upx;
+						font-size: $font-lg + 16upx;
+					}
+				}
+			}
+		}
+	}
+	.one-cover-category {
+		margin-top: $spacing-base;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		.box {
+			width: calc(71.44vw / 3);
+			margin-bottom: $spacing-lg;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			image {
+				width: 64%;
+				height: calc(71.44vw / 3 * 0.64);
+			}
+			.text {
+				margin-top: 8upx;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				font-size: 26upx;
+			}
+			.category-tag {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: $spacing-sm;
+				font-size: $font-sm + 2upx;
+				margin-right: $spacing-base;
+				color: $font-color-dark;
+				background-color: $page-color-base;
+				border-radius: 6upx;
+			}
+		}
+	}
+	.tui-product-container {
+		flex: 1;
+		margin-right: 10upx;
+	}
+	.tui-product-container:last-child {
+		margin-right: 0;
+	}
+	.category-product-list {
+		margin-bottom: 15upx;
+		padding-bottom: 15upx;
+		border-bottom: 1upx solid rgba(0, 0, 0, 0.08);
+	}
+	.category-product-list:last-child {
+		border-bottom: none;
+		background-color: #007aff;
+	}
+	.tui-pro-item {
+		width: 100%;
+		margin-bottom: 20upx;
+		background: $color-white;
+		box-sizing: border-box;
+		border-radius: 12upx;
+		overflow: hidden;
+		transition: all 0.15s ease-in-out;
+	}
+	.tui-flex-list {
+		display: flex;
+		margin-bottom: 1upx !important;
+	}
+	.tui-pro-img {
+		width: 100%;
+		display: block;
+	}
+	.tui-proimg-list {
+		width: 160upx;
+		height: 160upx !important;
+		flex-shrink: 0;
+		border-radius: 12upx;
+	}
+	.tui-pro-content {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+		padding: 0 20upx;
+	}
+	.tui-pro-tit {
+		color: #2e2e2e;
+		font-size: 26upx;
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+	}
+	.tui-sale-price {
+		font-size: 34upx;
+		font-weight: 500;
+	}
+	.tui-factory-price {
+		font-size: 24upx;
+		color: #a0a0a0;
+		text-decoration: line-through;
+		padding-left: 12upx;
+	}
+	.tui-pro-pay {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 24upx;
+		color: #656565;
+		.iconfont {
+			font-size: $font-lg + 6upx;
+			padding: 0 $spacing-sm;
+		}
+	}
+	.popup .layer {
+		// #ifndef H5
+		bottom: 0;
+		// #endif
+	}
+}

@@ -1,0 +1,128 @@
+page {
+	background-color: $page-color-base;
+}
+.evaluation {
+	margin-bottom: $spacing-lg;
+	.evaluation-item {
+		margin: $spacing-base;
+		padding: $spacing-lg;
+		background-color: $color-white;
+		border-radius: 12upx;
+		box-shadow: 0upx 5upx 25upx rgba(0, 0, 0, 0.05);
+	}
+	.product-info {
+		display: flex;
+		.product-image {
+			width: 200upx;
+			height: 150upx;
+		}
+		.product-content {
+			flex: 1;
+			margin-left: 20upx;
+			.product-name {
+				font-size: $font-base;
+				color: $font-color-dark;
+				line-height: 32upx;
+				min-height: 60upx;
+			}
+			.product-sku-name {
+				display: block;
+				font-size: $font-base;
+				color: $font-color-dark;
+			}
+		}
+	}
+	.product-rate {
+		display: flex;
+		align-items: center;
+		font-size: $font-lg;
+		color: $font-color-dark;
+		padding: 20upx 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		.product-rate-wrapper {
+			margin-top: $spacing-sm;
+			display: inline-block;
+		}
+	}
+	.product-textarea {
+		margin-top: 20upx;
+		height: 360upx;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+		position: relative;
+		.textarea {
+			width: 100%;
+		}
+		.tips {
+			position: absolute;
+			bottom: 10upx;
+			right: 0;
+			font-size: $font-sm;
+			color: $font-color-light;
+			.f {
+				color: $uni-color-success;
+			}
+			.s {
+				color: $uni-color-primary;
+			}
+		}
+		.anonymous {
+			color: $font-color-light;
+			font-size: $font-sm;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+		}
+	}
+	.upload-image {
+		overflow: hidden;
+		margin: 40upx 0;
+		.upload-image-wrapper {
+			display: inline-block;
+			position: relative;
+			width: 200upx;
+			height: 200upx;
+			padding: 10upx;
+			margin: 10upx;
+			.image {
+				display: inline-block;
+				width: 180upx;
+				height: 180upx;
+			}
+			.image-close {
+				position: absolute;
+				top: -10upx;
+				right: -10upx;
+			}
+		}
+		.add {
+			display: inline-block;
+			overflow: hidden;
+			width: 180upx;
+			height: 180upx;
+			text-align: center;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			font-size: 88upx;
+			color: $font-color-base;
+			font-weight: 100;
+		}
+	}
+	.confirm-btn {
+		width: 630upx;
+		height: 76upx;
+		line-height: 76upx;
+		border-radius: 50px;
+		margin-top: 50upx;
+		font-size: $font-lg;
+		&:after {
+			border-radius: 100px;
+		}
+	}
+	.uni-uploader__file {
+		width: 190upx;
+		height: 190upx;
+	}
+	.uni-uploader__input-box {
+		width: 188upx;
+		height: 188upx;
+	}
+}

@@ -1,0 +1,30 @@
+page {
+	background-color: $page-color-base;
+}
+.address-list {
+	position: relative;
+	.address-box {
+		display: flex;
+		align-items: center;
+		.tag {
+			font-size: 24upx;
+			margin-right: 4upx;
+			border: 1px solid;
+			border-radius: 4upx;
+			padding: 0 4upx;
+		}
+		.address {
+			font-size: 30upx;
+			color: $font-color-dark;
+		}
+	}
+	.u-box {
+		font-size: 28upx;
+		color: $font-color-light;
+		margin-top: 16upx;
+
+		.name {
+			margin-right: 30upx;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+page,
+.order {
+	background: $page-color-base;
+	height: 100%;
+	.order-search {
+		padding: $spacing-sm $spacing-base;
+		position: relative;
+		.order-search-input {
+			width: 100%;
+			background-color: $color-white;
+			border-radius: 40upx;
+			padding: $spacing-sm 0 $spacing-sm $spacing-lg;
+			color: $font-color-light;
+		}
+		.iconfont {
+			position: absolute;
+			right: 48upx;
+			top: 22upx;
+		}
+	}
+	.swiper-box {
+		height: calc(100% - 160upx);
+	}
+	.list-scroll-content {
+		height: 100%;
+	}
+	.uni-swiper-item {
+		height: auto;
+	}
+}

@@ -1,0 +1,12 @@
+page {
+	background: $page-color-base;
+}
+.set {
+	padding: $spacing-base 0;
+}
+.cu-list.card-menu {
+	margin: $spacing-base 0;
+	.title {
+		margin-left: $spacing-base;
+	}
+}

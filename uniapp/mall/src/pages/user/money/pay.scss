@@ -1,0 +1,103 @@
+page {
+	background-color: $color-white;
+}
+
+.pay {
+	width: 100%;
+	.pay-section {
+		height: 400upx;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 60vw;
+		}
+		.tips-wrapper {
+			text-align: center;
+			.title {
+				font-size: $font-lg;
+				margin-bottom: $spacing-base;
+			}
+			.tip {
+				font-size: $font-lg + 42upx;
+			}
+		}
+	}
+}
+
+.price-box {
+	background-color: #fff;
+	height: 265upx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 28upx;
+	color: #909399;
+
+	.price {
+		font-size: 50upx;
+		color: #303133;
+		margin-top: 12upx;
+	}
+}
+.pay-type-list {
+	margin: 60upx 0;
+	background-color: #fff;
+	padding: 0 40upx;
+	.type-item {
+		padding: 0 $spacing-lg;
+		height: 100upx;
+		border-radius: 100upx;
+		margin-bottom: $spacing-lg;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 30upx;
+		position: relative;
+		border: 2upx solid rgba(0, 0, 0, 0.12);
+	}
+
+	.type-item-active {
+		border: 2upx solid;
+	}
+
+	.iconfont {
+		font-size: 45upx;
+		margin: 0 $spacing-base;
+		color: $font-color-light;
+	}
+
+	.tit {
+		font-size: $font-base;
+		margin-bottom: 4upx;
+	}
+	.tit-active {
+		color: $font-color-dark;
+	}
+
+	.con {
+		flex: 1;
+		font-size: $font-sm;
+		color: $font-color-light;
+		.tit {
+			margin-right: $spacing-base;
+		}
+	}
+	.radio {
+		radio {
+			transform:scale(0.7)
+		}
+	}
+}
+.confirm-btn {
+	height: 86upx;
+	line-height: 86upx;
+	width: 70%;
+	margin-top: 144upx;
+}

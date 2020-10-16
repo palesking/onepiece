@@ -1,0 +1,89 @@
+page {
+	background: #fff;
+	height: calc(100% - 88upx);
+}
+
+.login-type {
+	padding-top: 80upx;
+	.logo {
+		text-align: center;
+		margin-bottom: 80upx;
+
+		image {
+			width: 180upx;
+			height: 180upx;
+			border-radius: 28upx;
+		}
+	}
+	.confirm-btn {
+		width: 84%;
+		margin: 0 7% 50upx;
+		height: 84upx;
+		line-height: 84upx;
+		font-size: $font-lg;
+		border: 1upx solid;
+	}
+	.confirm-btn-bg {
+		background: none;
+	}
+	.footer {
+		width: 100%;
+		text-align: center;
+		position: fixed;
+		bottom: 40upx;
+		font-size: $font-sm + 2upx;
+		.protocol {
+			color: $base-color;
+			margin: 0 10upx;
+		}
+		.d-header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 80upx;
+			margin-bottom: $spacing-base;
+			font-size: $font-base + 2upx;
+			color: $font-color-base;
+			position: relative;
+			text {
+				padding: 0 $spacing-lg;
+				background: #fff;
+				position: relative;
+				z-index: 1;
+			}
+			&:after {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translateX(-50%);
+				width: 300upx;
+				height: 0;
+				content: '';
+				border-bottom: 1px solid #ccc;
+			}
+		}
+		.login-type-list {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			.login-type-btn {
+				border: none;
+				background: none;
+				padding: 0 40upx 0 0;
+				margin: 0;
+				.image {
+					width: 64upx;
+					height: 64upx;
+				}
+				&:after {
+					border: none;
+				}
+			}
+			.iconfont {
+				font-size: 50upx;
+				color: $font-color-base;
+			}
+		}
+	}
+}

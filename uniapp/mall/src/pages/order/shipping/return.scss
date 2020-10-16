@@ -1,0 +1,76 @@
+page {
+	background-color: $color-white;
+}
+.evaluation {
+	background-color: $color-white;
+	/*  #ifndef H5  */
+	height: 100vh;
+	/*  #endif  */
+	padding: 20upx;
+	.product-info {
+		display: flex;
+		.product-image {
+			width: 200upx;
+			height: 150upx;
+		}
+		.product-content {
+			flex: 1;
+			margin-left: 20upx;
+			.product-name {
+				font-size: $font-base;
+				color: $font-color-dark;
+				line-height: 32upx;
+				min-height: 60upx;
+			}
+			.product-sku-name {
+				display: block;
+				font-size: $font-base;
+				color: $font-color-dark;
+			}
+		}
+	}
+	.input-content {
+		padding: 80upx 0 40upx;
+		.input-item {
+			display: flex;
+			padding: 0 30upx;
+			background: $page-color-light;
+			height: 80upx;
+			line-height: 80upx;
+			border-radius: 4px;
+			margin-bottom: 40upx;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.tit {
+				width: 120upx;
+				font-size: $font-sm + 2upx;
+				color: $font-color-base;
+			}
+			input {
+				width: calc(100% - 120upx);
+				height: 80upx;
+				line-height: 80upx;
+				font-size: $font-base + 2upx;
+				color: $font-color-dark;
+			}
+			.date {
+				height: 80upx;
+				line-height: 80upx;
+				font-size: $font-base + 2upx;
+				color: $font-color-dark;
+			}
+		}
+	}
+	.confirm-btn {
+		width: 630upx;
+		height: 76upx;
+		line-height: 76upx;
+		border-radius: 50px;
+		margin-top: 50upx;
+		font-size: $font-lg;
+		&:after {
+			border-radius: 100px;
+		}
+	}
+}

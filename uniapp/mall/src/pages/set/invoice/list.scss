@@ -1,0 +1,75 @@
+page {
+	background-color: $page-color-base;
+}
+.invoice-list {
+	position: relative;
+	.t-box {
+		display: flex;
+		align-items: center;
+		font-size: 30upx;
+		color: $font-color-dark;
+		.tag {
+			font-size: 24upx;
+			color: $base-color;
+			margin-right: 10upx;
+			background: #fffafb;
+			border: 1px solid #ffb4c7;
+			border-radius: 4upx;
+			padding: 4upx 10upx;
+			line-height: 1;
+		}
+	}
+	.u-box {
+		font-size: 28upx;
+		color: $font-color-light;
+		margin-top: 16upx;
+		.name {
+			margin-right: 30upx;
+		}
+	}
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+.address-box {
+	.order-fl {
+		font-size: $font-sm;
+		color: $font-color-light;
+		margin-bottom: 10upx;
+		.order-sn {
+			margin-left: 14upx;
+		}
+	}
+	.order-wrapper {
+		display: flex;
+		justify-content: space-between;
+		.tag {
+			font-size: 24upx;
+			color: $base-color;
+			margin-right: 10upx;
+			background: #fffafb;
+			border: 1px solid #ffb4c7;
+			border-radius: 4upx;
+			padding: 4upx 10upx;
+			line-height: 1;
+		}
+		.address {
+			font-size: $font-base + 2upx;
+			color: $font-color-dark;
+		}
+	}
+}
+.u-box {
+	font-size: 28upx;
+	color: $font-color-light;
+	margin-top: 16upx;
+	display: flex;
+	justify-content: space-between;
+	.name {
+	}
+	.time {
+		font-size: $font-sm + 2upx;
+	}
+}

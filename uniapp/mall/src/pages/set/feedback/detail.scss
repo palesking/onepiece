@@ -1,0 +1,80 @@
+page {
+	background-color: $page-color-base;
+}
+
+/* 上传 */
+.uni-uploader {
+	flex: 1;
+	flex-direction: column;
+}
+
+.uni-uploader-body {
+	margin-top: 16upx;
+}
+
+.uni-uploader__files {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.uni-uploader__file {
+	margin: 10upx;
+	width: 210upx;
+	height: 210upx;
+}
+
+.uni-uploader__img {
+	display: block;
+	width: 210upx;
+	height: 210upx;
+}
+
+/*问题反馈*/
+.feedback-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20upx;
+	color: #8f8f94;
+	font-size: 28upx;
+}
+
+.feedback-body {
+	background: $color-white;
+	padding: $spacing-sm $spacing-base;
+	.gender-item {
+		margin-right: 20upx;
+
+		.gender-item-text {
+			padding-left: 10upx;
+		}
+
+		radio .wx-radio-input.wx-radio-input-checked {
+			background: $uni-color-primary;
+			border-color: $uni-color-primary;
+		}
+	}
+}
+
+.feedback-textare {
+	height: 200upx;
+	font-size: 34upx;
+	line-height: 50upx;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 20upx 30upx 0;
+}
+
+.feedback-input {
+	font-size: 28upx;
+	height: 72upx;
+	min-height: 50upx;
+	padding: 15upx 20upx;
+	line-height: 72upx;
+}
+
+.feedback-uploader {
+	padding: 22upx 20upx;
+}

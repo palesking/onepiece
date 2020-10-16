@@ -1,0 +1,127 @@
+page {
+	background: $page-color-base;
+}
+.footprint {
+	.row {
+		width: calc(94%);
+		height: calc(22vw + 40upx);
+		margin: 20upx auto;
+		border-radius: 15upx;
+		box-shadow: 0upx 5upx 20upx rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		z-index: 4;
+		border: 0;
+		.menu {
+			.icon {
+				color: #fff;
+				font-size: 60upx;
+			}
+			position: absolute;
+			width: 29%;
+			height: 100%;
+			right: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+		}
+		.carrier {
+			@keyframes showMenu {
+				0% {
+					transform: translateX(0);
+				}
+				100% {
+					transform: translateX(-30%);
+				}
+			}
+			@keyframes closeMenu {
+				0% {
+					transform: translateX(-30%);
+				}
+				100% {
+					transform: translateX(0);
+				}
+			}
+			&.open {
+				animation: showMenu 0.25s linear both;
+			}
+			&.close {
+				animation: closeMenu 0.15s linear both;
+			}
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			padding: 0 0;
+			height: 100%;
+			z-index: 3;
+			display: flex;
+			align-items: center;
+			.left {
+				width: 22vw;
+				height: 22vw;
+				margin-left: 20upx;
+				margin-right: 10upx;
+				position: relative;
+				.image {
+					border-radius: 10upx;
+					width: 22vw;
+					height: 22vw;
+				}
+				.tag {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 60upx;
+					height: 60upx;
+				}
+			}
+			.mid {
+				width: 100%;
+				margin: 10upx 10upx 0;
+				.title {
+					height: 60upx;
+					line-height: 1.2;
+					font-size: $font-base;
+				}
+				.data {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					margin: 10upx 0 5upx;
+					font-size: $font-base;
+					color: $font-color-base;
+					.item {
+						flex: 1;
+					}
+					.iconfont {
+						color: $font-color-light;
+						margin-right: 10upx;
+					}
+					.status {
+						padding: 6upx 20upx;
+						background-color: $base-color;
+						opacity: 0.8;
+						color: $color-white;
+						font-size: $font-sm;
+						border-radius: 6upx;
+					}
+				}
+				.bottom {
+					line-height: 1.2;
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					font-size: $font-sm;
+					color: $font-color-light;
+					.price {
+						font-size: $font-lg;
+					}
+				}
+			}
+		}
+	}
+}

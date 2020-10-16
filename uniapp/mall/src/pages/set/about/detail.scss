@@ -1,0 +1,18 @@
+page {
+	background-color: $page-color-base;
+	position: relative;
+	.about {
+		.shop-info {
+			.about-content {
+				padding: $spacing-lg;
+			}
+			text-align: center;
+			image {
+				margin-top: 100upx;
+				width: 240upx;
+				height: 240upx;
+				border-radius: 50%;
+			}
+		}
+	}
+}

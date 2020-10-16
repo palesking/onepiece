@@ -54,7 +54,7 @@
                     <div class="col-md-12 ">
                         <ul class="label mt-2 pb-2">
                             <li class="layui-btn">
-                                <a href="#" target="_blank">github</a>
+                                <a href="https://github.com/palesking/onepiece" target="_blank">github</a>
                             </li>
                             <li class="layui-bg-red layui-btn">
                                 <a href="#" target="_blank">简历</a>

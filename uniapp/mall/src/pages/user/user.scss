@@ -1,0 +1,298 @@
+page {
+		background-color: $page-color-base;
+	}
+
+	.user {
+		.user-section {
+			background-color: $page-color-base;
+			height: 520upx;
+			padding: 100upx 30upx 0;
+			position: relative;
+
+			.bg {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				filter: blur(1px);
+				opacity: .7;
+			}
+
+			.user-info-box {
+				height: 180upx;
+				display: flex;
+				align-items: center;
+				position: relative;
+				z-index: 1;
+				justify-content: space-between;
+
+				.portrait-box {
+					display: flex;
+					align-items: center;
+
+					.portrait {
+						width: 130upx;
+						height: 130upx;
+						border: 5upx solid #fff;
+						border-radius: 50%;
+					}
+
+					.username {
+						font-size: $font-lg + 6upx;
+						color: $color-white;
+						margin-left: 20upx;
+					}
+
+					button {
+						background-color: transparent;
+						font-size: $font-lg + 6upx;
+						color: $font-color-dark;
+						border: none;
+					}
+
+					button::after {
+						border: none;
+					}
+				}
+			}
+
+			.vip-card-box {
+				display: flex;
+				flex-direction: column;
+				color: #f7d680;
+				height: 240upx;
+				background: linear-gradient(to left, rgba(0, 0, 0, .7), rgba(0, 0, 0, .8));
+				border-radius: 16upx 16upx 0 0;
+				overflow: hidden;
+				position: relative;
+				padding: 20upx 24upx;
+
+				.card-bg {
+					position: absolute;
+					top: 20upx;
+					right: 0;
+					width: 380upx;
+					height: 260upx;
+				}
+
+				.tit {
+					font-size: $font-base+2upx;
+					color: #f7d680;
+					margin-bottom: 28upx;
+
+					.iconfont {
+						color: #f6e5a3;
+						display: inline-block;
+						margin-right: 16upx;
+					}
+				}
+			}
+		}
+
+		.cover-container {
+			margin-top: -150upx;
+			padding: 0 30upx 20upx;
+			position: relative;
+			background-color: $page-color-base;
+
+			.arc {
+				position: absolute;
+				left: 0;
+				top: -34upx;
+				width: 100%;
+				height: 36upx;
+			}
+
+			.promotion-center {
+				background: #fff;
+				margin: 20upx 0;
+				/*分类列表*/
+				.category-list {
+					width: 100%;
+					padding: 0 0 30upx 0;
+					border-bottom: solid 2upx #f6f6f6;
+					display: flex;
+					flex-wrap: wrap;
+
+					.category {
+						width: 33.3%;
+						margin-top: 50upx;
+						display: flex;
+						justify-content: center;
+						flex-wrap: wrap;
+
+						.img {
+							width: 100%;
+							display: flex;
+							justify-content: center;
+
+							.iconfont {
+								font-size: $font-lg + 24upx;
+							}
+						}
+
+						.text {
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							font-size: 24upx;
+							color: #3c3c3c;
+						}
+
+						.share-btn {
+							height: 142upx;
+							text-align: left;
+							background: none;
+							padding: 0;
+							margin: 0;
+						}
+
+						.share-btn:after {
+							border: none;
+							border-radius: none;
+						}
+					}
+				}
+			}
+
+			.tj-sction {
+				@extend %section;
+				display: flex;
+
+				.tj-item {
+					@extend %flex-center;
+					flex: 1;
+					flex-direction: column;
+					margin: 30upx 0;
+					font-size: $font-sm;
+					color: #75787d;
+					/*border-right: 2upx solid rgba(0, 0, 0, 0.2);*/
+				}
+
+				/*.tj-item:last-child {*/
+				/*border-right: none;*/
+				/*}*/
+				.num {
+					font-size: $font-base;
+					color: $font-color-dark;
+				}
+
+				.red {
+					color: $base-color;
+				}
+			}
+
+			.order-section {
+				@extend %section;
+				padding: 28upx 0;
+
+				.order-item {
+					@extend %flex-center;
+					width: 120upx;
+					height: 120upx;
+					border-radius: 10upx;
+					font-size: $font-sm;
+					color: $font-color-dark;
+					position: relative;
+				}
+
+				.badge {
+					position: absolute;
+					top: 0;
+					right: 4upx;
+				}
+
+				.iconfont {
+					font-size: 48upx;
+					color: #fa436a;
+				}
+
+				.icon-shouhoutuikuan {
+					font-size: 44upx;
+				}
+			}
+
+			.history-section {
+				background: #fff;
+				border-radius: 10upx;
+				.sec-header {
+					display: flex;
+					align-items: center;
+					font-size: $font-base;
+					color: $font-color-dark;
+					.iconfont {
+						color: #5eba8f;
+						margin-right: 16upx;
+						line-height: 40upx;
+					}
+					.content {
+						flex: 1;
+					}
+					.iconyou {
+						font-size: $font-base + 2upx;
+						color: $font-color-base;
+						margin-left: $uni-spacing-row-sm;
+					}
+				}
+				.h-list {
+					white-space: nowrap;
+					padding: 20upx 30upx 0;
+					.h-item {
+						display: inline-block;
+						font-size: $font-sm;
+						color: $font-color-base;
+						width: 160upx;
+						margin-right: 20upx;
+						border-radius: 10upx;
+						.h-item-img {
+							width: 160upx;
+							height: 160upx;
+						}
+						.h-item-text {
+							font-size: $font-sm;
+						}
+					}
+				}
+
+				.no-foot-print {
+					text-align: center;
+					padding: 48upx 0;
+
+					.no-foot-print-icon {
+						color: $base-color;
+						font-size: $font-lg + 2upx;
+						margin-right: 10upx;
+					}
+				}
+
+				.share-btn {
+					height: 102upx;
+					text-align: left;
+					background: none;
+					padding: 0;
+					margin: 0;
+				}
+
+				.share-btn:after {
+					border: none;
+					border-radius: none;
+				}
+			}
+		}
+	}
+
+	%flex-center {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	%section {
+		justify-content: space-around;
+		display: flex;
+		align-content: center;
+		background: #fff;
+		border-radius: 10upx;
+	}

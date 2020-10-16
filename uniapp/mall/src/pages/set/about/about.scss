@@ -1,0 +1,51 @@
+page {
+	position: relative;
+	background-color: #f5f5f5;
+}
+/*关于商城*/
+.about {
+	padding: 20upx 0;
+	.history-section {
+		padding: 30upx 0 0;
+		margin-top: 20upx;
+		background: #fff;
+		border-radius: 10upx;
+		.sec-header {
+			display: flex;
+			align-items: center;
+			font-size: $font-base;
+			color: $font-color-dark;
+			line-height: 40upx;
+			margin-left: 30upx;
+			.iconfont {
+				font-size: 44upx;
+				color: #5eba8f;
+				margin-right: 16upx;
+				line-height: 40upx;
+			}
+		}
+		.qrcode-wrapper {
+			padding: $spacing-lg 0;
+			text-align: center;
+			.qrcode-img-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.qrcode {
+				height: 280upx;
+			}
+			.qrcode-img {
+				width: 300upx;
+				height: 300upx;
+				image {
+					width: 300upx;
+					height: 300upx;
+				}
+			}
+			.info {
+				display: block;
+			}
+		}
+	}
+}

@@ -1,0 +1,148 @@
+.register {
+	padding-top: 60px;
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	background: #fff;
+
+	.wrapper {
+		position: relative;
+		width: 100vw;
+		z-index: 90;
+		background: #fff;
+		padding-bottom: 40upx;
+
+		.welcome {
+			position: relative;
+			left: 50upx;
+			top: -90upx;
+			font-size: 46upx;
+			color: #555;
+			text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.3);
+		}
+
+		.input-content {
+			padding: 0 60upx;
+		}
+
+		.input-item {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 0 30upx;
+			background: $page-color-light;
+			height: 120upx;
+			border-radius: 4px;
+			margin-bottom: 50upx;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.tit {
+				height: 50upx;
+				line-height: 56upx;
+				font-size: $font-sm + 2upx;
+				color: $font-color-base;
+			}
+
+			input {
+				width: calc(100% - 100upx);
+				height: 60upx;
+				font-size: $font-base + 2upx;
+				color: $font-color-dark;
+				width: 100%;
+			}
+		}
+
+		.input-item-sms-code {
+			position: relative;
+			width: 100%;
+			.sms-code-btn {
+				position: absolute;
+				color: #111;
+				right: 20upx;
+				bottom: 20upx;
+				font-size: 28upx;
+			}
+
+			.sms-code-resend {
+				color: #999;
+			}
+
+			.sms-code-btn:after {
+				border: none;
+				background-color: transparent;
+			}
+		}
+
+		.forget-section {
+			font-size: $font-sm + 2upx;
+			color: $font-color-spec;
+			text-align: center;
+			margin-top: 40upx;
+		}
+	}
+
+	.back-btn {
+		position: absolute;
+		left: 40upx;
+		z-index: 9999;
+		padding-top: var(--status-bar-height);
+		top: 40upx;
+		font-size: 40upx;
+		color: $font-color-dark;
+	}
+
+	.left-top-sign {
+		font-size: 120upx;
+		color: $page-color-base;
+		position: relative;
+		left: -16upx;
+	}
+
+	.right-top-sign {
+		position: absolute;
+		top: 80upx;
+		right: -30upx;
+		z-index: 95;
+
+		&:before,
+		&:after {
+			display: block;
+			content: '';
+			width: 400upx;
+			height: 80upx;
+			background: #b4f3e2;
+		}
+
+		&:before {
+			transform: rotate(50deg);
+			border-radius: 0 50px 0 0;
+		}
+
+		&:after {
+			position: absolute;
+			right: -198upx;
+			top: 0;
+			transform: rotate(-50deg);
+			border-radius: 50px 0 0 0;
+			/* background: pink; */
+		}
+	}
+
+	.register-section {
+		margin: 30upx 0 50upx;
+		width: 100%;
+		font-size: $font-sm + 2upx;
+		color: $font-color-base;
+		text-align: center;
+
+		text {
+			color: $font-color-spec;
+			margin-left: 10upx;
+		}
+	}
+
+}

@@ -1,0 +1,161 @@
+page {
+	background: $page-color-base;
+}
+
+.goods-section {
+	margin-top: 16upx;
+	background: #fff;
+	padding-bottom: 1px;
+
+	.g-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 84upx;
+		padding: 0 30upx;
+		position: relative;
+	}
+
+	.logo {
+		display: block;
+		width: 50upx;
+		height: 50upx;
+		border-radius: 100px;
+	}
+
+	.name {
+		font-size: 30upx;
+		color: $font-color-base;
+		margin-left: 24upx;
+	}
+
+	.g-item {
+		display: flex;
+		margin: 20upx 30upx;
+		image {
+			flex-shrink: 0;
+			display: block;
+			width: 220upx;
+			height: 170upx;
+			border-radius: 4upx;
+		}
+
+		.right {
+			flex: 1;
+			padding-left: 16upx;
+			overflow: hidden;
+		}
+
+		.title {
+			font-size: $font-base;
+			line-height: 32upx;
+		}
+
+		.spec {
+			font-size: 22upx;
+			color: $font-color-light;
+		}
+
+		.price-box {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 28upx;
+			color: $font-color-dark;
+			.price {
+				margin-bottom: 4upx;
+			}
+			.number {
+				font-size: 26upx;
+				color: $font-color-base;
+				margin-left: 20upx;
+			}
+			.status {
+				font-size: 24upx;
+				color: $font-color-spec;
+			}
+		}
+
+		.step-box {
+			position: relative;
+		}
+	}
+}
+.yt-list {
+	margin-top: 16upx;
+	background: #fff;
+}
+.yt-list-cell {
+	display: flex;
+	align-items: center;
+	padding: 10upx 30upx 10upx 40upx;
+	line-height: 70upx;
+	position: relative;
+
+	&.cell-hover {
+		background: #fafafa;
+	}
+
+	&.b-b:after {
+		left: 30upx;
+	}
+
+	.cell-icon {
+		height: 32upx;
+		width: 32upx;
+		font-size: 22upx;
+		text-align: center;
+		line-height: 32upx;
+		border-radius: 4upx;
+		margin-right: 12upx;
+
+		&.hb {
+			background: #ffaa0e;
+		}
+
+		&.lpk {
+			background: #3ab54a;
+		}
+	}
+
+	.cell-more {
+		align-self: center;
+		font-size: 24upx;
+		color: $font-color-light;
+		margin-left: 8upx;
+		margin-right: -10upx;
+	}
+
+	.cell-tit {
+		flex: 1;
+		font-size: 26upx;
+		color: $font-color-light;
+		margin-right: 10upx;
+	}
+
+	.cell-tip {
+		font-size: 26upx;
+		&.disabled {
+			color: $font-color-light;
+		}
+	}
+
+	&.desc-cell {
+		.cell-tit {
+			max-width: 90upx;
+		}
+	}
+
+	.desc {
+		flex: 1;
+		font-size: $font-base;
+		color: $font-color-dark;
+	}
+	.copy {
+		margin-left: $spacing-sm;
+	}
+}
+.uni-timeline {
+	padding: 30upx 40upx;
+	background-color: #fff;
+}

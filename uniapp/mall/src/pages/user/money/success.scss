@@ -1,0 +1,69 @@
+page {
+	background-color: $page-color-base;
+}
+.pay-success {
+	.pay-section {
+		height: 400upx;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.bg {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 60vw;
+		}
+		.tips-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $color-white;
+			.iconfont {
+				font-size: 132upx;
+				margin-right: $spacing-base;
+			}
+			.content {
+				.title {
+					font-size: $font-lg + 4upx;
+				}
+				.tip {
+					font-size: $font-sm + 2upx;
+				}
+			}
+		}
+	}
+	.pay-card {
+		width: 90%;
+		height: 520upx;
+		background-color: $color-white;
+		border-radius: 12upx;
+		margin: -80upx 5% 0;
+		box-shadow: 0upx 5upx 25upx rgba(0, 0, 0, 0.05);
+		.pay-card-money {
+			text-align: center;
+			font-size: $font-lg + 12upx;
+			padding: $spacing-base 0;
+			color: $color-black;
+			font-weight: 500;
+			border-bottom: 1upx solid rgba(0, 0, 0, 0.05);
+		}
+		.item {
+			height: 80upx;
+			line-height: 80upx;
+			margin-left: $spacing-lg;
+			color: $font-color-dark;
+			.tit {
+				color: $font-color-light;
+			}
+		}
+	}
+	.btn-group {
+		padding-top: 60upx;
+		.confirm-btn {
+			margin-top: $spacing-lg;
+			width: 72%;
+		}
+	}
+}
