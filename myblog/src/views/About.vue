@@ -3,14 +3,15 @@
         <el-row class="">
             <el-col :span="16" class="row-left">
                 <el-col :span="24" class="one bgc mb-2">
-                    <div class="new">
+                    <div class="new colortomato">
+                        <i class="layui-icon layui-icon-home"></i>
                         <span>关于我</span>
                         <span>About me</span>
                     </div>
                 </el-col>
                 <el-col :span="24" class="two bgc mb-2">
-                    <div class="col-md-12 bgc">
-                        <p>一个前端入门者,1年工作经验,</p>
+                    <div class="new col-md-12 bgc colortomato">
+                        <p>博客1.0全新上线,付出总会有收获......</p>
                     </div>
                 </el-col>
                 <el-col :span="24" class="three bgc mb-4">
@@ -45,7 +46,8 @@
             </el-col>
             <el-col :span="8" class="row-right">
                 <el-col :span="24" class="one bgc">
-                    <div class="new">
+                    <div class="new colortomato">
+                        <i class="layui-icon layui-icon-link"></i>
                         <span>个人链接</span>
                         <span>New links</span>
                     </div>
@@ -84,6 +86,11 @@
     }
 </script>
 <style lang="less" scoped>
+    i{
+        vertical-align: middle;
+        font-size: 20px;
+        margin-right: 5px;
+    }
     @import url('../assets/css/index.less');
     .about{
         .row-left{

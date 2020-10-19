@@ -3,7 +3,8 @@
         <el-col :span="16" class="row mr-2 version-content">
             <el-row class="container">
                 <el-col :span="24" class="one bgc">
-                    <div class="new">
+                    <div class="new colortomato">
+                        <i class="layui-icon layui-icon-speaker" style="font-size:20px;"></i>
                         <span>吐槽一下</span>
                         <span>New Article</span>
                     </div>
@@ -100,6 +101,11 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+    i{
+        vertical-align: middle;
+        font-size: 20px;
+        margin-right: 5px;
+    }
     @import url("../assets/css/index.less");
     .two{
         padding: 20px 20px;

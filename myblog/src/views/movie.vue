@@ -3,8 +3,11 @@
         <el-row class="">
             <el-col :span="16" class="row-left">
                 <el-col :span="24" class="one bgc mb-4">
-                    <div class="new">
-                        <span>推荐视频</span>
+                    <div class="new colortomato">
+                        <span>
+                            <i class="layui-icon layui-icon-video"></i>
+                            推荐视频
+                        </span>
                         <span>New Article</span>
                     </div>
                 </el-col>
@@ -55,6 +58,17 @@ export default {
     .movie{
         .row-left{
             padding-right: 15px;
+            .one{
+                .new{
+                    span{
+                        i{
+                            vertical-align: middle;
+                        }
+                        
+                    }
+                    
+                }
+            }
             .two{
                 .two-content{
                     ul{

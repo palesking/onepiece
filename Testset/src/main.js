@@ -4,6 +4,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 import router from "@/router/index.js"
+import store from '@/store/index.js'
 
 //国际化
 import VueI18n from 'vue-i18n'
@@ -48,5 +49,6 @@ const i18n = new VueI18n({
 new Vue({
     router,
     i18n,
+    store,
     render: h => h(App),
 }).$mount('#app')

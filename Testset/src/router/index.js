@@ -14,6 +14,16 @@ const routes = [
         name:'home',
         component:home
     },
+    {
+        path: '/user',
+        name: 'user',
+        component: ()=>import('@/components/user.vue')
+    },
+    {
+        path: '/usertwo',
+        name: 'usertwo',
+        component: ()=>import('@/components/usertwo.vue')
+    }   
     // {
     //     path:"/testone",
     //     name:'testone',
@@ -25,5 +35,14 @@ const routes = [
 var router =  new VueRouter({
     mode: 'history',  //去掉url中的#
     routes
+})
+router.beforeEach((to,from,next)=>{
+    if(to.name === 'home'){
+        next()
+    }else if(to.name === 'user'){
+        next()
+    }else{
+        next(false)
+    }
 })
 export default router;

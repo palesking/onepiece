@@ -4,7 +4,10 @@
             <el-col :span="16" class="row-left">
                 <el-col :span="24" class="one bgc mb-2">
                     <div class="new">
-                        <span>学习无止境</span>
+                        <span class="colortomato">
+                            <i class="layui-icon layui-icon-read"></i>
+                            学习无止境
+                        </span>
                         <span>Don't stop</span>
                     </div>
                 </el-col>
@@ -145,6 +148,9 @@ export default {
 </script>
 <style lang="less" scoped>
     @import url('../../assets/css/index.less');
+    i{
+        vertical-align: middle;
+    }
     .community{
         .row-left{
             padding-right: 15px;

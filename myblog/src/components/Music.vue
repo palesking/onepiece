@@ -3,8 +3,10 @@
         <el-row class="">
             <el-col :span="16" class="row-left">
                 <el-col :span="24" class="one bgc mb-4">
-                    <div class="new">
-                        <span>推荐音乐</span>
+                    <div class="new colortomato">
+                        <span>
+                            <i class="layui-icon layui-icon-headset"></i>
+                            推荐音乐</span>
                         <span>New Article</span>
                     </div>
                 </el-col>

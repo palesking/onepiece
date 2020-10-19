@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box">
+        <button type="button" class="btn">change</button>
+    </div>
+</body>
+<script>
+    let a = document.getElementById('box')
+    let b = document.getElementsByClassName('btn')[0]
+    console.log(a)
+    console.log(b)
+    b.onclick = function(){
+        // console.log(123)
+        var xhr = new XMLHttpRequest();
+        console.log(xhr)
+        xhr.open('get','https://music.palingking.com/%E4%B8%80%E8%B7%AF%E5%90%91%E5%8C%97.mp3',true)
+        xhr.send(null)
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                a.innerHTML = xhr.responseText
+            }
+        }
+    }
+    
+</script>
+</html>
