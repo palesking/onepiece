@@ -77,9 +77,12 @@
                             下面的message相当于一个变量或占位符，最终会表示为真正的文本内容
                         </p>
                         <!-- {% raw %} -->
-                        <pre><code>&lt;div id="app"&gt;
-                        {{ message }}
-                        &lt;/div&gt;</code></pre><!-- {% endraw %} -->
+                        <pre>
+                            <code>
+                                &lt;div id="app"&gt;{{ message }}&lt;/div&gt;
+                            </code>
+                        </pre>
+                        <!-- {% endraw %} -->
                         <p>&nbsp;</p>
                         <h3 id="anchor4">构造器</h3>
                         <p>  
@@ -88,32 +91,31 @@
                             这个变量名表示Vue实例
                         </p>
                         <div>
-                        <pre>var vm = new Vue({
-                        // 选项
-                        })</pre>
+                            <pre>var vm = new Vue({// 选项})</pre>
                         </div>
 
-                        <p>  在实例化Vue时，需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等选项</p>
+                        <p>在实例化Vue时，需要传入一个选项对象，它可以包含数据、模板、挂载元素、方法、生命周期钩子等选项</p>
                         <div>
-                        <pre>var vm = new Vue({
-                        el: '#app',
-                        data: {
-                            message: 'Hello Vue!'
-                        }
-                        })</pre>
+                            <pre>
+                                var vm = new Vue({
+                                    el: '#app',
+                                    data: {
+                                        message: 'Hello Vue!'
+                                    }
+                                })
+                            </pre>
                         </div>
-
-                        <p>  上面为Vue()构造函数传入了一个对象，对象中包括el和data这两个参数</p>
+                        <p>上面为Vue()构造函数传入了一个对象，对象中包括el和data这两个参数</p>
                         <p>【el】</p>
-                        <p>  参数el，是element的缩写，用于提供一个在页面上已存在的 DOM 元素作为 Vue 实例的挂载目标</p>
-                        <p>  参数值有两种类型，包括string | HTMLElement</p>
-                        <p>  上例中， el : "#app"表示挂载目标为id为"app"的元素，也可以写为 el : document.getElementById('app')</p>
+                        <p>参数el，是element的缩写，用于提供一个在页面上已存在的 DOM 元素作为 Vue 实例的挂载目标</p>
+                        <p>参数值有两种类型，包括string | HTMLElement</p>
+                        <p>上例中， el : "#app"表示挂载目标为id为"app"的元素，也可以写为 el : document.getElementById('app')</p>
                         <p>【data】</p>
-                        <p>  参数data表示Vue实例的数据对象</p>
-                        <p>  上例中，data: {&nbsp; message: 'Hello Vue!'&nbsp;} 表示变量message所代表的真实值为"Hello Vue!"</p>
+                        <p>参数data表示Vue实例的数据对象</p>
+                        <p>上例中，data: {&nbsp; message: 'Hello Vue!'&nbsp;} 表示变量message所代表的真实值为"Hello Vue!"</p>
                         <p>&nbsp;</p>
                         <h3 id="anchor5">简单实例</h3>
-                        <p>  下面将Vue的模板插值和构造器结合起来，制作一个简单实例</p>
+                        <p>下面将Vue的模板插值和构造器结合起来，制作一个简单实例</p>
                         <!-- {% raw %} -->
                         <pre>
                             <code>
@@ -131,9 +133,9 @@
                                 &lt;script&gt;
                                 var vm = new Vue({
                                 el: '#app',
-                                data: {
-                                    message: 'Hello Vue!'
-                                }
+                                    data: {
+                                        message: 'Hello Vue!'
+                                    }
                                 })
                                 &lt;/script&gt;
                                 &lt;/body&gt;
@@ -191,7 +193,11 @@
 </template>
 <script>
 export default {
-    
+    data() {
+        return {
+            message:''
+        }
+    },
 }
 </script>
 <style lang="less" scoped>

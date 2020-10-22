@@ -38,6 +38,12 @@ export default {
             element.init()
         });
     },
+    beforeRouterUpdate(to,from,next){
+        console.log(to)
+        console.log(from)
+        console.log(next)
+        console.log(123)
+    },
     components: {
         leftcontent,
         rightcontent

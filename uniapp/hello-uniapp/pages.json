@@ -16,6 +16,12 @@
 				"navigationBarTitleText": "首页"
 			}
 		},
+        {
+            "path":"pages/tabbar/tabbar",
+            "style": {
+            	"navigationBarTitleText": "可拖动顶部选项卡"
+            }
+        },
 		{
 			"path": "pages/message/message",
 			"style":{
@@ -55,6 +61,12 @@
 				"iconPath":"static/tabs/home.png",
 				"selectedIconPath":"static/tabs/home-active.png"
 			},
+            {
+                "text":"分类",
+                "pagePath":"pages/tabbar/tabbar",
+                "iconPath":"static/tabs/home.png",
+                "selectedIconPath":"static/tabs/home-active.png"
+            },
 			{
 				"text":"信息",
 				"pagePath":"pages/message/message",

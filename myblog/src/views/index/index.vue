@@ -19,7 +19,6 @@
 <script>
 import sectionone from '@/components/sectionone.vue'
 import sectiontwo from '@/components/sectiontwo.vue'
-// import headerone from '@/components/headerone.vue'
 import footerone from '@/views/footer/footerone.vue'
 import headerone from '@/components/header/index.vue'
 import contentone from '@/components/contentone/index.vue'
@@ -27,9 +26,18 @@ import music from '@/components/music.vue'
 
 export default {
     name: 'index',
+    loading:false,
     data() {
         return {
             
+        }
+    },
+    created() {
+        this.loading()
+    },
+    methods: {
+        loading(){
+            this.loading = true
         }
     },
     mounted() {
@@ -72,18 +80,18 @@ export default {
 .logofour{
     color: #1e9fff;
 }
-@media (min-width: 992px){
-    .navbar-expand-lg {
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        .container, .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
-            -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap;
-        }
-    }
-}
+// @media (min-width: 992px){
+//     .navbar-expand-lg {
+//         -ms-flex-flow: row nowrap;
+//         flex-flow: row nowrap;
+//         -ms-flex-pack: start;
+//         justify-content: flex-start;
+//         .container, .navbar-expand-lg > .container-fluid, .navbar-expand-lg > .container-sm, .navbar-expand-lg > .container-md, .navbar-expand-lg > .container-lg, .navbar-expand-lg > .container-xl {
+//             -ms-flex-wrap: nowrap;
+//             flex-wrap: nowrap;
+//         }
+//     }
+// }
 
 // @media (min-width: 992px){
 //     .container, .container-sm, .container-md, .container-lg {
@@ -98,11 +106,11 @@ export default {
 // }
 
 
-@media (min-width: 1200px){
-    .container {
-        max-width: 1140px;
+    @media (min-width: 1200px){
+        .container {
+            max-width: 1140px;
+        }
     }
-}
 
 // @media (min-width: 992px){
 //     .container {
@@ -116,13 +124,13 @@ export default {
 //     }
 // }
 
-@media (min-width: 768px){
-    .col-md-4 {
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
-        max-width: 33.333333%;
-    }
-}
+// @media (min-width: 768px){
+//     .col-md-4 {
+//         -ms-flex: 0 0 33.333333%;
+//         flex: 0 0 33.333333%;
+//         max-width: 33.333333%;
+//     }
+// }
 // @media (min-width: 576px){
 //     .container {
 //         max-width: 540px;
@@ -601,6 +609,12 @@ export default {
                 margin: auto;
                 margin-top: 16px;
             }
+            @media screen and (max-width: 576px) {
+                .index-main{
+                    max-width: 480px;
+                    display: flex;
+                }
+            }
         }
     }
     .layui-nav {
@@ -712,22 +726,22 @@ export default {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    @media (min-width: 992px){
-        .d-lg-block {
-            display: block !important;
-        }
-    }
+    // @media (min-width: 992px){
+    //     .d-lg-block {
+    //         display: block !important;
+    //     }
+    // }
 
-    @media (min-width: 768px){
-        .d-md-none {
-            display: none !important;
-        }
-    }
+    // @media (min-width: 768px){
+    //     .d-md-none {
+    //         display: none !important;
+    //     }
+    // }
     
-    @media (min-width: 576px){
-        .d-sm-none {
-            display: none !important;
-        }
-    }
+    // @media (min-width: 576px){
+    //     .d-sm-none {
+    //         display: none !important;
+    //     }
+    // }
     
 </style>

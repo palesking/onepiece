@@ -16,6 +16,6 @@
         // background-image: url('./assets/images/bl1.png');
         // background-repeat: no-repeat;
         // background-attachment: fixed;
-        
     }
+   
 </style>

@@ -7,7 +7,7 @@
                 class="animate__animated animate__bounceInDown animate__delay-0.5s"
             >
                 <el-carousel-item v-for="item in img" :key="item.id">
-                    <img v-lazy='item.url' alt="" class="lunbotu">
+                    <img :src="item.url" alt="" class="lunbotu">
                 </el-carousel-item>
             </el-carousel>
             <el-row class="">
@@ -27,59 +27,62 @@
                     <ul class="art-list list-unstyled">
                         <li 
                             class="listone animate__animated animate__bounceInLeft animate__delay-1s" 
-                            v-for="(item,index) in 10" 
+                            v-for="(item,index) in list" 
                             :key="index"
                         >
-                            <div class="art-img">
-                                <img src="../../assets/images/8.jpg" alt="">
-                            </div>
-                            <div class="art-content">
-                                <h5 @click="handledetails">js前端实现模糊查询</h5>
-                                <p @click="handledetails">
-                                    js前端实现模糊查询对于模糊查询，
-                                    一般都是传关键字给后端，由后端来做。
-                                    但是有时候一些轻量级的列表前端来做可以减少ajax请求，
-                                    在一定程度上提高用户体验。废话不多...
-                                    js前端实现模糊查询对于模糊查询，
-                                    一般都是传关键字给后端，由后端来做。
-                                    但是有时候一些轻量级的列表前端来做可以减少ajax请求，
-                                    在一定程度上提高用户体验。废话不多...
-                                </p>
-                                <ul class="art-links">
-                                    <li>
-                                        <a href="/">
-                                            <i class="layui-icon layui-icon-time"></i>
-                                            2019-04-03
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <i class="layui-icon layui-icon-friends"></i>
-                                            天堂瀑布
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <i class="layui-icon layui-icon-heart-fill"></i>
-                                            2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <i class="layui-icon layui-icon-praise"></i>
-                                            1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/">
-                                            <i class="layui-icon layui-icon-template-1"></i>
-                                            标签
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <router-link :to="{ name: 'detailsone', params: { id: index }}">
+                                <div class="art-img">
+                                    <img src="../../assets/images/8.jpg" alt="">
+                                </div>
+                                <div class="art-content">
+                                    <h5 >js前端实现模糊查询</h5>
+                                    <p>
+                                        js前端实现模糊查询对于模糊查询，
+                                        一般都是传关键字给后端，由后端来做。
+                                        但是有时候一些轻量级的列表前端来做可以减少ajax请求，
+                                        在一定程度上提高用户体验。废话不多...
+                                        js前端实现模糊查询对于模糊查询，
+                                        一般都是传关键字给后端，由后端来做。
+                                        但是有时候一些轻量级的列表前端来做可以减少ajax请求，
+                                        在一定程度上提高用户体验。废话不多...
+                                    </p>
+                                    <ul class="art-links">
+                                        <li>
+                                            <a href="/">
+                                                <i class="layui-icon layui-icon-time"></i>
+                                                2019-04-03
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/">
+                                                <i class="layui-icon layui-icon-friends"></i>
+                                                天堂瀑布
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/">
+                                                <i class="layui-icon layui-icon-heart-fill"></i>
+                                                2
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/">
+                                                <i class="layui-icon layui-icon-praise"></i>
+                                                1
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/">
+                                                <i class="layui-icon layui-icon-template-1"></i>
+                                                标签
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </router-link>
                         </li>
                     </ul>
+                    <router-view></router-view>
                 </el-col>
             </el-row>
             <el-row class="bgc">
@@ -172,7 +175,8 @@ export default {
                     url:require('../../assets/images/3.png'),
                 }
             ],
-            loading: true
+            loading: true,
+            list:10
         }
     },
     methods: {
@@ -196,6 +200,7 @@ export default {
                 list-style: none;
                 .listone:hover{
                     border: 1px solid #ff6700;
+                    cursor: pointer;
                 }
                 .listone{
                     width: 100%;
@@ -221,6 +226,7 @@ export default {
                         /* padding-left: 20px; */
                         margin-left: 10px;
                         h5{
+                            color: tomato;
                             background: none;
                             font-size: 18px;
                             text-indent: 0;
@@ -230,6 +236,9 @@ export default {
                             padding-bottom: 5px;
                             cursor: pointer;
                             font-weight: bolder;
+                        }
+                        h5:hover{
+                            color: #2d8cf0;
                         }
                         p{
                             cursor: pointer;
@@ -287,6 +296,13 @@ export default {
                 margin-right: auto;
                 margin-left: auto;
             }
+        }
+
+    }
+    @media screen and (max-width: 576px) {
+        ::v-deep.el-col-16{
+            width: 100%;
+            // max-width: 500px;
         }
     }
     .art-img{

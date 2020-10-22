@@ -504,6 +504,13 @@ export default {
             }
         }
     }
+    @media screen and (max-width: 576px) {
+        ::v-deep.el-col-8{
+            width: 100%;
+            margin-top: 20px;
+            // max-width: 500px;
+        }
+    }
     .new{
         background: rgba(255,255,255,0.5);
         // margin-top: 8px;

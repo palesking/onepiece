@@ -1,12 +1,10 @@
 <template>
     <div class="home">
-        <router-link to='/user'>user</router-link>
-        <router-link to="/usertwo">usertwo</router-link>
-        <div class="box">
+        <!-- <div class="box">
             <p>{{$store.state.num}}</p>
             <button @click="addnum">增加</button>
             <button @click="removenum">减少</button>
-        </div>
+        </div> -->
         <!-- <testone></testone> -->
         <!-- <testtwo></testtwo> -->
         <!-- <testthree></testthree> -->
