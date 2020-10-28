@@ -1,14 +1,7 @@
 <template>
     <view class="uni-container">
-        <!-- <view class="uni-header-logo">
-            <image class="uni-header-image" src="/static/componentIndex.png"></image>
-        </view>
-        <view class="uni-hello-text">
-            <text class="hello-text">uni-app内置组件，展示样式仅供参考，文档详见：</text>
-            <u-link class="hello-link" :href="'https://uniapp.dcloud.io/component/'" :text="'https://uniapp.dcloud.io/component/'"
-                :inWhiteList="true"></u-link>
-        </view> -->
         <swiperDot></swiperDot>
+        <button type="default" @click="Jumpapi">跳转</button>
         <view class="uni-panel" v-for="(item, index) in list" :key="item.id">
             <view class="uni-panel-h" :class="item.open ? 'uni-panel-h-on' : ''" @click="triggerCollapse(index)">
                 <text class="uni-panel-text">{{item.name}}</text>
@@ -182,7 +175,18 @@
                 setTimeout(() => {
                     this.navigateFlag = false;
                 }, 200)
+            },
+            Jumpapi(){
+                console.log(123)
+                console.log(this.$route)
+                console.log(this.$router)
+                this.$router.push({path:"pages/tabBar/API/API"})
             }
+        },
+        beforeRouteUpdate (to, from, next) {
+            console.log(123)
+            // react to route changes...
+            // don't forget to call next()
         }
     }
 </script>

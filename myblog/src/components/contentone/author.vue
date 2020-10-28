@@ -1,6 +1,6 @@
 <template>
     <div>
-        <el-row class="right-author bgc">
+        <el-row class="right-author bgc box-shadow">
             <el-col :span="24">
                 <div class="auth-img">
                     <img src="../../assets/logo.jpg" alt="">
@@ -27,6 +27,9 @@ export default {
 </script>
 <style lang="less" scoped>
     @import url("../../assets/css/index.less");
+    .box-shadow{
+        border: 0;
+    }
     .right-author{
         display: flex;
         position: relative;

@@ -10,7 +10,7 @@
                     <img :src="item.url" alt="" class="lunbotu">
                 </el-carousel-item>
             </el-carousel>
-            <el-row class="">
+            <el-row class="lefttwo">
                 <el-col :span="24">
                     <div class="new mt-2">
                         <span>
@@ -22,7 +22,7 @@
                 </el-col>
             </el-row>
             
-            <el-row class="mainlist">
+            <el-row class="leftthree">
                 <el-col :span="24">
                     <ul class="art-list list-unstyled">
                         <li 
@@ -85,7 +85,8 @@
                     <router-view></router-view>
                 </el-col>
             </el-row>
-            <el-row class="bgc">
+
+            <el-row class="leftfour bgc">
                 <el-col :span="24">
                     <div class="new">
                         <span>
@@ -96,21 +97,22 @@
                     </div>
                 </el-col>
             </el-row>
-            <el-row class="bgc mt-4 codeone">
+
+            <el-row class="bgc mt-4 leftfive">
                 <el-col :span="24">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-4 bgc  ">
+                            <div class="col-md-4 bgc">
                                 <div class="card mb-4 box-shadow  mt-4">
                                     <div class="showimg">
-                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/7.jpg" data-holder-rendered="true">
+                                        <img class="card-img-top" src="../../assets/images/7.jpg" data-holder-rendered="true">
                                     </div>
 
                                     <div class="card-body">
                                         <a href="#">测试图文</a>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="cardTime">
                                             <div class="btn-group showtitle">
-                                                <i class="el-time"></i>2019-04-03
+                                                <i class="el-icon-time"></i>2019-04-03
                                             </div>
                                             <small class="text-muted"><i class="el-fire"></i>9 mins</small>
                                         </div>
@@ -120,13 +122,13 @@
                             <div class="col-md-4 bgc ">
                                 <div class="card mb-4 box-shadow mt-4">
                                     <div class="showimg">
-                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/9.jpg" data-holder-rendered="true">
+                                        <img class="card-img-top" src="../../assets/images/9.jpg" data-holder-rendered="true">
                                     </div>
                                     <div class="card-body">
                                         <a href="#">测试图文</a>
-                                        <div class="d-flex justify-content-between align-items-center">
+                                        <div class="cardTime">
                                             <div class="btn-group showtitle">
-                                                <i class="el-time"></i>2019-04-03
+                                                <i class="el-icon-time"></i>2019-04-03
                                             </div>
                                             <small class="text-muted">9 mins</small>
                                         </div>
@@ -136,13 +138,13 @@
                             <div class="col-md-4 bgc ">
                                 <div class="card  box-shadow mt-4">
                                     <div class="showimg">
-                                        <img class="card-img-top" style=" width: 100%; display: block;" src="../../assets/images/9.jpg" data-holder-rendered="true">
+                                        <img class="card-img-top" src="../../assets/images/9.jpg" data-holder-rendered="true">
                                     </div>
                                     <div class="card-body">
                                         <a href="#">测试图文</a>
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="btn-group showtitle">
-                                                <i class="el-time"></i>2019-04-03
+                                        <div class="cardTime">
+                                            <div>
+                                                <i class="el-icon-time"></i>2019-04-03
                                             </div>
                                             <small class="text-muted">9 mins</small>
                                         </div>
@@ -153,6 +155,7 @@
                     </div>
                 </el-col>
             </el-row>
+
         </el-col>
     </div>
 </template>
@@ -193,7 +196,7 @@ export default {
             width: 100%;
             height: 100%;
         }
-        .mainlist{
+        .leftthree{
             margin-top: 8px;
             .list-unstyled{
                 padding-left: 0;
@@ -288,13 +291,56 @@ export default {
                 }
             }
         }
-        .codeone{
+        .leftfive{
             .container {
                 width: 100%;
                 padding-right: 15px;
                 padding-left: 15px;
                 margin-right: auto;
                 margin-left: auto;
+                .row{
+                    flex-wrap: nowrap;
+                    .card-body{
+                        padding: 10px 20px;
+                        a{
+                            line-height: 30px;
+                            display: block;
+                            color: #000;
+                            overflow: hidden;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
+                            
+                        }
+                        a:hover{
+                            color: tomato;
+                        }
+                        .cardTime{
+                            line-height: 30px;
+                            display: flex;
+                            align-items: baseline;
+                            justify-content: space-between;
+                            
+                            div{
+                                font-size: 12px;
+                                i{
+                                    margin-right: 5px;
+                                }
+                            }
+                            // small{
+                            //     align-items: flex-end;
+                            // }
+                        }
+                    }
+                    .box-shadow{
+                        background-clip: border-box;
+                        border: 1px solid rgba(0, 0, 0, 0.125);
+                        transition: all .5s ease;
+                    }
+                    .box-shadow:hover {
+                        background: #fff;
+                        box-shadow: #ccc 1px 1px 8px;
+                    }
+                }
             }
         }
 
@@ -306,6 +352,14 @@ export default {
         }
     }
     .art-img{
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .showimg{
+        width: 211px;
+        height: 160px;
         img{
             width: 100%;
             height: 100%;

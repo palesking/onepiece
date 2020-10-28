@@ -26,19 +26,16 @@ import music from '@/components/music.vue'
 
 export default {
     name: 'index',
-    loading:false,
     data() {
         return {
             
         }
     },
     created() {
-        this.loading()
+        
     },
-    methods: {
-        loading(){
-            this.loading = true
-        }
+    methods: { 
+        
     },
     mounted() {
         layui.use('element', function(){
