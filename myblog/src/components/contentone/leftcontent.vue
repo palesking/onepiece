@@ -351,6 +351,12 @@ export default {
             width: 500px;
         }
     }
+    @media screen and (max-width: 375px) {
+        ::v-deep.el-col-16{
+            // width: 100%;
+            min-width: 375px;
+        }
+    }
     .art-img{
         img{
             width: 100%;
