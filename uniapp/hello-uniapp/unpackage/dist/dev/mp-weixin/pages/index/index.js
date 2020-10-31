@@ -99,7 +99,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components
+var components = {
+  uniDrawer: function() {
+    return __webpack_require__.e(/*! import() | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then(__webpack_require__.bind(null, /*! @/components/uni-drawer/uni-drawer.vue */ 47))
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -135,25 +139,37 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var uniDrawer = function uniDrawer() {__webpack_require__.e(/*! require.ensure | components/uni-drawer/uni-drawer */ "components/uni-drawer/uni-drawer").then((function () {return resolve(__webpack_require__(/*! @/components/uni-drawer/uni-drawer.vue */ 47));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
 {
+  components: { uniDrawer: uniDrawer },
   data: function data() {
     return {
       title: 'Hello' };
 
   },
-  onLoad: function onLoad() {
-
-  },
+  // onLoad(options) {
+  // 	console.log("页面加载了",options)
+  // },
+  // onShow() {
+  // 	console.log("页面显示了")
+  // },
+  // onReady() {
+  // 	console.log("页面初次渲染完成了")
+  // },
+  // onHide() {
+  // 	console.log("页面被隐藏了")
+  // },
   methods: {} };exports.default = _default;
 
 /***/ }),

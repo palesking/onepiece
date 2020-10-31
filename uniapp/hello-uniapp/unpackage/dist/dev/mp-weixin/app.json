@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/tabbar/tabbar",
     "pages/message/message",
     "pages/contact/contact",
-    "pages/details/details"
+    "pages/list/list"
   ],
   "subPackages": [],
   "window": {
@@ -22,6 +23,12 @@
         "selectedIconPath": "static/tabs/home-active.png"
       },
       {
+        "text": "分类",
+        "pagePath": "pages/tabbar/tabbar",
+        "iconPath": "static/tabs/home.png",
+        "selectedIconPath": "static/tabs/home-active.png"
+      },
+      {
         "text": "信息",
         "pagePath": "pages/message/message",
         "iconPath": "static/tabs/message.png",
@@ -35,6 +42,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap48.json"
+  "usingComponents": {}
 }

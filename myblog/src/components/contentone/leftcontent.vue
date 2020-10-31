@@ -347,8 +347,8 @@ export default {
     }
     @media screen and (max-width: 576px) {
         ::v-deep.el-col-16{
-            width: 100%;
-            // max-width: 500px;
+            // width: 100%;
+            width: 500px;
         }
     }
     .art-img{
@@ -358,11 +358,16 @@ export default {
         }
     }
     .showimg{
-        width: 211px;
+        // width: 211px;
         height: 160px;
         img{
             width: 100%;
             height: 100%;
+        }
+    }
+    @media screen and (max-width: 576px){
+        .showimg{
+            height: 100px;
         }
     }
     .new{

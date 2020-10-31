@@ -74,6 +74,9 @@
         <div class="box1">
 
         </div>
+        <div id="box2">
+            
+        </div>
         <div class="box1">
 
         </div>
@@ -86,32 +89,15 @@
     </div>
 </body>
 <script>
-    // let a = document.getElementsByTagName('div')
-    // console.log(a)
-    // console.log(a.parentNode)
-    // console.log(a.childNodes)
-    // let arr = [1,2,2,4,5,4,7,5,6,1]
-    // let res = arr.reduce(function(prev,cur,index,arr){
-    //     console.log(arguments);
-    //     if(!prev.includes(cur)){
-    //         prev.push(cur)
-    //     }
-    //     return prev;
-    // },[])
-    // console.log(res);
-    // console.log(0)
-    // setTimeout(function(){
-    //     console.log(1)
-    // },0)
-    // setTimeout(function(){
-    //     console.log(2)
-    // },0)
-    // setTimeout(function(){
-    //     console.log(3)
-    // },0)
-    // console.log(4)
-    // fn1();
-    // fn2();
-    // fn3();
+    let str = "apple banana";
+    console.log(str.indexOf("apple"));
+    let a = document.getElementById('box2')
+    console.log(a)
+    let b = document.getElementsByTagName('div')[0]
+    console.log(b)
+    let c = document.getElementsByClassName('box')
+    console.log(c)
+    let d = document.querySelector('#box2')
+    console.log(d)
 </script>
 </html>

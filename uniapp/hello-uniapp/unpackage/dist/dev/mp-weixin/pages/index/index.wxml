@@ -1,1 +1,1 @@
-<view class="content"><image class="logo" src="/static/logo.png"></image><view class="text-area"><text class="title">{{title}}</text></view></view>
+<view class="content"><uni-drawer vue-id="8dd740cc-1" visible="{{true}}" bind:__l="__l" vue-slots="{{['default']}}"><view style="padding:30rpx;"><view class="uni-title">抽屉式导航</view></view></uni-drawer></view>

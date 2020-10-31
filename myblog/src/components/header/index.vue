@@ -107,19 +107,19 @@ export default {
             console.log(key, keyPath);
         }
     },
-    // watch: {
-    //     screenWidth:{
-    //         immediate:true,
-    //         handler:function (newval) {
-    //             console.log(newval)
-    //             // console.log(this)
-    //             if( newval <= "576"){
-    //                 this.showlist()
-    //             }
+    watch: {
+        // screenWidth:{
+        //     immediate:true,
+        //     handler:function (newval) {
+        //         console.log(newval)
+        //         // console.log(this)
+        //         if( newval <= "576"){
+        //             this.showlist()
+        //         }
                 
-    //         }
-    //     }
-    // },
+        //     }
+        // }
+    },
 }
 </script>
 <style lang="less" scoped>
@@ -192,17 +192,18 @@ export default {
         }
         @media screen and (max-width: 576px){
             .content-title{
-                display: flex !important;
-                -ms-flex-preferred-size: auto;
-                flex-basis: auto;
-                align-items: initial;
-                height: 100%;
-                // margin-top: 50px;
-                ul{
-                    flex-direction: column;
-                }
+                display: none;
+                // display: flex !important;
+                // -ms-flex-preferred-size: auto;
+                // flex-basis: auto;
+                // align-items: initial;
+                // height: 100%;
+                // // margin-top: 50px;
+                // ul{
+                //     flex-direction: column;
+                // }
 
-            }
+            }   
         }
     }
     .layui-nav {
