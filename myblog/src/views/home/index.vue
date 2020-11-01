@@ -29,20 +29,34 @@ export default {
     name: 'index',
     data() {
         return {
-            
+            loading:false,
+            post: null,
+            error: null
         }
     },
     created() {
-        
+        // this.fetchData()
     },
     methods: { 
-        
+        // fetchData(){
+        //     this.error = this.post = null
+        //     this.loading = true
+        //     // replace getPost with your data fetching util / API wrapper
+        //     getPost(this.$route.params.id, (err, post) => {
+        //         this.loading = false
+        //         if (err) {
+        //             this.error = err.toString()
+        //         } else {
+        //             this.post = post
+        //         }
+        //     })
+        // }
     },
     mounted() {
         layui.use('element', function(){
             var element = layui.element;
             element.init()
-        });
+        })
     },
     components: {
         headerone,
@@ -51,6 +65,10 @@ export default {
         footerone,
         contentone,
         music
+    },
+    watch: {
+        // 如果路由有变化，会再次执行该方法
+        // '$route': 'fetchData'
     }
 }
 </script>

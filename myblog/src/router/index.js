@@ -21,7 +21,7 @@ import moviecontent from "@/views/moviecontent.vue"
         {
             path:'/home',
             name:'home',
-            component:()=>import('@/views/index/index.vue'),
+            component:()=>import('@/views/home/index.vue'),
             children:[
                 {
                     path:'/home/version',
