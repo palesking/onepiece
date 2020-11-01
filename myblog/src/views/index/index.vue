@@ -7,6 +7,7 @@
             <el-main class="index-main">
                 <div class="main-content">
                     <router-view></router-view>
+                    <contentone v-show="$route.path === '/home'"></contentone>
                 </div>
             </el-main>
             <el-footer id="footer">
@@ -42,6 +43,8 @@ export default {
             var element = layui.element;
             element.init()
         });
+        console.log(this.$router)
+        console.log(this.$route)
     },
     components: {
         headerone,

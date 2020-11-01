@@ -70,7 +70,7 @@
     </style>
 </head>
 <body>
-    <div class="box">
+    <div class="box" id="app">
         <div class="box1">
 
         </div>
@@ -88,16 +88,25 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
-    let str = "apple banana";
-    console.log(str.indexOf("apple"));
-    let a = document.getElementById('box2')
-    console.log(a)
-    let b = document.getElementsByTagName('div')[0]
-    console.log(b)
-    let c = document.getElementsByClassName('box')
-    console.log(c)
-    let d = document.querySelector('#box2')
-    console.log(d)
+    // let str = "apple banana";
+    // console.log(str.indexOf("apple"));
+    // let a = document.getElementById('box2')
+    // console.log(a)
+    // let b = document.getElementsByTagName('div')[0]
+    // console.log(b)
+    // let c = document.getElementsByClassName('box')
+    // console.log(c)
+    // let d = document.querySelector('#box2')
+    // console.log(d)
+    new Vue({
+        el:'#app',
+        data() {
+            return {
+                
+            }
+        }
+    })
 </script>
 </html>

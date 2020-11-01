@@ -48,7 +48,7 @@ export default {
             list:[
                 {
                    title:'首页',
-                   router:'/index' 
+                   router:'/home' 
                 },
                 {
                    title:'快乐前端',

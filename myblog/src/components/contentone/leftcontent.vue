@@ -347,13 +347,11 @@ export default {
     }
     @media screen and (max-width: 576px) {
         ::v-deep.el-col-16{
-            // width: 100%;
             width: 500px;
         }
     }
-    @media screen and (max-width: 375px) {
+    @media screen and (min-width: 375px) {
         ::v-deep.el-col-16{
-            // width: 100%;
             min-width: 375px;
         }
     }
@@ -364,7 +362,6 @@ export default {
         }
     }
     .showimg{
-        // width: 211px;
         height: 160px;
         img{
             width: 100%;

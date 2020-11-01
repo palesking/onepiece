@@ -1,10 +1,7 @@
 <template>
     <div>
-        <el-row>
-            <leftcontent></leftcontent>
-            <rightcontent></rightcontent>
-        </el-row>
-        <!-- <music></music> -->
+        <leftcontent></leftcontent>
+        <rightcontent></rightcontent>
     </div>
 </template>
 <script>
