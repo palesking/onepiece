@@ -7,6 +7,11 @@ Vue.use(VueRouter)
 // const content = () => import ("@/components/content.vue")
 // const section = () => import ("@/components/sectionone.vue")
 // const index = ()=> import('@/views/index/index.vue');
+import movie from '@/views/movie.vue';
+import version from '@/views/version.vue';
+import about from '@/views/about.vue';
+import community from "@/views/community/community.vue"
+import moviecontent from "@/views/moviecontent.vue"
 
     const routes = [
         {
@@ -19,50 +24,66 @@ Vue.use(VueRouter)
             component:()=>import('@/views/index/index.vue'),
             children:[
                 {
-                    path:'/version',
+                    path:'/home/version',
                     name:'version',
-                    component:()=>import('@/views/version.vue')
+                    component:version,
+                    children:[
+                        {
+                            path: '/home/version/vueone',
+                            name: 'vueone',
+                            component: ()=>import('@/views/community/vue/vueone.vue')
+                        }
+                    ]
                 },
                 {
-                    path:'/movie',
+                    path:'/home/movie',
                     name:'movie',
-                    component:()=>import('@/views/movie.vue')
+                    component:movie,
+                    // component:()=>import('@/views/movie.vue'),
+                    children:[
+                        {
+                            path: '/home/movie/moviecontent',
+                            name: 'moviecontent',
+                            // component: moviecontent
+                            component : ()=>import("@/views/moviecontent.vue")
+                        },
+                    ]
                 },
                 {
-                    path:'/about',
+                    path:'/home/about',
                     name:'about',
-                    component: () =>import('@/views/about.vue')
+                    component: about
                 },
                 {
-                    path:'/community',
+                    path:'/home/community',
                     name:'community',
-                    component:()=>import('@/views/community/community.vue')
+                    component:community
                 },
                 {
-                    path:'/music',
+                    path:'/home/music',
                     name:'music',
                     component: ()=>import('@/components/music.vue')
                 },
                 {
-                    path:'/index',
+                    path:'/home/index',
                     name: 'index',
                     component: ()=>import('@/components/contentone/index.vue')
                 },
                 {
-                    path: '/detailsone/:id',
+                    path: '/home/detailsone/:id',
                     name: 'detailsone',
                     component: ()=>import('@/components/details/index.vue')
                 },
-                {
-                    path: '/moviecontent',
-                    name: 'moviecontent',
-                    component: ()=>import('@/views/moviecontent.vue')
-                },
-                {
-                    path: '/vueone',
-                    name: 'vueone',
-                    component: ()=>import('@/views/community/vue/vueone.vue')
-                }
+                // {
+                //     path: 'moviecontent',
+                //     name: 'moviecontent',
+                //     component: ()=>import('@/views/moviecontent.vue')
+                // },
+                // {
+                //     path: 'vueone',
+                //     name: 'vueone',
+                //     component: ()=>import('@/views/community/vue/vueone.vue')
+                // }
             ]
         },
         // {path:'/content/:aid',name:'content',component:content},

@@ -11,23 +11,23 @@
                         <span>New Article</span>
                     </div>
                 </el-col>
-                <el-col :span="24" class="two bgc animate__animated animate__bounceInRight">
+                <el-col :span="24" class="two bgc animate__animated animate__bounceInRight" v-show="$route.path === '/home/movie'">
                     <div class="two-content ">
                         <ul class="">
                             <li v-for="item in 20" class="two-list ">
-                                <a href="/moviecontent" class="two-list-img">
+                                <a href="/home/movie/moviecontent" class="two-list-img">
                                     <div class="two-img">
                                         <img src="../assets/images/movie/movie01.jpg" alt="">
                                     </div>
                                 </a>
-                                <a href="/moviecontent" class="two-list-title">
+                                <a href="/home/movie/moviecontent" class="two-list-title">
                                     你的名字。
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </el-col>
-                <el-col>
+                <el-col v-show="$route.path === '/home/movie'">
                     <el-pagination
                         background
                         layout="prev, pager, next"
@@ -35,6 +35,9 @@
                         class="pag mt-4"
                     >
                     </el-pagination>
+                </el-col>
+                <el-col :span="24">
+                    <router-view class="animate__animated animate__bounceInRight"></router-view>
                 </el-col>
             </el-col>
             <el-col :span="8" class="row-right">
@@ -50,7 +53,9 @@
 </template>
 <script>
 export default {
-    
+    mounted() {
+        console.log(this.$route)
+    },
 }
 </script>
 <style lang="less" scoped>

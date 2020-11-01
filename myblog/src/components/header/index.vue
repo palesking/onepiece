@@ -52,15 +52,15 @@ export default {
                 },
                 {
                    title:'快乐前端',
-                   router:'/community' 
+                   router:'/home/community' 
                 },
                 {
                    title:'精彩文章',
-                   router:'/version' 
+                   router:'/home/version' 
                 },
                 {
                    title:'精彩视频',
-                   router:'/movie' 
+                   router:'/home/movie' 
                 },
                 // {
                 //    title:'文章',
@@ -68,11 +68,11 @@ export default {
                 // },
                 {
                    title:'好听音乐',
-                   router:'/music' 
+                   router:'/home/music' 
                 },
                 {
                    title:'关于',
-                   router:'/about' 
+                   router:'/home/about' 
                 }
             ],
             router:this.$route.path,

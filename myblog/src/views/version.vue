@@ -86,6 +86,9 @@
                     >
                     </el-pagination>
                 </el-col>
+                <el-col :span="24">
+                    <router-view></router-view>
+                </el-col>
             </el-row>
         </el-col>
         <rightcontent></rightcontent>
