@@ -41,11 +41,17 @@
     </div>
 </body>
 <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
-<script lang="ts">
-    let a = 10
-    a = "hello word"
-    console.log(a)
-    let b:boolean = true;
-    console.log(b) 
+<script>
+    // let a = "年龄≥60岁,BMI≥25,大手术史,吸烟史,妊娠或产褥期,卧床或肢体制动＞72h,有DVT或PE病史"
+    // console.log(a.includes("大手术史"))
+    let a = ['年龄≥60岁',"大手术史","吸烟史","妊娠或产褥期"]
+    let b = ["有DVT或PE病史","卧床或肢体制动＞72h"]
+    let c = a.join()
+    let d = b.join()
+
+    // console.log(a)
+    // console.log(b)
+    console.log(c+d)
+    console.log(d)
 </script>
 </html>
