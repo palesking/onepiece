@@ -72,7 +72,7 @@
     </div>
 </template>
 <script>
-    import sectiontwo from '../components/sectiontwo'
+    import sectiontwo from '@/components/sectiontwo.vue'
     export default {
         name:'about',
         data() {

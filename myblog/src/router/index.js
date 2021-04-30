@@ -9,9 +9,9 @@ Vue.use(VueRouter)
 // const index = ()=> import('@/views/index/index.vue');
 import movie from '@/views/movie.vue';
 import version from '@/views/version.vue';
-import about from '@/views/about.vue';
+// import about from '@/views/about.vue';
 import community from "@/views/community/community.vue"
-import moviecontent from "@/views/moviecontent.vue"
+// import moviecontent from "@/views/moviecontent.vue"
 
     const routes = [
         {
@@ -52,7 +52,7 @@ import moviecontent from "@/views/moviecontent.vue"
                 {
                     path:'/home/about',
                     name:'about',
-                    component: about
+                    component: ()=>import("@/views/about.vue")
                 },
                 {
                     path:'/home/community',
