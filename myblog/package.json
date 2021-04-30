@@ -10,7 +10,7 @@
     "@moefe/vue-aplayer": "^2.0.0-beta.5",
     "amfe-flexible": "^2.2.1",
     "animate.css": "^4.1.1",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "core-js": "^3.6.4",
     "element-ui": "^2.13.1",
