@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "deploy:dev": " npm run build && cross-env NODE_ENV=dev node ./deploy",
+    "deploy:prod": "npm run build && cross-env NODE_ENV=prod node ./deploy"
   },
   "dependencies": {
     "@moefe/vue-aplayer": "^2.0.0-beta.5",
@@ -16,7 +18,6 @@
     "element-ui": "^2.13.1",
     "normalize-wheel": "^1.0.1",
     "postcss-plugin-px2rem": "^0.8.1",
-    "scp2": "^0.5.0",
     "throttle-debounce": "^2.1.0",
     "view-design": "^4.3.2",
     "vue": "^2.6.11",
@@ -30,8 +31,12 @@
     "@vue/cli-plugin-vuex": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "babel-plugin-component": "^1.1.1",
+    "compressing": "^1.5.1",
+    "cross-env": "^7.0.3",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
+    "ora": "^5.4.0",
+    "scp2": "^0.5.0",
     "vue-template-compiler": "^2.6.11"
   },
   "browserslist": [
