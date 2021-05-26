@@ -12,9 +12,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production(打包)
+### Compiles and minifies for production(一键打包部署)
 ```
-npm run build
+npm run deploy:dev
 ```
 
 ### Customize configuration

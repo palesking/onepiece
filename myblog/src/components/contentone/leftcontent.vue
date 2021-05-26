@@ -4,7 +4,7 @@
             <el-carousel 
                 :interval="5000" 
                 arrow="always" 
-                class="animate__animated animate__bounceInDown animate__delay-0.5s"
+                
             >
                 <el-carousel-item v-for="item in img" :key="item.id">
                     <img :src="item.url" alt="" class="lunbotu">
@@ -26,7 +26,7 @@
                 <el-col :span="24">
                     <ul class="art-list list-unstyled">
                         <li 
-                            class="listone animate__animated animate__bounceInLeft animate__delay-1s" 
+                            class="listone" 
                             v-for="(item,index) in list" 
                             :key="index"
                         >
@@ -85,7 +85,20 @@
                     <router-view></router-view>
                 </el-col>
             </el-row>
-
+            <el-row class="pagelist">
+                <el-col>
+                    <el-pagination
+                    @size-change="handleSizeChange"
+                    @current-change="handleCurrentChange"
+                    :current-page="currentPage4"
+                    :page-sizes="[100, 200, 300, 400]"
+                    :page-size="100"
+                    layout="total, sizes, prev, pager, next, jumper"
+                    :total="400">
+                    </el-pagination>
+                </el-col>
+            </el-row>
+            
             <el-row class="leftfour bgc">
                 <el-col :span="24">
                     <div class="new">
@@ -164,6 +177,7 @@ export default {
     data() {
         return {
             activeName: 'first',
+            currentPage4: 4,
             img:[
                 {
                     id:1,
@@ -185,6 +199,12 @@ export default {
     methods: {
         handledetails(){
             this.$router.push({path:'/detailsone'})
+        },
+        handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
         }
     },
 }
@@ -406,5 +426,8 @@ export default {
             font-weight: 400;
             color: #bcbcbc;
         }
+    }
+    .pagelist{
+        margin-bottom: 24px;
     }
 </style>
