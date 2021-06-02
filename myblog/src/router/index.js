@@ -19,9 +19,21 @@ import community from "@/views/community/community.vue"
             redirect : '/home'
         },
         {
+            path: '/login',
+            name: 'Login',
+            component: () => import('@/views/login/index.vue'),
+            meta: {
+                title: '登录界面'
+            }
+        },
+        {
             path:'/home',
             name:'home',
             component:()=>import('@/views/home/index.vue'),
+            meta: {
+                title: '首页',
+                requireAuth: true
+            },
             children:[
                 {
                     path:'/home/version',
@@ -140,6 +152,7 @@ import community from "@/views/community/community.vue"
     // })
     const router = new VueRouter({
         mode: 'history',
+        base: process.env.BASE_URL,
         routes
     })
 

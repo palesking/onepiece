@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 import axios from 'axios'
 // import "amfe-flexible" 
-
+import Valid from './utils/valid'
 //element-ui
 import {
   Pagination,
@@ -109,6 +109,7 @@ Vue.use(ViewUI);
 import animated from 'animate.css'
 Vue.use(animated)
 
+Vue.prototype.$Valid = Valid;
 
 Vue.prototype.axios = axios
 Vue.use(Pagination);
@@ -200,6 +201,31 @@ Vue.config.productionTip = false
 import Element from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(Element, { size: 'small', zIndex: 3000 });
+
+// 实现全局路由守卫
+router.beforeEach((to, from, next) => {
+	if (to.meta.title) {
+	  document.title = to.meta.title;
+	}
+
+	if (to.meta.requireAuth) {
+		if (store.state.userInfo.data.token) {
+			if (to.path == '/login') {
+        next('/');
+      } else {
+        next();
+      }
+		} else {
+			next('/login');
+		}
+	} else {
+		if (store.state.userInfo.data.token) {
+			next('/');
+		} else {
+			next();
+		}
+	}
+})
 
 
 new Vue({
